@@ -1,0 +1,1790 @@
+undefined = void(0);
+if(typeof Alexa == "undefined"){
+ Alexa = null;
+}
+var UNDEFINED = "undefined";
+var userAgent="MSIE 8.0;";
+try{
+    userAgent = navigator.userAgent;
+}
+catch(e){}
+var win = new Object();
+try{
+    if(typeof(window) != "undefined"){
+        win = window;
+    }
+    if(typeof(navigator) == "undefined"){
+        navigator = new Object();
+        navigator.userAgent = userAgent;
+    }
+}
+catch(e){
+}
+
+if(Alexa == null){
+  if (/Chrome[\/\s](\d+\.\d+)/.test(userAgent)) {
+    Alexa = window.Alexa ? window.Alexa : {
+      "_internal": {
+        "_data": {},
+        "_callback": {},
+        "_popupShowingListeners": [],
+        "_callbackFuncs": {},
+        "_loaddata": function()
+        {
+          var div = document.getElementById("ALX_DATA");
+          if (!div)
+          {
+            var div = document.createElement("div");
+            div.id = "ALX_DATA";
+            div.style.display = "none";
+            document.head.appendChild(div);
+            div.addEventListener("DOMSubtreeModified", Alexa._internal._ondatadivchange, false)
+          }
+
+          Alexa._internal._ondatadivchange({currentTarget: div})
+        },
+        "_isReady": function()
+        {
+          for(var key in Alexa._internal._data)
+            return true;
+          return false;
+        },
+        "_setFeedBackDiv": function()
+        {
+          var div = document.getElementById("ALX_DATA_BACK");
+          if (!div)
+          {
+            div = document.createElement("div");
+            div.id = "ALX_DATA_BACK";
+            div.style.display = "none";
+            document.head.appendChild(div);
+          }
+        },
+        '_sendback': function(action, data, callback)
+        {
+          var databack = document.getElementById("ALX_DATA_BACK");
+          if (databack)
+          {
+            var message = {action: action, data: data}
+            databack.innerText = JSON.stringify(message);
+            if (data.requireCallback)
+            {
+              Alexa._internal._callbackFuncs[data.callid] = callback;
+            }
+          }
+        },
+        "_init": function()
+        {
+          Alexa._internal._loaddata();
+          Alexa._internal._setFeedBackDiv();
+          window.close = function() {
+            var name = null;
+            if (window.top != window)
+              name = window.name;
+            Alexa._internal._sendback('BACK_CLOSE_API_WINDOW', {name: name});
+          }
+        },
+        '_getData': function(dataname, defValue)
+        {
+          if (Alexa._internal._data[dataname])
+            return Alexa._internal._data[dataname]
+          else
+            return defValue;
+        },
+        '_setApiData' : function(obj)
+        {
+          if (obj.data)
+          {
+            for(key in obj.data)
+            {
+              Alexa._internal._data[key] = obj.data[key]
+            }
+          }
+        },
+        '_runCallback' : function(obj)
+        {
+          if (obj.callback)
+          {
+            for(key in obj.callback)
+            {
+              var func = Alexa._internal._callbackFuncs[key];
+              if (func)
+              {
+                if (obj.callback[key])
+                  func.apply(func, obj.callback[key]);
+                delete Alexa._internal._callbackFuncs[key];
+              }
+            }
+            delete obj.callback[key];
+          }
+        },
+        '_ondatadivchange': function(e)
+        {
+          if (e.currentTarget)
+          {
+            var jsonstr = e.currentTarget.innerText;
+            var obj = {};
+            if (jsonstr)
+            {
+
+              obj = JSON.parse(jsonstr);
+            }
+
+            var isReady = Alexa._internal._isReady();
+            Alexa._internal._setApiData(obj);
+            Alexa._internal._runCallback(obj);
+            if (!isReady)
+            {
+              for(var i in Alexa._internal._popupShowingListeners)
+                Alexa._internal._popupShowingListeners[i]();
+            }
+          }
+        }
+      },
+      'browser':
+      {
+        'browserType': "chrome",
+        'registerButtons': function(toolbar_id, url) {
+          var _alx_data = {
+            url : url,
+            skip_confirm: false
+          }
+          Alexa._internal._sendback('BACK_REGISTER_BUTTON', _alx_data);
+          return {};
+        },
+        'getButtons': function()
+        {
+          Alexa._internal._loaddata();
+
+          var buttons = Alexa._internal._getData("getButtons", []);
+          return buttons;
+        },
+        'setButtons': function(buttonStr, toolbar_id)
+        {
+          Alexa._internal._sendback('BACK_SET_BUTTONS', {buttons: buttonStr});
+        },
+        'navigate': function (url, openIn, features, args, event)
+        {
+          var obj = {
+            url : url,
+            openIn: openIn,
+            features: features,
+            args: args,
+            event: event
+          }
+          Alexa._internal._sendback('BACK_INTERNAL_LOAD_URL', obj);
+          return {};
+        },
+        'getVersion': function()
+        {
+          Alexa._internal._loaddata();
+
+          var info= Alexa._internal._getData("toolbarInfo", {name: "Alexa Toolbar", version: null});
+          return info["version"];
+        },
+        'getToolbarName': function()
+        {
+          Alexa._internal._loaddata();
+
+          var info= Alexa._internal._getData("toolbarInfo", {name: "Alexa Toolbar", version: null});
+          return info["name"];
+        },
+        'getFeatures': function()
+        {
+          Alexa._internal._loaddata();
+
+          var features = Alexa._internal._getData("globalFeatures", []);
+          return features;
+        },
+        'configure': function(params, toolbar_id)
+        {
+          Alexa._internal._sendback('BACK_SET_API_DATA', {type: "globalFeatures", extra: params});
+        },
+        'getLocale': function()
+        {
+          Alexa._internal._loaddata();
+
+          var locale = Alexa._internal._getData("locale", "default");
+          return locale;
+        },
+        'setLocale': function(localeStr, toolbar_id)
+        {
+          if (localeStr) {
+            Alexa._internal._sendback('BACK_SET_API_DATA', {type: "locale", extra: localeStr});
+          }
+        },
+        'arguments': function() {
+          if (window.arguments && window.arguments.length > 1) {
+            return window.arguments[1];
+          }
+          else {
+            return { '_callback': Alexa.browser.callback };
+          }
+        },
+        'callback': function(perName, funcName, params, isRemove, partner_id, callback)
+        {
+          var isCB    = callback ? true: false;
+          var t       = new Date();
+          var time    = t.getTime();
+          var rand    = Math.floor( Math.random()* 1000000000000000 );
+          var callid  = String(time) + "_" + String(rand)
+
+          var obj = {
+                      persistence: perName,
+                      funcName: funcName,
+                      params: params,
+                      remove: isRemove,
+                      requireCallback: isCB,
+                      callid: callid
+                    };
+          Alexa._internal._sendback('BACK_BUTTON_CALLBACK', obj, callback);
+          //Alexa._internal._sendback('BACK_CLOSE_API_WINDOW', {});
+        }
+      },
+      'events':
+      {
+        'addListener': function(el, event, callback, capturing)
+        {
+          capturing = capturing ? capturing : false;
+          el.addEventListener(event, callback, capturing);
+        },
+        'addPopupShowingListener': function(func)
+        {
+          if (Alexa._internal._isReady())
+            func();
+          else
+            Alexa._internal._popupShowingListeners.push(func);
+        }
+      },
+      'tools':
+      {
+        'JSON': {
+          'decode': function (str) {
+            var obj = null;
+            try {
+              obj = JSON.parse(str);
+            } catch(e) {}
+            return obj;
+          },
+          'encode': function (obj) {
+            var str = "";
+            try {
+              str = JSON.stringify(obj);
+            } catch(e) {}
+            return str;
+          }
+        },
+        'setNodeText': function(node, text) {
+          return node.innerText = text + " ";
+        },
+        'trace': function( log_str )
+        {
+          try {
+            console.log( log_str );
+          } catch(e) {}
+        }
+      }
+    }
+    Alexa._internal._init();
+    //window.addEventListener("load", function(e) {Alexa._internal._init();}, false)
+    //window.addEventListener("load", function(e) {Alexa._internal._init();}, false)
+  } else if (/Firefox[\/\s](\d+\.\d+)/.test(userAgent)) {
+    Alexa = win.Alexa ? win.Alexa : {
+      'browser':
+      {
+        'browserType': "firefox",
+        'getToolbarRoot': function()
+        {
+          try {
+            return window.arguments[0].getToolbarRoot();
+          } catch(e) {}
+          return "";
+        },
+        'setToolbarRoot': function(base_toolbar)
+        {
+          try {
+            window.arguments[0].setToolbarRoot(base_toolbar, base_toolbar);
+          } catch(e) {}
+        },
+        'registerButtons': function(toolbar_id, url) {
+          var element = document.createElement("AlexaDataElement");
+          element.setAttribute("function", "register_buttons");
+          element.setAttribute("url", url);
+          document.documentElement.appendChild(element);
+
+          var evt = document.createEvent("Events");
+          evt.initEvent(toolbar_id + "_NS_PH_EVENT", true, false);
+          element.dispatchEvent(evt);
+          document.documentElement.removeChild(element);
+        },
+        'configure': function(params, toolbar_id) {
+          if (window.arguments[0].configure)
+            window.arguments[0].configure(params);
+          else {
+            var element = document.createElement("AlexaDataElement");
+            element.setAttribute("function", "configure");
+            element.setAttribute("params", window.arguments[0].jsonEncode(params));
+            document.documentElement.appendChild(element);
+
+            var evt = document.createEvent("Events");
+            evt.initEvent(toolbar_id + "_NS_PH_EVENT", true, false);
+            element.dispatchEvent(evt);
+            document.documentElement.removeChild(element);
+          }
+        },
+        'getVersion': function()
+        {
+          if (window.arguments[0].getVersion)
+            return window.arguments[0].getVersion();
+          else
+            return "Unknown Version";
+        },
+        'getToolbarName': function()
+        {
+          if (window.arguments[0].getToolbarName)
+            return window.arguments[0].getToolbarName();
+          else
+            return "Alexa Toolbar";
+        },
+        'getButtons': function()
+        {
+          var buttons = [];
+          try {
+            buttons = window.arguments[0].getButtons();
+          } catch(e) {}
+          return buttons;
+        },
+        'setButtons': function(buttonStr, toolbar_id)
+        {
+          if (buttonStr != null) {
+            if (typeof buttonStr == "object" )
+              buttonStr = buttonStr.join(",")
+            if (window.arguments[0].setButtons(buttonStr))
+              window.arguments[0].setButtons(buttonStr);
+          }
+        },
+        'getLocale': function()
+        {
+          var locale = "default";
+          try {
+            locale = window.arguments[0].getLocale();
+          } catch(e) {}
+          return locale;
+        },
+        'setLocale': function(localeStr, toolbar_id)
+        {
+          if (localeStr) {
+            if (window.arguments[0].setLocale(localeStr))
+              window.arguments[0].setLocale(localeStr);
+            else {
+              var element = document.createElement("AlexaDataElement");
+              element.setAttribute("function", "set_locale");
+              element.setAttribute("locale", localeStr);
+              document.documentElement.appendChild(element);
+
+              var evt = document.createEvent("Events");
+              evt.initEvent(toolbar_id + "_NS_PH_EVENT", true, false);
+              element.dispatchEvent(evt);
+              document.documentElement.removeChild(element);
+            }
+          }
+        },
+        'getFeatures': function()
+        {
+          var features = [];
+          try {
+            features =  window.arguments[0].getFeatures();
+          } catch(e) {}
+          return features;
+        },
+        'arguments': function() {
+          if (window.arguments && window.arguments.length > 1) {
+              return window.arguments[1];
+          }
+          else {
+              return null;
+          }
+        },
+        'callback': function(perName, funcName, params, isRemove, toolbar_id) {
+          var element = document.createElement("AlexaDataElement");
+          element.setAttribute("persistence", perName);
+          element.setAttribute("funcName", funcName);
+          element.setAttribute("function", "callback");
+          element.setAttribute("params", params);
+          element.setAttribute("remove", isRemove);
+          document.documentElement.appendChild(element);
+          var evt = document.createEvent("Events");
+          evt.initEvent(toolbar_id + "_NS_PH_EVENT", true, false);
+          element.dispatchEvent(evt);
+          document.documentElement.removeChild(element);
+        },
+        'navigate': function(url, openIn, features, arguments) {
+          if (window.arguments && window.arguments[0]) {
+              window.arguments[0].navigate(url, openIn, features, arguments);
+          }
+          else {
+              window.location = url;
+          }
+        }
+      },
+      'messaging': {
+        'postMessage': function (message, id, toolbar_id) {
+          try {
+            if (window.arguments && window.arguments[0] && window.arguments[0].postMessage)
+              window.arguments[0].postMessage(message, id);
+            else {
+              var element = document.createElement("AlexaDataElement");
+              element.setAttribute("function", "postMessage");
+              element.setAttribute("message", message);
+              element.setAttribute("id", id);
+              document.documentElement.appendChild(element);
+
+              var evt = document.createEvent("Events");
+              evt.initEvent(toolbar_id + "_NS_PH_EVENT", true, false);
+              element.dispatchEvent(evt);
+              document.documentElement.removeChild(element);
+            }
+          } catch(e) {}
+        }
+      },
+      'tools':
+      {
+        'JSON': {
+          'decode': function (str) {
+            var obj = null;
+            try {
+              obj = window.arguments[0].jsonDecode(str);
+            } catch(e) {}
+            return obj;
+          },
+          'encode': function (obj) {
+            var str = "";
+            try {
+              str = window.arguments[0].jsonEncode(obj);
+            } catch(e) {}
+            return str;
+          }
+        },
+        'termsAccept': function() {
+          if (window.arguments && window.arguments.length > 1) {
+              window.arguments[1][0]();
+          }
+        },
+        'termsReject': function() {
+          if (window.arguments && window.arguments.length > 1) {
+              window.arguments[1][1]();
+          }
+        },
+        'termsDecisionMade': function() {
+          if (window.arguments && window.arguments.length > 1) {
+              window.arguments[1][2]();
+          }
+        },
+        'getOEMTag': function()
+        {
+          try {
+             return window.arguments[0].getOEMTag();
+          } catch(e) {}
+          return "";
+        },
+        'setOEMTag': function(tag)
+        {
+          if (typeof tag == "string")
+          {
+            try {
+               window.arguments[0].setOEMTag(tag);
+            } catch(e) {}
+          }
+        },
+        'getToolbarRoot': function()
+        {
+          try {
+            return window.arguments[0].getToolbarRoot();
+          } catch(e) {}
+          return "";
+        },
+        'setToolbarRoot': function(base_toolbar)
+        {
+          try {
+            window.arguments[0].setToolbarRoot(base_toolbar, base_toolbar);
+          } catch(e) {}
+        },
+        'checkSearchEngineStatus': function(seName)
+        {
+          var returnObj = {"existing": false, "current": false};
+          try {
+            returnObj = window.arguments[0].checkSearchEngineStatus(seName);
+          } catch(e) {}
+          return returnObj;
+        },
+        'addSearchEngine': function(seName, searchUrl, iconUrl, description, isDefault, suggestionUrl)
+        {
+          try {
+            window.arguments[0].addSearchEngine(seName, searchUrl, iconUrl, description, isDefault, suggestionUrl);
+          } catch(e) {}
+        },
+        'removeSearchEngine': function(seName, isRemoved)
+        {
+          try {
+            window.arguments[0].removeSearchEngine(seName, isRemoved);
+          } catch(e) {}
+        },
+        'setFeatures': function(params, button_id)
+        {
+          try {
+            window.arguments[0].setFeaturesNew(params, button_id);
+          } catch(e) {}
+        },
+        'getFeatures': function( button_id )
+        {
+          var params = {}
+          try {
+            params =  window.arguments[0].getFeaturesNew(button_id);
+          } catch(e) {}
+          return params;
+        },
+        'checkUpdate': function( message )
+        {
+          try {
+            window.arguments[0].checkUpdate( message );
+          } catch(e) {}
+        },
+        'trace': function( log_str )
+        {
+          try {
+            window.arguments[0].trace( log_str );
+          } catch(e) {}
+        }
+      }
+    };
+} else if (/MSIE (\d+\.\d+);/.test(userAgent)) {
+Alexa = {
+    'browser': {
+        _siteInfo: null,
+        'browserType': "ie",
+        'arguments': function() {
+            if ((typeof window.external != UNDEFINED) && (typeof window.external.arguments != UNDEFINED)) {
+                return window.external.arguments;
+            }
+            else if (typeof window.external.termsAccepted != UNDEFINED) {
+                var arr = new Array();
+                arr.push(Alexa.tools.termsAccept);
+                arr.push(Alexa.tools.termsReject);
+                arr.push(Alexa.tools.termsDecisionMade);
+                return arr;
+            }
+
+
+            return null;
+        },
+        'getLocale': function() {
+            var locale = "default";
+            try {
+                locale = window.external.locale;
+            } catch (ex) { }
+            if (!locale)
+                locale = "default";
+
+            return locale;
+        },
+        'setLocale': function(locale) {
+            try {
+                window.external.locale = locale;
+                Alexa.browser.reloadBand();
+            } catch (ex) { }
+        },
+        'injectJsFile': function(injectUrl) {
+            if (!injectUrl)
+                return;
+            ret = window.external.injectJsFile(injectUrl);
+            if (this._postInjectFunc) {
+                this._postInjectFunc();
+            }
+            return ret;
+
+        },
+        'injectJsSnippet': function(snippet) {
+            if (!snippet)
+                return;
+            ret = window.external.injectJsSnippet(snippet);
+            if (this._postInjectFunc) {
+                this._postInjectFunc();
+            }
+            return ret;
+        },
+        'getPageElementByXpath': function(xpath_string) {
+            if (!xpath_string)
+                return;
+            var aRet = new Array();
+            var aRes = window.external.getPageElementsByXpath(xpath_string);
+            for (var i = 0; i < aRes[0]; i++) {
+                aRet.push(aRes[i + 1]);
+            }
+
+            return aRet;
+            // lets hand this on
+
+        },
+        'getPageElementProperty': function(node, attr) {
+            if ((typeof node != "undefined") &&
+    (typeof attr != "undefined")) {
+                try {
+                    if (node[attr])
+                        return node[attr];
+                    if (node.hasAttribute(attr))
+                        return node.getAttribtue(attr);
+
+                }
+                catch (e) { }
+                if (attr == "textContent") {
+                    if (typeof node == "string") {
+                        return node;
+                    }
+                    try {
+                        if (typeof node.innerText != "undefined") {
+                            return node.innerText;
+                        }
+                        if (typeof node.innerHTML != "undefined") {
+                            return node.innerHTML;
+                        }
+                        return node.toString();
+                    }
+                    catch (e) { }
+                }
+            }
+            return null;
+        },
+        'fitSize': function(){
+        },
+        'getSiteInfo': function() {
+            return this._siteInfo;
+        },
+        'getSelectedText': function() {
+            return window.external.selectedText;
+        },
+        'getVersion': function() {
+            var ver = "__EXTENDED__VERSION__PLACEHOLDER__";
+            return Alexa.tools.replacePlaceholders(ver);
+        },
+        'navigate': function(url, openIn, windowFeatures, arguments) {
+            return window.external.navigate(url, openIn, windowFeatures, arguments);
+        },
+        'getButtons': function(){
+          try{
+            return new VBArray(window.external.buttons).toArray();
+          }
+          catch(e){}
+          return new Array();
+        },
+        'setButtons': function(buttonArray, toolbarID){
+          try{
+           window.external.buttons=buttonArray;
+          }catch(e){}
+
+        },
+        'registerButtons': function(partnerId, url) {
+            if (!(/^https?:\/\//.test(url) ) ) {
+                var l = window.location;
+                var h = l.protocol + "//" + l.host;
+                if (url.indexOf('/') != 0) {
+                    h = h + l.pathname.replace(/\/[^\/]*$/, "/");
+                }
+                url = h + url;
+
+            }
+            var registerUrl = "alexa://installbutton?partnerId=" + partnerId + "&button=" + url;
+            try {
+                window.external.navigate(registerUrl, "currentTab", null, null);
+            } catch (ex) {
+                window.location = registerUrl;
+            }
+        },
+        'configure': function(features) {
+            for (key in features) {
+                window.external.configure(key, features[key]);
+            }
+        },
+        'reloadBand': function() {
+            window.external.reload_band();
+        },
+        'getFeatures': function() {
+            if (typeof (window.external.features) != UNDEFINED) {
+                return (new VBArray(window.external.features)).toArray();
+            }
+            return null;
+        },
+        'getSearchProvider': function() {
+            if (typeof (window.external.searchProvider) != UNDEFINED) {
+                return window.external.searchProvider;
+            }
+            return null;
+        },
+        'setToolbarRoot': function(tbroot) {
+            window.external.toolbarRoot = tbroot;
+        },
+        'getToolbarRoot': function(){
+            var tbroot="__TOOLBAR__ROOT__PLACEHOLDER__";
+            return tbroot.replacePlaceholders();
+        },
+        '_onSiteInformationAvailable': function(siteInfo) {
+            this._siteInfo = siteInfo;
+        }
+    },
+
+    'button': {
+        'menu': {
+            'addCallbackItem': function(label, callback, arguments, icon) {
+                window.external.addCallbackMenuItem(label, callback, arguments, icon);
+            },
+            'addSeparator': function() {
+                window.external.addMenuSeparator();
+            },
+            'addUrlItem': function(label, url, openIn, windowFeatures, icon) {
+                if (typeof (openIn) == UNDEFINED || null == openIn) {
+                    openIn = "currentTab";
+                }
+                window.external.addURLMenuItem(label, url, openIn, windowFeatures, icon);
+            },
+            'clear': function() {
+                window.external.clearMenu();
+            },
+            'create': function() {
+                window.external.hasMenu = true;
+            },
+            'destroy': function() {
+                window.external.clearMenu();
+                window.external.hasMenu = false;
+            }
+        },
+        'properties': {},
+        'update': function() {
+            this.properties.id = window.external.buttonId;
+            if (typeof (this.properties.image) != UNDEFINED) {
+                window.external.image = this.properties.image;
+            }
+            if (typeof (this.properties.openIn) != UNDEFINED) {
+                window.external.openIn = this.properties.openIn;
+            }
+            if (typeof (this.properties.text) != UNDEFINED) {
+                window.external.title = this.properties.text;
+            }
+            if (typeof (this.properties.tooltip) != UNDEFINED) {
+                window.external.tooltip = this.properties.tooltip;
+            }
+            if (typeof (this.properties.tooltipBody) != UNDEFINED) {
+                window.external.tooltipBody = this.properties.tooltipBody;
+            }
+            if (typeof (this.properties.tooltipTitle) != UNDEFINED) {
+                window.external.tooltipTitle = this.properties.tooltipTitle;
+            }
+            if (typeof (this.properties.windowFeatures) != UNDEFINED) {
+                window.external.windowFeatures = this.properties.windowFeatures;
+            }
+            if (typeof (this.properties.url) != UNDEFINED) {
+                window.external.url = this.properties.url;
+            }
+            if (typeof (this.properties.updated) != UNDEFINED) {
+                window.external.updated = this.properties.updated;
+            }
+            if (typeof (this.properties.width) != UNDEFINED) {
+                window.external.width = this.properties.width;
+            }
+            if (typeof (this.properties.visible) != UNDEFINED) {
+                window.external.visible = this.properties.visible;
+            }
+        },
+
+        'images': {
+            'add': function(attributes, events) {
+                window.external.addImage(attributes.src, attributes.width, attributes.height, attributes.tooltiptext, events != null ? events.click : null);
+            },
+
+            'clear': function() {
+                window.external.clearImages();
+            }
+        },
+        'html': {
+            'setUseHTML': function(bUse) {
+                try {
+                    return window.external.imageHTML = bUse;
+                }
+                catch (e) {
+                    alert("setUseHTML " + e.toString());
+                }
+            },
+            'setInnerHTML': function(snippet) {
+                try {
+                    var buttonDiv = document.getElementById("ALX_BUTTON_CONTENT");
+                    buttonDiv.innerHTML = snippet;
+
+
+
+                }
+                catch (e) { alert("setInnerHTML " + e.toString()); }
+
+            },
+            'insertFileIntoHead': function(type, file) {
+                try {
+                    var headID = document.getElementsByTagName("head")[0];
+                    var node = document.createElement(type);
+                    if (type === "LINK") {
+                        node.type = "text/css";
+                        node.rel = "stylesheet";
+                        node.href = file;
+                        node.media = "screen";
+                    }
+                    else {
+                        node.type = "text/javascript";
+                        node.src = file;
+                    }
+                    headID.appendChild(node);
+                }
+                catch (e) { }
+            },
+            'insertCSSFile': function(cssUrl) {
+                try {
+                    this.insertFileIntoHead("LINK", cssUrl);
+                }
+                catch (e) { }
+            },
+            'insertJSFile': function(jsUrl) {
+                try {
+                    this.insertFileIntoHead("SCRIPT", cssUrl);
+                }
+                catch (e) { }
+            }
+        }
+    },
+
+    'storage': {
+        'saveClientState': function(key, value) {
+            window.external.system.saveClientState(key, value);
+        },
+        'readClientState': function(key) {
+            return window.external.system.readClientState(key);
+        },
+        'saveSessionState': function(key, value) {
+            if (typeof (window.external.setSessionState) != UNDEFINED) {
+                window.external.setSessionState(key, value);
+            }
+        },
+        'readSessionState': function(key) {
+            if (typeof (window.external.readSessionState) != UNDEFINED) {
+                return window.external.readSessionState(key);
+            }
+            return null;
+        }
+    },
+
+    'tools': {
+        'setFeatures': function(params, button_id) {
+            try {
+                if (typeof button_id == "undefined") {
+                    button_id = "global_setting";
+                    var globals = this.getFeatures(button_id);
+                    var i;
+                    for (i in globals) {
+                        if (typeof params[i] == UNDEFINED) {
+                            params[i] = globals[i];
+                        }
+                    }
+
+                }
+            } catch (e) { }
+            try {
+                var jsonParams = this.JSON.encode(params);
+                window.external.setFeatures(button_id, jsonParams);
+            } catch (e) { }
+        },
+        'getFeatures': function(button_id) {
+            if (typeof button_id == "undefined") {
+                button_id = "global_setting";
+            }
+            var params;
+            try {
+                var jsonParams = window.external.getFeatures(button_id);
+                params = this.JSON.decode(jsonParams);
+                try {
+                    var assoc = window.external.associateTag;
+                    if (typeof (assoc) != "undefined" && assoc) {
+                        params['associate'] = assoc;
+                    }
+                }
+                catch (e) { }
+            } catch (e) { }
+            return params;
+        },
+        'termsAccept': function() {
+            try {
+                window.external.termsAccepted(true);
+            }
+            catch (e) { }
+        },
+        'termsReject': function() {
+            try {
+                window.external.termsAccepted(false);
+            }
+            catch (e) { }
+        },
+        'termsDecisionMade': function() {
+            try {
+                window.external.decisionMade();
+            } catch (e) { }
+        },
+        'setSearchProvider': function(providerUrl) {
+            try {
+                window.external.setSearchProvider(providerUrl);
+            } catch(e){}
+        },
+        'setOEMTag': function(OEMTag){
+            try {
+            window.external.associateTag=OEMTag;
+            }catch(e){}
+        },
+        'getOEMTag': function(){
+            try {
+            return window.external.associateTag;
+            }catch(e){}
+        },
+        'getLocale': function() {
+            return navigator.userLanguage.toLowerCase();
+        },
+        'checkUpdate': function(noUpdateMessage) {
+            try {
+            window.external.checkUpdate(noUpdateMessage);
+            }
+            catch(e){}
+        },
+        'sandbox': {
+            'initialized': false,
+            '_alert': function(msg) {
+                if (typeof window.external != "undefined"
+                && typeof window.external.alert != "undefined") {
+                    return window.external.alert(msg);
+                }
+            },
+            '_setTimeout': function(f, msec) {
+                if (typeof window.scriptWindow != "undefined" && typeof window.scriptWindow.setTimeout != "undefined") {
+                    return window.scriptWindow.setTimeout(f, msec);
+                }
+            },
+            '_clearTimeout': function(tid) {
+                if (typeof window.scriptWindow != "undefined" && typeof window.scriptWindow.clearTimeout != "undefined") {
+                    return window.scriptWindow.clearTimeout(tid);
+                }
+            },
+            '_setInterval': function(f, msec) {
+                if (typeof window.scriptWindow != "undefined" && typeof window.scriptWindow.setInterval != "undefined") {
+                    return window.scriptWindow.setInterval(f, msec);
+                }
+            },
+            '_clearInterval': function(tid) {
+                if (typeof window.scriptWindow != "undefined" && typeof window.scriptWindow.clearInterval != "undefined") {
+                    return window.scriptWindow.clearInterval(tid);
+                }
+            },
+            '_attachEvent': function(eventName, func) {
+
+                if (eventName == "onload" || eventName == "load" ) {
+                    if(this.initialized){
+                        func();
+                        return;
+                    }
+                }
+                else {
+
+                    if (typeof window != "undefined" &&
+                    typeof window.sandbox != "undefined" &&
+                    typeof window.sandbox.attachEvent == "function") {
+                        return window.sandbox.attachEvent(eventName, func);
+                    }
+                }
+            },
+            'initialize': function(scriptWindowIn) {
+            if(this.initialized){
+                return;
+            }
+                try {
+                    if (typeof window == "undefined") {
+                        window = new Object();
+                        window.external = external;
+                        window.scriptWindow = scriptWindowIn;
+                        window.console = new Object();
+                        window.console.log = Alexa.tools.trace;
+                        console = window.console;
+                        window.document = new Object();
+                        window.navigator = new Object();
+                        window.attachEvent = this._attachEvent;
+                        window.document.addEventListener = null;
+                    }
+                    if (typeof alert == "undefined") {
+                        alert = this._alert;
+                        window.alert = alert;
+                    }
+                    if (typeof setTimeout == "undefined") {
+                        setTimeout = this._setTimeout;
+                        window.setTimeout = setTimeout;
+                    }
+                    if (typeof clearTimeout == "undefined") {
+                        clearTimeout = this._clearTimeout;
+                        window.clearTimeout = clearTimeout;
+                    }
+                    if (typeof setInterval == "undefined") {
+                        setInterval = this._setInterval;
+                        window.setInterval = setInterval;
+                    }
+                    if (typeof clearInterval == "undefined") {
+                        clearInterval = this._clearInterval;
+                        window.clearInterval = clearInterval;
+                    }
+                    if (typeof navigator == "undefined") {
+                        navigator = window.navigator;
+                    }
+                    if (typeof document == "undefined") {
+                        document = window.document;
+                    }
+
+                    if (typeof UNDEFINED == "undefined") {
+                        UNDEFINED = "undefined";
+                    }
+                    this.initialized=true;
+                }
+                catch (e) {
+                    externalIn.alert(e);
+                }
+
+            }
+        },
+        'JSON': {
+            'f': function(n) {
+                return n < 10 ? '0' + n : n;
+            },
+            'cx': /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g,
+            'escapable': /[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g,
+            'gap': '',
+            'indent': '',
+            'meta': {
+                '\b': '\\b',
+                '\t': '\\t',
+                '\n': '\\n',
+                '\f': '\\f',
+                '\r': '\\r',
+                '"': '\\"',
+                '\\': '\\\\'
+            },
+            'rep': null,
+
+
+            'quote': function(string) {
+
+                this.escapable.lastIndex = 0;
+                return this.escapable.test(string) ?
+            '"' + string.replace(this.escapable, function(a) {
+                try {
+                    var c = Alexa.tools.JSON.meta[a];
+
+                    return typeof c === 'string' ? c :
+                    '\\u' + ('0000' + a.charCodeAt(0).toString(16)).slice(-4);
+                } catch (e) { return ""; }
+            }) + '"' :
+            '"' + string + '"';
+            },
+
+
+            'str': function(key, holder) {
+                var i,          // The loop counter.
+            k,          // The member key.
+            v,          // The member value.
+            length,
+            mind = this.gap,
+            partial,
+            value = holder[key];
+                if (value && typeof value === 'object' &&
+                typeof value.toJSON === 'function') {
+                    value = value.toJSON(key);
+                }
+                if (typeof this.rep === 'function') {
+                    value = this.rep.call(holder, key, value);
+                }
+                switch (typeof value) {
+                    case 'string':
+                        return this.quote(value);
+
+                    case 'number':
+                        return isFinite(value) ? String(value) : 'null';
+                    case 'boolean':
+                    case 'null':
+                        return String(value);
+                    case 'object':
+                        if (!value) {
+                            return 'null';
+                        }
+                        this.gap += this.indent;
+                        partial = [];
+                        if (Object.prototype.toString.apply(value) === '[object Array]') {
+                            length = value.length;
+                            for (i = 0; i < length; i += 1) {
+                                partial[i] = this.str(i, value) || 'null';
+                            }
+                            v = partial.length === 0 ? '[]' :
+                    this.gap ? '[\n' + this.gap +
+                            partial.join(',\n' + this.gap) + '\n' +
+                                mind + ']' :
+                          '[' + partial.join(',') + ']';
+                            this.gap = mind;
+                            return v;
+                        }
+                        if (this.rep && typeof this.rep === 'object') {
+                            length = this.rep.length;
+                            for (i = 0; i < length; i += 1) {
+                                k = this.rep[i];
+                                if (typeof k === 'string') {
+                                    v = this.str(k, value);
+                                    if (v) {
+                                        partial.push(quote(k) + (this.gap ? ': ' : ':') + v);
+                                    }
+                                }
+                            }
+                        } else {
+                            for (k in value) {
+                                if (Object.hasOwnProperty.call(value, k)) {
+                                    v = this.str(k, value);
+                                    if (v) {
+                                        partial.push(this.quote(k) + (this.gap ? ': ' : ':') + v);
+                                    }
+                                }
+                            }
+                        }
+                        v = (partial.length === 0) ? ('{}') : (
+                this.gap ? ('{\n' + this.gap + partial.join(',\n' + this.gap) + '\n' +
+                        mind + '}') : ('{' + partial.join(',') + '}'));
+                        this.gap = mind;
+                        return v;
+                }
+            },
+            'initJSON': function() {
+                if (typeof Date.prototype.toJSON !== 'function') {
+
+                    Date.prototype.toJSON = function(key) {
+
+                        return isFinite(this.valueOf()) ?
+                   this.getUTCFullYear() + '-' +
+                 f(this.getUTCMonth() + 1) + '-' +
+                 f(this.getUTCDate()) + 'T' +
+                 f(this.getUTCHours()) + ':' +
+                 f(this.getUTCMinutes()) + ':' +
+                 f(this.getUTCSeconds()) + 'Z' : null;
+                    };
+
+                    String.prototype.toJSON =
+        Number.prototype.toJSON =
+        Boolean.prototype.toJSON = function(key) {
+            return this.valueOf();
+        };
+                }
+            },
+            'encode': function(value) {
+                return this.stringify(value);
+            },
+            'stringify': function(value, replacer, space) {
+                this.initJSON();
+
+                var i;
+                this.gap = '';
+                this.indent = '';
+
+                if (typeof space === 'number') {
+                    for (i = 0; i < space; i += 1) {
+                        this.indent += ' ';
+                    }
+                } else if (typeof space === 'string') {
+                    this.indent = space;
+                }
+                rep = replacer;
+                if (replacer && typeof replacer !== 'function' &&
+                    (typeof replacer !== 'object' ||
+                     typeof replacer.length !== 'number')) {
+                    throw new Error('JSON.stringify');
+                }
+                return this.str('', { '': value });
+            },
+            'decode': function(text) {
+                return this.parse(text);
+            },
+            'parse': function(text, reviver) {
+                this.initJSON();
+                var j;
+                function walk(holder, key) {
+                    var k, v, value = holder[key];
+                    if (value && typeof value === 'object') {
+                        for (k in value) {
+                            if (Object.hasOwnProperty.call(value, k)) {
+                                v = walk(value, k);
+                                if (v !== undefined) {
+                                    value[k] = v;
+                                } else {
+                                    delete value[k];
+                                }
+                            }
+                        }
+                    }
+                    return reviver.call(holder, key, value);
+                }
+                text = String(text);
+
+
+                this.cx.lastIndex = 0;
+                if (this.cx.test(text)) {
+                    text = text.replace(this.cx, function(a) {
+                        return '\\u' +
+                        ('0000' + a.charCodeAt(0).toString(16)).slice(-4);
+                    });
+                }
+                if (/^[\],:{}\s]*$/
+.test(text.replace(/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, '@')
+.replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, ']')
+.replace(/(?:^|:|,)(?:\s*\[)+/g, ''))) {
+                    try {
+                        j = eval('(' + text + ')');
+                    }
+                    catch (e) {
+                    }
+                    return typeof reviver === 'function' ?
+                    walk({ '': j }, '') : j;
+                }
+                //            throw new SyntaxError('JSON.parse');
+
+            }
+        },
+        'sandboxRequest': function(url, callback, method) {
+            if (null == method ||
+                            typeof (method) == UNDEFINED) {
+                method = "GET";
+            }
+            return window.external.sandboxRequest(method, url, callback);
+            return Alexa.tools.XMLHttpRequest({
+                method: method,
+                url: url,
+                onreadystatechange: function(responseDetails) {
+                    callback(responseDetails.responseText, responseDetails.status);
+                }
+            });
+
+        },
+        'replacePlaceholders': function(str) {
+        try{
+            return window.external.replacePlaceholders(str);
+            }
+            catch(e){};
+            return str;
+        },
+        'XMLHttpRequest': function(request) {
+            var alexaXMLHTTP = window.external.alexaXMLHTTP;
+            alexaXMLHTTP.open(request.method, request.url, true, request.username, request.password);
+            if (typeof (request.headers) != UNDEFINED) {
+                for (var header in request.headers) {
+                    alexaXMLHTTP.setRequestHeader(header, request.headers[header]);
+                }
+            }
+            if(typeof (request.bUseCache) != UNDEFINED){
+               alexaXMLHTTP.bUseCache = request.bUseCache;
+            }
+            alexaXMLHTTP.onreadystatechange = function() {
+                var responseDetails = {
+                    'status': null,
+                    'statusText:': null,
+                    'responseHeaders': null,
+                    'responseText': null,
+                    'readyState': alexaXMLHTTP.readyState
+                };
+
+                try {
+                    responseDetails.status = alexaXMLHTTP.status;
+                } catch (e) {
+                }
+                try {
+                    responseDetails.statusText = alexaXMLHTTP.statusText;
+                } catch (e) {
+                }
+                try {
+                    responseDetails.responseHeaders = alexaXMLHTTP.getAllResponseHeaders();
+                } catch (e) {
+                }
+                try {
+                    responseDetails.responseText = alexaXMLHTTP.responseText;
+                } catch (e) {
+                }
+                if (typeof (request.onreadystatechange) != UNDEFINED) {
+                    request.onreadystatechange(responseDetails);
+                }
+                if (alexaXMLHTTP.readyState >= 4) {
+                    if ((alexaXMLHTTP.status >= 200 || alexaXMLHTTP.status == 0) && alexaXMLHTTP.status < 400) {
+                        if (typeof (request.onload) != UNDEFINED) {
+                            request.onload(responseDetails);
+                        }
+                    } else {
+                        if (typeof (request.onerror) != UNDEFINED) {
+                            request.onerror(responseDetails);
+                        }
+                    }
+                }
+            }
+            alexaXMLHTTP.send(request.data);
+        },
+        'DOMParser': function() {
+            return {
+                'parseFromString': function(text, mimeType) {
+                    var xmlDOM = null;
+                    try {
+                        xmlDOM = new ActiveXObject("Msxml2.DOMDocument.6.0");
+                    } catch (ex) {
+                        try {
+                            xmlDOM = new ActiveXObject("Msxml2.DOMDocument.4.0");
+                        } catch (ex) {
+                            try {
+                                xmlDOM = new ActiveXObject("Msxml2.DOMDocument.3.0");
+                            } catch (ex) {
+                                try {
+                                    xmlDOM = new ActiveXObject("Msxml.DOMDocument");
+                                } catch (ex) {
+                                }
+                            }
+                        }
+                    }
+                    xmlDOM.async = "false";
+                    xmlDOM.loadXML(text);
+                    return xmlDOM;
+                }
+            }
+        },
+        'getNodeText': function(node) {
+            return node.text;
+        },
+        'setNodeText': function(node, text) {
+            return node.innerText = text + " ";
+        },
+        'trace': function(msg) {
+            try {
+                var ta = document.createElement("textarea");
+                ta.innerHTML = msg.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                msg = ta.value;
+                if (typeof (window.external.DebugOut) != UNDEFINED) {
+                    window.external.DebugOut(msg);
+                }
+                if(window.external.buttonId != "clog" ){
+                    Alexa.messaging.postMessage(msg, "clog");
+                }
+            }
+            catch (e) { }
+        },
+        'initFeedButton': function(fn) {
+            if (typeof (window.external.initFeedButton) != UNDEFINED) {
+                window.external.initFeedButton();
+            }
+        },
+        'feedLoader': {
+            _preprocessor: null,
+            _errorHandler: null,
+            _interval: -1,
+            _receivingUpdates: false,
+
+            'setInterval': function(fn, interval) {
+                Alexa.tools.feedLoader._interval = interval;
+                var wasReceivingUpdates = Alexa.tools.feedLoader._receivingUpdates;
+                if (0 == Alexa.tools.feedLoader._interval) {
+                    Alexa.tools.feedLoader._receivingUpdates = false;
+                }
+                if (wasReceivingUpdates && typeof (window.external.setInterval) != UNDEFINED) {
+                    window.external.setInterval(Alexa.tools.feedLoader._interval);
+                }
+            },
+            'loadParseItemsFunc': function(fn) {
+                Alexa.tools.feedLoader._preprocessor = fn;
+            },
+            'loadErrorFunc': function(fn) {
+                Alexa.tools.feedLoader._errorHandler = fn;
+            },
+            'loadRSS': function() {
+                Alexa.tools.feedLoader._receivingUpdates = false;
+                if (typeof (window.external.setInterval) != UNDEFINED) {
+                    window.external.setInterval(Alexa.tools.feedLoader._interval);
+                    Alexa.tools.feedLoader._receivingUpdates = (0 != Alexa.tools.feedLoader._interval);
+                }
+            },
+
+            '_onFeedData': function(url, feedData, time, expires, status, headers) {
+                if (null != Alexa.tools.feedLoader._preprocessor) {
+                    //TODO: Turn the feedData into the object we want
+                    feedData = new Object();
+                    Alexa.tools.feedLoader._preprocessor(feedData);
+                    //TODO: Pass back the modified results
+                }
+            },
+            '_onFeedError': function(errorCode, headers) {
+                if (null != Alexa.tools.feedLoader._errorHandler) {
+                    Alexa.tools.feedLoader._errorHandler(errorCode, headers);
+                }
+            },
+            '_onFeedIntervalChanged': function(newInterval) {
+                Alexa.tools.feedLoader._interval = newInterval;
+                Alexa.tools.feedLoader._receivingUpdates = (0 != Alexa.tools.feedLoader._interval);
+            }
+        },
+        'getFeedLoader': function(fn) {
+            return Alexa.tools.feedLoader;
+        }
+    },
+
+    'events': {
+        _mouseOverListeners: [],
+        _mouseOutListeners: [],
+        _siteInfoListeners: [],
+        _leftClickListeners: [],
+        _popupShowingListeners: [],
+        _popupHidingListeners: [],
+        _saveSessionStateListeners: [],
+        _buttonShowingListeners: [],
+        _networkErrorListeners: [],
+        _urlChangeListeners: [],
+        _inMouseOut:false,
+        _inMouseOver:false,
+        _inSiteInfo:false,
+        _inLeftClick:false,
+        _inPopupShowing:false,
+        _inPopupHiding:false,
+        _inSaveSessionState:false,
+        _inButtonShowing:false,
+        _inNetworkError:false,
+        _inUrlChange:false,
+
+        'addSaveSessionStateListener': function(obj) {
+            this._saveSessionStateListeners.push(obj);
+        },
+
+        'addPageTurnListener': function(obj) {
+            this._siteInfoListeners.push(obj);
+        },
+        'addUrlChangeListener': function(obj){
+            this._urlChangeListeners.push(obj);
+        },
+        'addLeftClickListener': function(obj) {
+            this._leftClickListeners.push(obj);
+        },
+
+        'addPopupShowingListener': function(obj) {
+            this._popupShowingListeners.push(obj);
+        },
+
+        'addPopupHidingListener': function(obj) {
+            this._popupHidingListeners.push(obj);
+        },
+        'addMouseOverListener': function(obj) {
+            this._mouseOverListeners.push(obj);
+        },
+        'addMouseOutListener': function(obj) {
+            this._mouseOutListeners.push(obj);
+        },
+        'addButtonShowingListener': function(obj) {
+      this._buttonShowingListeners.push(obj);
+      if(Alexa._buttonized) {
+        setTimeout(function() {
+          Alexa.events._onButtonShowing();;
+        },1);
+      }
+        },
+    'addNetworkErrorListener': function(obj) {
+      this._networkErrorListeners.push(obj);
+    },
+        'addMessageListener': function(obj) {
+            Alexa.messaging.addMessageListener(obj);
+        },
+        'preventDefault': function(ev) {
+            if (ev) {
+                ev.returnValue = false;
+            }
+        },
+        'addListener': function(el, event, callback, capturing/*ignored*/) {
+            if (event == "mouseover") {
+                this._mouseOverListeners.push(callback);
+            } else if (event == "mouseout") {
+                this._mouseOutListeners.push(callback);
+            } else {
+                el.attachEvent("on" + event, callback);
+            }
+        },
+        '_onEvent': function(ev, listeners, lock){
+            if(lock){
+                return;
+            }
+            lock = true;
+            try{
+                for(var i=0,l=listeners.length;i<l;i++){
+                    try {
+                        listeners[i](ev);
+                    }
+                    catch(e){}
+                }
+            }
+            catch(e){}
+            lock = false;
+        },
+        '_onNetworkError': function(ev) {
+            this._onEvent(ev, this._networkErrorListeners, this._inNetworkError);
+        },
+        '_onButtonShowing': function(ev) {
+             this._onEvent(ev, this._buttonShowingListeners, this._inButtonShowing);
+
+        },
+        '_onMouseOver': function(ev) {
+            if (this._inMouseOver) {
+                return;
+            }
+            this._inMouseOver = true;
+
+            try {
+                for (var i = 0,l= this._mouseOverListeners.length; i<l; i++) {
+                    if(   Alexa.events._onMouseOver !=this._mouseOverListeners[i]){
+                    try { this._mouseOverListeners[i](ev); }
+                    catch (e) { }
+                    }
+                }
+            }
+            catch (e) { alert(e); }
+            try {
+                if (typeof Alexa.browser.onmouseover == "function") {
+                    Alexa.browser.onmouseover(ev);
+                }
+            }
+            catch (e) { }
+            try {
+                window.external.onMouseOver();
+            } catch (e) { }
+            this._inMouseOver = false;
+        },
+        '_onMouseOut': function(ev) {
+            if (this._inMouseOut) {
+                return;
+            }
+            this._inMouseOut = true;
+            try {
+                for (var i = 0,l= this._mouseOutListeners.length; i<l; i++) {
+                    if(   Alexa.events._onMouseOut !=this._mouseOutListeners[i]){
+                    try { this._mouseOutListeners[i](ev); }
+                    catch (e) { }
+                    }
+                }
+            }
+            catch (e) { }
+            try {
+                if (typeof Alexa.browser.onmouseout == "function") {
+                    Alexa.browser.onmouseout(ev);
+                }
+            }
+            catch (e) { }
+            try {
+                window.external.onMouseOut();
+            } catch (e) { }
+            this._inMouseOut = false;
+        },
+        '_onLeftClick': function(ev) {
+             this._onEvent(ev, this._leftClickListeners, this._inLeftClick);
+
+        },
+        '_onUrlChange': function(URL){
+            this._onEvent(URL, this._urlChangeListeners, this._inUrlChange);
+
+        },
+        '_onSiteInformationAvailable': function(siteInfo) {
+            this._onEvent(siteInfo, this._siteInfoListeners, this._inSiteInfo);
+        },
+
+        '_onPopupShowing': function(ev) {
+            this._onEvent(ev, this._popupShowingListeners, this._inPopupShowing);
+        },
+        '_onPopupHiding': function(ev) {
+            this._onEvent(ev, this._popupHidingListeners, this._inPopupHiding);
+        },
+        '_onSaveSessionState': function(key, oldvalue, newvalue, time) {
+            if(this._inSaveSessionState){
+                return;
+            }
+            this._inSaveSessionState = true;
+            try{
+            for (var i = 0,l=this._saveSessionStateListeners.length;i<l; i++) {
+                this._saveSessionStateListeners[i](key, oldvalue, newvalue, time)
+            }
+            }
+            catch(e){}
+            this._inSaveSessionState=false;
+            
+        }
+
+    },
+
+    'messaging': {
+        '_receiveMessageListeners': [],
+        '_onPostMessage': null,
+        '_onAcceptMessage': function(message, sender) {
+            var l = this._receiveMessageListeners;
+            for (var i = l.length; i; i--) {
+                l[i - 1](message, sender);
+            } //for
+        }, //function
+        'addMessageListener': function(obj) {
+            this._receiveMessageListeners.push(obj);
+        },
+        'broadcastMessage': function(message) {
+            try {
+                window.external.broadcastMessage(message);
+            }
+            catch (e) { }
+        },
+        'postMessage': function(message, id) {
+            try {
+                if (typeof id != "undefined" && id.length > 0) {
+                    window.external.postMessage(message, id);
+                } else {
+                    window.external.broadcastMessage(message);
+                }
+            } catch (e) { }
+        }
+    },
+    //messaging
+    '_registerContentCallback': function(callback) {
+        try {
+            Alexa.messaging._onPostMessage = null;
+            Alexa.messaging._onPostMessage = callback;
+        } catch (e) { }
+    },
+    '_clearContentCallback': function() {
+        try {
+            Alexa.messaging._onPostMessage = null;
+        } catch (e) { }
+    },
+    '_onLeftClick': function(ev) {
+        try {
+            Alexa.events._onLeftClick(ev);
+        } catch (e) { }
+    },
+    '_onUrlChange': function(URL){
+        try{
+            Alexa.events._onUrlChange(URL);
+        }
+        catch(e){}
+    },
+    '_onSiteInformationAvailableTimer': function(siteInfo){
+        try {
+            Alexa.browser._onSiteInformationAvailable(siteInfo);
+            Alexa.events._onSiteInformationAvailable(siteInfo);
+            Alexa.button.update();
+        } catch (e) { }
+    },
+    '_onSiteInformationAvailable': function(siteInfo) {
+        window.setTimeout(function(){Alexa._onSiteInformationAvailableTimer(siteInfo)}, 1);
+    },
+    '_onPopupShowing': function(ev) {
+        try {
+            Alexa.events._onPopupShowing(ev);
+        } catch (e) { }
+    },
+    '_onPopupHiding': function(ev) {
+        try {
+            Alexa.events._onPopupHiding(ev);
+        } catch (e) { }
+    },
+    '_onFeedData': function(url, feedData, time, expires, status, headers) {
+        try {
+            Alexa.feedLoader._onFeedData(url, feedData, time, expires, status, headers);
+        } catch (e) { }
+    },
+    '_onFeedError': function(errorCode, headers) {
+        try {
+            Alexa.feedLoader._onFeedError(errorCode, headers);
+        } catch (e) { }
+    },
+    '_onFeedIntervalChanged': function(newInterval) {
+        try {
+            Alexa.feedLoader._onFeedintervalChanged(newInterval);
+        } catch (e) { }
+    },
+    '_onSaveSessionState': function(key, oldvalue, newvalue, time) {
+        try {
+            Alexa.events._onSaveSessionState(key, oldvalue, newvalue, time);
+        } catch (e) { }
+    },
+    '_attachSandbox': function(remoteWindow, remoteDocument) {
+        try {
+            window.sandbox = remoteWindow;
+            window.navigator = remoteWindow.navigator;
+            navigator = remoteWindow.navigator;
+            if (remoteDocument) {
+                window.document = remoteDocument;
+                document = remoteDocument;
+//                document.addEventListener = null;
+            }
+            this._sandboxAttached = 1;
+        } catch (e) { }
+    },
+    "_buttonizeWindow": function() {
+        // set up everything
+        if (this._buttonized) {
+            success=true;
+            return;
+        }
+
+            window.document.body.style.overflow = "hidden";
+            var elements = window.document.getElementsByTagName("html");
+            for (var i in elements) {
+                try {
+                    elements[i].style.overflow = "hidden";
+                }
+                catch (e) { }
+            }
+            Alexa.events._onButtonShowing();
+            if (typeof window.document.body.onmouseover === "function" 
+            && window.document.body.onmouseover.ID !== "ALEXA_MOUSEOVER" ) {
+                Alexa.events.addMouseOverListener(window.document.body.onmouseover);
+            }
+            window.document.body.onmouseover = function(ev){Alexa.events._onMouseOver(ev);};
+            window.document.body.onmouseover.ID="ALEXA_MOUSEOVER";
+            
+            if (typeof window.document.body.onmouseout === "function" 
+            && window.document.body.onmouseout.ID !== "ALEXA_MOUSEOUT") {
+                Alexa.events.addMouseOutListener(window.document.body.onmouseout);
+            }
+            window.document.body.onmouseout = function(ev){Alexa.events._onMouseOut(ev);};
+            window.document.body.onmouseout.ID="ALEXA_MOUSEOUT";
+
+        var retVal = false;
+        var toolbarId = "__PLUGIN__REPORTING__IDENTIFIER__";
+        toolbarId=window.external.replacePlaceholders(toolbarId);
+        if((typeof sourceIs).toLowerCase() == "string"){
+            var sourceIsCopy = sourceIs;
+            retVal = (toolbarId.toLowerCase() == sourceIsCopy.toLowerCase());
+        }
+        if(!retVal){throw (typeof sourceIs);}
+        this._buttonized=true;
+    },
+    "_initializeSandbox": function(externalIn) {
+        try {
+            Alexa.tools.sandbox.initialize(externalIn);
+        }
+        catch (e) { }
+    },
+    "_acceptMessage": function(strMessage, strSenderID) {
+        try {
+            Alexa.messaging._onAcceptMessage(strMessage, strSenderID);
+        }
+        catch (e) {
+        }
+    },
+  '_onNetworkError': function(ev) {
+    Alexa.events._onNetworkError(ev);
+  }
+};
+}
+}
+win.Alexa = Alexa;
+(function(){
+String.prototype.replacePlaceholders = function(){return Alexa.tools.replacePlaceholders(this)};
+})();

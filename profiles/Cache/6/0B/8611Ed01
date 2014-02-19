@@ -1,0 +1,447 @@
+(function () {
+    window.A$ = {
+        namespace_name: 'AlexaNS',
+        namespace: null,
+        inherit: function (self_name,parent_name,obj2) {
+            var initializing = false, fnTest = /xyz/.test(function () {
+                xyz;
+            }) ? /\b_super\b/ : /.*/, _super, prototype, new_class, obj1 = this.nsGet(parent_name), self = this;
+            if(parent_name === null) {
+                obj1 = function () {
+                };
+            }else if(!obj1) {
+                return false;
+            }
+            _super = obj1.prototype;
+
+            // Instantiate a base class (but only create the instance,
+            // don't run the init constructor)
+            initializing = true;
+            prototype = new obj1();
+            initializing = false;
+
+            //create new arrays and objects
+            A$.foreach(prototype,function (i,v) {
+                if(v.length !== undefined && v.constructor == Array) {
+                    v = self.clone_array(v);
+                }else if(typeof v === 'object') {
+                    v = self.clone_object(v);
+                }
+            });
+
+            // Copy the properties over onto the new prototype
+            for(var name in obj2) {
+                // Check if we're overwriting an existing function
+                prototype[name] = typeof obj2[name] == "function" && typeof _super[name] == "function" && fnTest.test(obj2[name]) ? (function (name,fn) {
+                    return function () {
+                        var tmp = this._super;
+
+                        // Add a new ._super() method that is the same method
+                        // but on the super-class
+                        this._super = _super[name];
+
+                        // The method only need to be bound temporarily, so we
+                        // remove it when we're done executing
+                        var ret = fn.apply(this,arguments);
+                        this._super = tmp;
+
+                        return ret;
+                    };
+                })(name,obj2[name]) : obj2[name];
+            }
+
+            // The dummy class constructor
+            new_class = function () {
+
+                for(var v in this) {
+                    if(this[v].length !== undefined && this[v].constructor == Array) {
+                        this[v] = self.clone_array(this[v]);
+                    }else if(typeof this[v] === 'object') {
+                        this[v] = self.clone_object_deep(this[v]);
+                    }
+                }
+                ;
+
+                if(!initializing && typeof this.init === 'function') {
+                    this.init.apply(this,arguments);
+                }
+            };
+            // Populate our constructed prototype object
+            new_class.prototype = prototype;
+
+            // Enforce the constructor to be what we expect
+            new_class.constructor = new_class;
+
+            this.nsSet(self_name,new_class);
+            return new_class;
+        },
+        foreach: function (obj,func) {
+            if(obj instanceof Array) {
+                var ret = [], i, l, tmp;
+                for(i = 0, l = obj.length; i < l; i++) {
+                    tmp = func(i,obj[i]);
+                    if(tmp) {
+                        ret.push(tmp);
+                    }
+                }
+                return ret;
+            }else if(obj instanceof Object) {
+                var ret = {}, key, tmp;
+                for(key in obj) {
+                    if(obj.hasOwnProperty(key)) {
+                        tmp = func(key,obj[key]);
+                        if(tmp && tmp[0] && tmp[1]) {
+                            ret[tmp[0]] = tmp[1];
+                        }
+                    }
+                }
+                return ret;
+            }
+        },
+        /** Take the definition object and update the AlexaChart default options
+         * to instead use the custom chart definition
+         * @param definition
+         * @return a set of options which will define the Highcharts chart.
+         */
+        merge: function (source,destination) {
+            for(key in source) {
+                if(source[key] instanceof Object) {
+                    if(destination.hasOwnProperty(key)) {
+                        this.merge(source[key],destination[key]);
+                    }else {
+                        //if doesnt exist in the dest object then just set it
+                        destination[key] = source[key];
+                    }
+                }else {
+                    destination[key] = source[key];
+                }
+            }
+            return destination;
+        },
+        clone_object: function (o) {
+            if(typeof o === 'object') {
+                var f = function () {
+                };
+                f.prototype = o;
+                return new f;
+            }
+            return o;
+        },
+        clone_object_deep: function (o) {
+            var clone = this.clone_object(o);
+            for(var i in clone) {
+                if(typeof clone[i] === 'object') {
+                    clone[i] = this.clone_object_deep(o[i]);
+                }else {
+                    clone[i] = this.clone_object(o[i]);
+                }
+            }
+            return clone;
+        },
+        clone_array: function (a) {
+            if(a.length !== undefined) {
+                a = a.slice(0);
+                return a;
+            }
+        },
+
+        /********************************************************
+         * Utility functions used throughout the alexa website  *
+         ********************************************************/
+        util: {
+            addCommas: function (number) {
+                number += '';
+                parts = number.split('.'); //see if it has a decimal part
+                integer = parts[0];
+                decimal = parts.length > 1 ? '.' + parts[1] : '';
+                var rgx = /(\d+)(\d{3})/;
+                while(rgx.test(integer)) {
+                    integer = integer.replace(rgx,'$1' + ',' + '$2');
+                }
+                return integer + decimal;
+            }
+        },
+        /*************************************************************************
+         * This _ajax object holds methods and propeties for the A$.ajax call *
+         *************************************************************************/
+        _ajax: {
+            active_requests: 0,
+            error_container: 'alexa-ajax-error-container',
+            ajax_error_message: 'There was an unexpected AJAX error.',
+            get_error_container: function () {
+                if(typeof this.error_container === 'function') {
+                    return this.error_container();
+                }else {
+                    return $('#' + this.error_container);
+                }
+            },
+            handle_error: function (error_text,error_data) {
+                this.get_error_container().text(error_text);
+            },
+            clear_error: function () {
+                this.get_error_container().text('');
+            },
+            map_return: function (map,data) {
+                A$.foreach(map,function (k,v) {
+                    if(data[v]) {
+                        $(k).each(function (index) {
+                            $(this).val(data[v]);
+                        });
+                    }
+                });
+            },
+            clear: function (elements) {
+                A$.foreach(elements,function (k,v) {
+                    $(v).val('');
+                });
+            },
+            do_request: function (url,data,settings,onSuccess,type) {
+                var settings = settings || {}, obj = {
+                    'url': url || '',
+                    'data': data || {},
+                    'type': type || 'GET',
+                    'dataType': 'json',
+                    'context': window.A$._ajax,
+                    'complete': function (xhr,status) {
+                        this.active_requests--;
+                    },
+                    'success': function (return_data,text_status,xhr) {
+                        if(settings.clear) {
+                            this.clear(settings.clear);
+                        }
+                        if(return_data && return_data.status) {
+                            if(settings.replace) {
+                                this.map_return(settings.replace,return_data.data);
+                            }
+                            if(typeof onSuccess === 'function') {
+                                onSuccess(return_data.data,text_status,xhr);
+                            }
+                        }else {
+                            if(return_data && return_data.error && return_data.error.msg) {
+                                this.handle_error(return_data.error.msg);
+                            }else {
+                                this.handle_error(this.ajax_error_message);
+                            }
+                            if(typeof settings.onError === 'function') {
+                                settings.onError(error_text,error_data);
+                            }
+                        }
+                    },
+                    'error': function (xhr,text_status,error_thrown) {
+                        debugger;
+                        this.handle_error(this.ajax_error_message);
+                    },
+                    'beforeSend': function (xhr,send_settings) {
+                        //TODO: Add loading pane or something
+
+                        this.clear_error();
+                        this.active_requests++;
+                        if(typeof settings.onBeforeSend === 'function') {
+                            settings.onBeforeSend.call(self,xhr,send_settings);
+                        }
+                    }
+                };
+                $.extend(obj,settings);
+                $.ajax(obj);
+            }
+        },
+        ajax: function (url,data,onSuccess,settings,type) {
+            return this._ajax.do_request(url,data,onSuccess,settings,type);
+        },
+        nsSet: function (name,obj) {
+            if(typeof obj !== 'undefined') {
+                this.namespace[name] = obj;
+            }
+        },
+        nsGet: function (name) {
+            if(typeof name === 'string' && typeof this.namespace[name] !== 'undefined') {
+                return this.namespace[name];
+            }
+            return false;
+        },
+        log: function (msg) {
+
+        },
+        Facebook: {
+            api_id: '197918390426',
+            init_stack: [],
+            script_loaded: false,
+            script_included: false,
+            load: function (func) {
+                var args = Array.prototype.slice.call(arguments,1);
+                if(typeof func === 'function') {
+                    if(this.script_loaded) {
+                        func(args);
+                    }else {
+                        this.init_stack.push({
+                            'func': func,
+                            'args': args
+                        });
+                    }
+                }
+                if(!this.script_included) {
+                    this.include_script();
+                }
+            },
+            on_load: function () {
+                this.script_loaded = true;
+                this.init();
+                for(var i = this.init_stack.length; i; i--) {
+                    var cur = this.init_stack[i - 1];
+                    if(typeof cur['func'] === 'function') {
+                        cur['func'].apply(this,(cur['args']));
+                    }
+                }
+            },
+            include_script: function () {
+                $('<div id="fb-root"></div>').prependTo('body');
+                if(typeof window.FB === 'object') {
+                    A$.Facebook.on_load();
+                    return;
+                }
+                window.fbAsyncInit = function () {
+                    A$.Facebook.on_load();
+                };
+                var e = document.createElement('script');
+                e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+                e.id = 'alexa-facebook-script';
+                e.async = true;
+                document.getElementById('fb-root').appendChild(e);
+                this.script_included = true;
+            },
+            init: function () {
+                FB.init({
+                    appId: this.api_id,
+                    status: true,
+                    cookie: true,
+                    xfbml: true,
+                    oauth: true,
+                    channelUrl: 'https://www.alexa.com/secure/facebook/channel'  // custom channel
+                });
+            },
+            login: function (redirect) {
+                FB.login(function (response) {
+                    if(response.authResponse) {
+                        if(response.status === 'connected') {
+                            $shortLivedToken = response.authResponse.accessToken;
+                            $tokenExpiration = new Date();
+                            $tokenExpiration.setTime($tokenExpiration.getTime()
+                                + (response.authResponse.expiresIn * 1000));
+                            $.cookie("ax_fb_slat", $shortLivedToken,
+                                {expires: $tokenExpiration, path: '/'});
+                            if(typeof redirect === 'function') {
+                                redirect();
+                            }else {
+                                window.location.href = '/login/facebook?resource=' + encodeURIComponent(redirect);
+                            }
+                        }else {
+                            // user is logged in, but did not grant any permissions
+                        }
+                    }else {
+                        // user is not logged in
+                    }
+                },{
+                    scope: 'email'
+                });
+            },
+            valid_user: function (func) {
+                FB.getLoginStatus(function (response) {
+                    if(response.status === 'connected') {
+                        func(true);
+                    }else {
+                        func(false);
+                    }
+                });
+            },
+            wall_post: {
+                wall_properties: {
+                    method: 'feed',
+                    display: 'iframe'
+                },
+                post: function (data) {
+                    var parent = A$.Facebook, self = this, prop = this.wall_properties,
+                        func = function () {
+                            parent.valid_user(function (valid) {
+                                if(valid) {
+                                    FB.ui($.extend(self.stage_post(data),self.wall_properties));
+                                }else {
+                                    parent.login(function () {
+                                        FB.ui($.extend(self.stage_post(data),self.wall_properties))
+                                    });
+                                }
+                            });
+                        };
+                    if(!parent.script_loaded) {
+                        parent.load(function () {
+                            func();
+                        },data);
+                    }else {
+                        func();
+                    }
+                },
+                stage_post: function (data) {
+                    var post;
+                    switch(data['type']) {
+                        //traffic stats tab on siteinfo
+                        case 'siteinfo':
+                            post = {
+                                name: "Check out Alexa's siteinfo page for " + data['site'] + ".",
+                                caption: data['site'] + " - Traffic Details from Alexa",
+                                description: "http://www.alexa.com/siteinfo/" + data['site'],
+                                link: "http://www.alexa.com/siteinfo/" + data['site'],
+                                source: 'http://traffic.alexa.com/graph?&w=400&h=220&o=f&c=1&y=r&b=ffffff&r=1m&u=' + data['site'],
+                                actions: {
+                                    name: "View Traffic Stats",
+                                    link: "http://www.alexa.com/siteinfo/" + data['site'] + "#trafficstats"
+                                }
+                            };
+                            break;
+                        //reviews tab on siteinfo
+                        case 'review':
+                            //star, site, title, text, author, wallposttype
+                            var review_url, tmp = data['site'].split("_");
+                            if(tmp.length > 1) {
+                                data['site'] = tmp[1];
+                                review_url = 'http://www.alexa.com/reviews/single/' + tmp[0];
+                            }else {
+                                review_url = 'http://www.alexa.com/write/review/' + data['site'];
+                            }
+                            post = {
+                                name: data['author'] + " wrote a review for " + data['site'] + " on Alexa",
+                                caption: data['title'],
+                                description: data['text'],
+                                link: 'http://www.alexa.com/siteinfo/' + data['site'] + '#reviews',
+                                source: 'http://www.alexa.com/images/reviews/star-' + data['star'] + '.png',
+                                actions: {
+                                    name: "View Full Review",
+                                    link: review_url
+                                }
+                            };
+                            break;
+                        //user on profile page
+                        case 'profile':
+                            post = {
+                                name: data['author'] + " is a rank " + data['rank'] + " reviewer on Alexa!",
+                                caption: "Check out all " + data['author'] + "'s reviews on Alexa!",
+                                link: data['site'],
+                                source: 'http://www.alexa.com/images/1x1blank.png',
+                                actions: {
+                                    name: "See the Reviews",
+                                    link: data['site']
+                                }
+                            };
+                            break;
+                        default:
+
+                    }
+                    return post;
+                }
+            },
+            isProd: true,
+            useCF: true
+        }
+    };
+
+    window[A$.namespace_name] = {};
+    A$.namespace = window[A$.namespace_name];
+})();

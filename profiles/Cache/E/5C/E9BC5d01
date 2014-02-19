@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<link rel="shortcut icon" href="http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/images/favicon.ico" />
+<title>公共卫生领域空间信息技术应用研究中心</title>
+
+				
+	
+										
+<link rel="alternate" type="application/rss+xml" title="公共卫生领域空间信息技术应用研究中心 &raquo; Feed" href="http://www.slors.cn/cn/en/feed/" />
+<link rel="alternate" type="application/rss+xml" title="公共卫生领域空间信息技术应用研究中心 &raquo; Comments Feed" href="http://www.slors.cn/cn/en/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="公共卫生领域空间信息技术应用研究中心 &raquo; 主页 Comments Feed" href="http://www.slors.cn/cn/en/%e6%b5%8b%e8%af%95%e9%a1%b5%e9%9d%a2%e7%9c%8b%e7%9c%8b/feed/" />
+<link rel='stylesheet' id='form-manager-css-css'  href='http://www.slors.cn/cn/wp-content/plugins/wordpress-form-manager/css/style.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dcwp_plugin_admin_dcscf_css-css'  href='http://www.slors.cn/cn/wp-content/plugins/slick-contact-forms/css/admin.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='css_main-css'  href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/stylesheets/styles.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='css_blue-css' title='blue' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/blue.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_dark-violet-css' title='dark-violet' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/dark-violet.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_dark-css' title='dark' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/dark.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_emerald-css' title='emerald' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/emerald.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_golden-css' title='golden' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/golden.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_grapefruit-css' title='grapefruit' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/grapefruit.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_light-brown-css' title='light-brown' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/light-brown.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_lime-css' title='lime' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/lime.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_metallic-blue-css' title='metallic-blue' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/metallic-blue.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_ocean-css' title='ocean' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/ocean.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_olive-css' title='olive' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/olive.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_orange-css' title='orange' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/orange.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_pink-css' title='pink' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/pink.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_raspberry-css' title='raspberry' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/raspberry.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_sky-blue-css' title='sky-blue' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/sky-blue.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='alternate stylesheet' id='css_violet-css' title='violet' href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/colors/violet.css?ver=3.3.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='css_ddsmoothmenu-css'  href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/stylesheets/ddsmoothmenu.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='css_tipsy-css'  href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/stylesheets/tipsy.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='css_custom-css'  href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/stylesheets/custom.php?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='css_slider_round-css'  href='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/stylesheets/round-slider.css?ver=3.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.slors.cn/cn/wp-content/plugins/contact-form-7/styles.css?ver=3.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp_dlmp_styles-css'  href='http://www.slors.cn/cn/wp-content/plugins/download-monitor/page-addon/styles.css?ver=3.3.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/plugins/slick-contact-forms/js/jquery.easing.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/plugins/slick-contact-forms/js/jquery.hoverIntent.minified.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/plugins/slick-contact-forms/js/jquery.slick.contact.1.3.2.js?ver=3.3.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var fm_user_I18n = {"ajaxurl":"http:\/\/www.slors.cn\/cn\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/plugins/wordpress-form-manager/js/userscripts.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/js/round-slider.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/js/jquery.easing.1.3.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/js/jquery.watermarkinput.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/js/ddsmoothmenu.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/js/jquery.tipsy.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/js/jquery.scrollTo-min.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/js/jquery.localscroll-min.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/js/jquery.flexibleColumns.min.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/js/jquery.preloader.js?ver=3.3.1'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/js/common.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-includes/js/comment-reply.js?ver=20090102'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.slors.cn/cn/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.slors.cn/cn/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='示例页面' href='http://www.slors.cn/cn/en/sample-page/' />
+<link rel='next' title='中心简介' href='http://www.slors.cn/cn/en/%e4%b8%ad%e5%bf%83%e7%ae%80%e4%bb%8b/' />
+<meta name="generator" content="WordPress 3.3.1" />
+<link rel='canonical' href='http://www.slors.cn/cn/en/' />
+	<style type='text/css'>
+	.download-info .download-button {
+		background-image: url(http://www.slors.cn/cn/wp-content/plugins/download-monitor/page-addon/downloadbutton.gif);
+	}
+	.download-info .more-button {
+		background-image: url(http://www.slors.cn/cn/wp-content/plugins/download-monitor/page-addon/morebutton.gif);
+	}
+	</style>
+
+<meta http-equiv="Content-Language" content="en-US" />
+<style type="text/css" media="screen">
+.qtrans_flag span { display:none }
+.qtrans_flag { height:12px; width:18px; display:block }
+.qtrans_flag_and_text { padding-left:20px }
+.qtrans_flag_zh { background:url(http://www.slors.cn/cn/wp-content/plugins/qtranslate/flags/cn.png) no-repeat }
+.qtrans_flag_en { background:url(http://www.slors.cn/cn/wp-content/plugins/qtranslate/flags/gb.png) no-repeat }
+</style>
+<link hreflang="zh" href="http://www.slors.cn/cn/" rel="alternate" />
+	
+	<script type="text/javascript">jQuery(document).ready(function () {
+	jQuery('#round-slider').css('display', 'block');
+	jQuery("#round-slider").waterwheelCarousel("horizontal",{
+		startingItem:           Math.ceil(jQuery('#round-slider').find('img').length / 2),
+		startingItemSeparation: 150,
+		itemSeparationFactor:   0.5,
+		startingWaveSeparation: 35,
+		waveSeparationFactor:   0.75,
+		itemDecreaseFactor:     0.8,
+		opacityDecreaseFactor:  0.5,
+		centerOffset:           35,
+		flankingItems:          4,
+		speed:                  300,
+		animationEasing:			'swing',
+		quickerForFurther:		true,
+		clickedCenter: function(e) {
+			var link_id = jQuery(e).attr('rel');
+			if (link_id != undefined) {
+				window.location.href = jQuery(link_id).attr('href');
+				return false;
+			}
+		},
+		movedToCenter: function(e) {
+			jQuery('#round-slider > img').each(function() {
+				jQuery(this).css({cursor: 'default'});
+			});
+			if (jQuery(e).attr('rel') != undefined)
+				jQuery(e).css({cursor: 'pointer'});
+		}
+	});
+});
+</script>
+	</head>
+<body>
+<!-- Begin Container -->
+<div class="container">
+	<!-- Begin Header -->
+	<div id="header">
+		<!-- Site Logo -->
+		<a href="http://www.slors.cn/cn/" class="logo">
+			<img src="http://www.slors.cn/cn/wp-content/uploads/2012/03/LOGO_new26.png" alt="" />
+		</a>
+		<!-- SearchBox -->
+		<form role="search" method="get" id="searchform" action="http://www.slors.cn/cn/en/" >
+	<div><label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" value="" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="Search" />
+	</div>
+	</form>		<div class="clear"></div>
+	</div>
+	<!-- End Header -->
+	<!-- Start Main Nav -->
+	<div id="MainNav">
+		<a href="http://www.slors.cn/cn/" class="home_btn"><img src="http://www.slors.cn/cn/wp-content/themes/Paradise/Paradise/images/icon_home.gif" width="17" height="19" alt="Home" /></a>
+		<div id="menu">
+		<ul id="menu-%e9%a6%96%e9%a1%b5%e4%b8%bb%e8%8f%9c%e5%8d%95" class="ddsmoothmenu"><li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="http://www.slors.cn/cn/en/%e4%b8%ad%e5%bf%83%e7%ae%80%e4%bb%8b/">中心简介</a></li>
+<li id="menu-item-147" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147"><a href="http://www.slors.cn/cn/projects/sub-center-intro/">分中心介绍</a></li>
+<li id="menu-item-150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"><a href="http://www.slors.cn/cn/gallery/member/">中心人员</a>
+<ul class="sub-menu">
+	<li id="menu-item-380" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-380"><a href="http://www.slors.cn/cn/环境健康遥感诊断研究团队/">环境健康遥感诊断研究团队</a></li>
+	<li id="menu-item-956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-956"><a href="http://www.slors.cn/cn/en/%e4%ba%ba%e6%89%8d%e5%bc%95%e8%bf%9b/">人才引进</a></li>
+</ul>
+</li>
+<li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13"><a href="http://www.slors.cn/cn/en/category/%e6%9c%80%e6%96%b0%e5%8a%a8%e6%80%81/">最新动态</a></li>
+<li id="menu-item-215" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-215"><a href="http://www.slors.cn/cn/en/category/%e7%bb%bc%e5%90%88%e6%96%b0%e9%97%bb/">综合新闻</a></li>
+<li id="menu-item-479" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-479"><a href="http://www.slors.cn/cn/en/category/%e5%b7%a5%e4%bd%9c%e5%86%85%e5%ae%b9/">工作内容</a>
+<ul class="sub-menu">
+	<li id="menu-item-314" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-314"><a href="http://www.slors.cn/cn/en/category/%e5%b7%a5%e4%bd%9c%e5%86%85%e5%ae%b9/%e7%8e%af%e5%a2%83%e5%81%a5%e5%ba%b7%e9%81%a5%e6%84%9f%e8%af%8a%e6%96%ad/">环境健康遥感诊断</a></li>
+	<li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a href="http://www.slors.cn/cn/en/category/%e7%a0%94%e7%a9%b6%e6%88%90%e6%9e%9c/">发表文章</a></li>
+</ul>
+</li>
+<li id="menu-item-567" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-567"><a href="http://www.slors.cn/cn/%E4%B8%8B%E8%BD%BD%E4%B8%93%E5%8C%BA/">下载专区</a></li>
+<li id="menu-item-490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="http://www.slors.cn/cn/en/%e6%98%9f%e5%85%89%e9%81%a5%e6%84%9f%e7%88%b1%e5%bf%83%e5%9f%ba%e9%87%91/">星光遥感爱心基金</a></li>
+<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="http://www.slors.cn/cn/en/%e8%81%94%e7%b3%bb%e6%88%91%e4%bb%ac/">联系我们</a></li>
+</ul>		</div>
+				<!-- Start Social Icons -->
+			<ul class="social">
+						</ul>
+		<!-- End Social Icons -->
+		<div class="clear"></div>
+	</div>
+	<!-- End Main Nav -->
+		<div class="slider_wrapper">
+	<div id="round-slider" style="display:none;">
+		<img width="400" height="220" src="http://www.slors.cn/cn/wp-content/uploads/2012/03/team-400x220.png" class="attachment-slider_round wp-post-image" alt="team" title="" /><img width="400" height="220" src="http://www.slors.cn/cn/wp-content/uploads/2012/03/second1-400x220.jpg" class="attachment-slider_round wp-post-image" alt="second" title="" rel="#slide-119" /><img width="400" height="220" src="http://www.slors.cn/cn/wp-content/uploads/2012/02/banner-400x220.png" class="attachment-slider_round wp-post-image" alt="banner" title="" rel="#slide-19" /><img width="400" height="204" src="http://www.slors.cn/cn/wp-content/uploads/2012/03/fenzhongxin-e1331201260119.png" class="attachment-slider_round wp-post-image" alt="fenzhongxin" title="" rel="#slide-116" /><img width="400" height="220" src="http://www.slors.cn/cn/wp-content/uploads/2012/03/result-400x220.jpg" class="attachment-slider_round wp-post-image" alt="result" title="" rel="#slide-89" />	</div>
+	<div id="round-slider-links" style="display:none;">
+				<a id="slide-119" href="http://www.slors.cn/cn/en/%e7%ac%ac%e4%ba%8c%e5%b1%8a%e7%8e%af%e5%a2%83%e5%81%a5%e5%ba%b7%e9%81%a5%e6%84%9f%e8%af%8a%e6%96%ad%e5%9b%bd%e9%99%85%e5%ad%a6%e6%9c%af%e7%a0%94%e8%ae%a8%e4%bc%9a%e5%9c%a8%e6%88%90%e9%83%bd%e4%b8%be/"></a>				<a id="slide-19" href="http://www.slors.cn/cn/en/%e4%b8%ad%e5%bf%83%e7%ae%80%e4%bb%8b/"></a>				<a id="slide-116" href="http://www.slors.cn/cn/projects/sub-center-intro/"></a>				<a id="slide-89" href="http://www.slors.cn/cn/en/category/%e7%a0%94%e7%a9%b6%e6%88%90%e6%9e%9c/"></a>			</div>
+</div>
+		<!-- Start Featured Home Page Line -->
+	<div id="featured_line">
+		<div style="width:100%"><div style="width:90%; float:left;"><h2>热烈祝贺公共卫生领域空间信息技术应用研究中心成立十周年</h2></div><div style="width:10%; float:right;"><a href="http://www.slors.cn/cn/10th/" target="_self"  class="btn alignright big" style="display:block;"><h4>查看详情</h4></a></div></div>		<div class="clear"></div>
+	</div>
+	<!-- End Featured Home Page Line -->
+			<!-- Start Content Wrapper -->
+		<div id="content_wrapper_sbr">
+	
+		<!-- Content Area -->
+		<div id="content">
+					<div class="box">
+					<div>
+<div>
+<h3>最新动态</h3>
+</div>
+
+
+
+
+</div>
+<div id="widgetized-area">
+	<div id="recentpostswidget-4" class="widget-container widget_recent_posts">			<ul>
+							<li>
+					<div>
+						<a href="http://www.slors.cn/cn/en/%e7%ac%ac%e4%b8%89%e5%b1%8a%e7%8e%af%e5%a2%83%e5%81%a5%e5%ba%b7%e9%81%a5%e6%84%9f%e8%af%8a%e6%96%ad%e5%9b%bd%e9%99%85%e5%ad%a6%e6%9c%af%e7%a0%94%e8%ae%a8%e4%bc%9a%e8%83%9c%e5%88%a9%e5%8f%ac%e5%bc%80/">
+							<img width="260" height="125" src="http://www.slors.cn/cn/wp-content/uploads/2013/10/8x15-260x125.jpg" class="pic alignleft wp-post-image" alt="8x15" title="" />							<h4>第三届环境健康遥感诊断国际学术研讨会胜利召开</h4>
+							<div class="short">(中文) 2013年9月28日至30日，第三届环境健康遥感诊断国际学术研讨会在深圳胜利召开，来自国内外近100名专家学者参加会议。会议由由中心主办，深圳市疾病预防控制中心、深圳市预防医学会和遥感科学国家重点实验室联合承办。</div>							<span class="date">%A %B %e%q, %Y</span>						</a>
+					</div>
+				</li>
+							<li>
+					<div>
+						<a href="http://www.slors.cn/cn/en/%e4%b8%ad%e6%b3%b0%e9%a1%b9%e7%9b%ae%e4%b8%ad%e6%96%b9%e4%bb%a3%e8%a1%a8%e5%9b%a2%e8%ae%bf%e6%b3%b0/">
+							<img width="260" height="125" src="http://www.slors.cn/cn/wp-content/uploads/2013/10/zhongtaiheying260-172-260x125.jpg" class="pic alignleft wp-post-image" alt="zhongtaiheying260-172" title="" />							<h4>&#8220;中泰卫星在泰国的洪灾管理应用项目&#8221;中方代表团访泰</h4>
+							<div class="short">(中文) 2013年9月20日至25日，根据“中泰卫星数据在泰国洪灾多发区的洪灾管理应用”项目执行进程，应泰方的邀请，由中国科学院遥感与数字地球研究所的赵千钧副所长带领作项目的中方成员一行5人，前往泰国的相关部门进行了交流访问。</div>							<span class="date">%A %B %e%q, %Y</span>						</a>
+					</div>
+				</li>
+							<li>
+					<div>
+						<a href="http://www.slors.cn/cn/en/%e6%88%91%e4%b8%ad%e5%bf%83%e8%8e%b7%e3%80%8a%e5%9c%b0%e7%90%83%e9%81%a5%e6%84%9f%e8%af%8a%e6%89%80%e8%b5%84%e6%ba%90%e7%ae%a1%e7%90%86%e7%b3%bb%e7%bb%9f%e3%80%8b%e8%bd%af%e4%bb%b6%e8%91%97%e4%bd%9c/">
+							<img width="260" height="125" src="http://www.slors.cn/cn/wp-content/uploads/2013/07/dqygzs-260x125.png" class="pic alignleft wp-post-image" alt="dqygzs" title="" />							<h4>我中心获《地球遥感诊所资源管理系统》软件著作权授权</h4>
+							<div class="short">(中文) 我中心2013年2月发布的“地球遥感诊所资源管理系统”获国家版权中心软件著作权授权。该软件系统以关系数据库为基础，集成内容管理系统、工作流引擎、版本管理工具，为“地球遥感诊所”系列软件系统提供资源管理支撑和工作流程管理服务。</div>							<span class="date">%A %B %e%q, %Y</span>						</a>
+					</div>
+				</li>
+							<li>
+					<div>
+						<a href="http://www.slors.cn/cn/en/%e5%8c%97%e4%ba%ac%e5%a4%a7%e5%ad%a6%e9%81%a5%e6%84%9f%e4%b8%93%e5%ae%b6%e9%a9%ac%e8%94%bc%e4%b9%83%e6%95%99%e6%8e%88%e6%9d%a5%e4%b8%ad%e5%bf%83%e8%ae%b2%e5%ba%a7/">
+							<img width="260" height="125" src="http://www.slors.cn/cn/wp-content/uploads/2013/06/DSC_79173-260x125.jpg" class="pic alignleft wp-post-image" alt="马蔼乃教授和中心主任曹春香研究员合影" title="" />							<h4>北京大学遥感专家马蔼乃教授来中心讲座</h4>
+							<div class="short">(中文) 2013年6月5日、6月6日，中心执行主任曹春香研究员邀请了北京大学著名遥感专家马蔼乃教授来我中心讲座，马教授为中心及遥感科学国家重点实验室师生就“遥感信息模型”、”天地人机信息一体化系统网络”两个主题展开了详细的讲解。</div>							<span class="date">%A %B %e%q, %Y</span>						</a>
+					</div>
+				</li>
+						</ul>
+
+<div style="height:20px"><a href="category/%e6%9c%80%e6%96%b0%e5%8a%a8%e6%80%81" class="btn alignright small" style="display:block;">Read more</a></div>
+
+		</div>	
+
+</div>
+
+				
+			</div>
+
+			<!-- Content Box -->
+<div class="clear"></div>
+
+
+			<!-- End Content Box -->
+		</div>
+		<!-- End Content Area -->
+				<!-- Sidebar -->
+		<div id="sidebar">
+			<div id="recentpostswidget-2" class="widget-container widget_recent_posts"><h3>综合新闻</h3>			<ul>
+							<li>
+					<div>
+						<a href="http://www.slors.cn/cn/en/%e4%b8%ad%e6%b3%b0%e9%a1%b9%e7%9b%ae%e4%b8%ad%e6%96%b9%e4%bb%a3%e8%a1%a8%e5%9b%a2%e8%ae%bf%e6%b3%b0/">
+							<img width="60" height="55" src="http://www.slors.cn/cn/wp-content/uploads/2013/10/zhongtaiheying260-172-60x55.jpg" class="pic alignleft wp-post-image" alt="zhongtaiheying260-172" title="" />							<h4>&#8220;中泰卫星在泰国的洪灾管理应用项目&#8221;中方代表团访泰</h4>
+														<span class="date">%A %B %e%q, %Y</span>						</a>
+					</div>
+				</li>
+							<li>
+					<div>
+						<a href="http://www.slors.cn/cn/en/%e5%9b%bd%e5%ae%b6863%e8%af%be%e9%a2%98%e5%85%b8%e5%9e%8b%e5%ba%94%e7%94%a8%e9%a2%86%e5%9f%9f%e5%85%a8%e7%90%83%e5%ae%9a%e9%87%8f%e9%81%a5%e6%84%9f%e4%ba%a7%e5%93%81%e7%94%9f%e4%ba%a7/">
+							<img width="60" height="55" src="http://www.slors.cn/cn/wp-content/uploads/2013/05/863-60x55.jpg" class="pic alignleft wp-post-image" alt="863" title="" />							<h4>国家863课题“典型应用领域全球定量遥感产品生产体系”正式启动</h4>
+														<span class="date">%A %B %e%q, %Y</span>						</a>
+					</div>
+				</li>
+							<li>
+					<div>
+						<a href="http://www.slors.cn/cn/en/h7n9%e7%a6%bd%e6%b5%81%e6%84%9f%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%ef%bc%9a%e4%bc%a0%e6%9f%93%e6%ba%90%e4%be%9d%e7%84%b6/">
+														<h4>H7N9禽流感的前世今生：传染源依然</h4>
+														<span class="date">%A %B %e%q, %Y</span>						</a>
+					</div>
+				</li>
+						</ul>
+
+<div style="height:20px"><a href="category/%e7%bb%bc%e5%90%88%e6%96%b0%e9%97%bb" class="btn alignright small" style="display:block;">Read more</a></div>
+
+		</div><div id="recentpostswidget-5" class="widget-container widget_recent_posts"><h3>研究成果</h3>			<ul>
+							<li>
+					<div>
+						<a href="http://www.slors.cn/cn/en/re-trieval-of-fore-st-canopy-attrib-utes-based-on-geometric-optical-model-using-airbor-ne-lidar-and-optical-re-mote-sensing-data/">
+							<img width="260" height="125" src="http://www.slors.cn/cn/wp-content/uploads/2012/03/paper2-260x125.png" class="pic alignleft wp-post-image" alt="paper2" title="" />							<h4>Retrieval of forest canopy attributes based on geometric-optical model using airborne LiDAR and optical remote sensing data</h4>
+																				</a>
+					</div>
+				</li>
+						</ul>
+
+<div style="height:20px"><a href="category/%e7%a0%94%e7%a9%b6%e6%88%90%e6%9e%9c" class="btn alignright small" style="display:block;">Read more</a></div>
+
+		</div>		</div>
+		<!-- End Sidebar -->
+<script type="text/javascript">
+	jQuery(window).load(function() {
+		var offset = jQuery('#sidebar').height();
+		jQuery('#content > .box').each(function(index) {
+			offset -= this.offsetHeight + parseInt(jQuery(this).css('margin-top')) + parseInt(jQuery(this).css('margin-bottom'));
+		});
+		if (offset > 0)
+			jQuery('#content .box:last-child').height(jQuery('#content .box:last-child').height() + offset);
+	});
+</script>		<div class="clear"></div>
+	</div>
+	<!-- End Content Wrapper -->
+</div>
+<!-- End Container -->
+
+
+<!-- Start Footer Sidebar -->
+<div id="f_sidebar">
+	<div class="sb_wrapper">
+		<div id="text-4" class="widget-container widget_text"><h3>联系方式</h3>			<div class="textwidget"><h6><p>通信地址：北京市9718信箱 13分箱</p>
+<p>邮政编码：100101</p>
+<p>中心地址：北京市朝阳区大屯路甲20号北</p>
+<p>电话（传真）: 0086-10-64836205</p>
+<p>电子邮箱：xuyf@irsa.ac.cn</p></h6></div>
+		</div><div id="linkcat-2" class="widget-container widget_links"><h3>相关链接</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="http://cphi.chinacdc.cn/">中国卫生信息学会公共卫生信息专业委员会</a></li>
+<li><a href="http://www.radi.ac.cn/">中国科学院科院遥感与数字地球研究所</a></li>
+<li><a href="http://ime.bmi.ac.cn/">军事医学科学院微生物流行病研究所</a></li>
+<li><a href="http://www.bnu.edu.cn/">北京师范大学</a></li>
+<li><a href="http://www.tsinghua.edu.cn">清华大学</a></li>
+
+	</ul>
+</div>
+<div id="qtranslate-2" class="widget-container widget_qtranslate"><h3>Language</h3><ul class="qtrans_language_chooser" id="qtranslate-2-chooser"><li><a href="http://www.slors.cn/cn/" class="qtrans_flag_zh qtrans_flag_and_text" title="中文"><span>中文</span></a></li><li class="active"><a href="http://www.slors.cn/cn/en/" class="qtrans_flag_en qtrans_flag_and_text" title="English"><span>English</span></a></li></ul><div class="qtrans_widget_end"></div></div><div id="text-5" class="widget-container widget_text"><h3>反馈意见</h3>			<div class="textwidget"><div class="wpcf7" id="wpcf7-f195-w1-o1"><form action="/cn/#wpcf7-f195-w1-o1" method="post" class="wpcf7-form">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="195" />
+<input type="hidden" name="_wpcf7_version" value="3.1.1" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f195-w1-o1" />
+<input type="hidden" name="_wpnonce" value="0910650bc3" />
+</div>
+<p>姓名<br />
+    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" size="40" /></span> </p>
+<p>电邮<br />
+    <span class="wpcf7-form-control-wrap your-email"><input type="text" name="your-email" value="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" size="40" /></span> </p>
+<p>
+    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" class="wpcf7-form-control  wpcf7-textarea" cols="40" rows="10"></textarea></span> </p>
+<p><input type="submit" value="发送" class="wpcf7-form-control  wpcf7-submit" /></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div></div>
+		</div>	</div>
+	<div class="clear"></div>
+</div>
+<!-- End Footer Sidebar -->	<!-- Start Footer  -->
+<div id="footer">
+	<p class="copy">Copyright © 2012 公共卫生领域空间信息技术应用研究中心. All rights reserved.</p>
+	<p class="developed_by">Developed by XX70235</p>
+	<div class="clear"></div>
+</div>
+	<!-- End Footer  -->
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.8.16'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.8.16'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.8.16'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-includes/js/jquery/jquery.color.js?ver=2.0-4561m'></script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/plugins/contact-form-7/jquery.form.js?ver=2.96'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.slors.cn\/cn\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.slors.cn/cn/wp-content/plugins/contact-form-7/scripts.js?ver=3.1.1'></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39201160-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

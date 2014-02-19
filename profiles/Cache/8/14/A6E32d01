@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<searchresults total_results="1">
+                    <addon id="5362">
+  <name>Alexa Sparky</name>
+  <type id="1">Extension</type>
+  <guid>toolbar@alexa.com</guid>
+  <slug>alexa-sparky</slug>
+  <version>1.8.0</version>
+  <status id="4">Fully Reviewed</status>
+  <authors>
+        <author id="4929694">
+      <name>Alexa Internet</name>
+      <link>https://addons.mozilla.org/en-US/firefox/user/alexa-internet/?src=api</link>
+    </author>      </authors>
+  <summary>Get Alexa data in your status bar!</summary>
+  <description>Alexa Internet&#39;s free Firefox extension!  Alexa&#39;s extension accompanies you as you browse, providing you with Alexa data about the sites you visit without interrupting your browsing.
+
+&lt;b&gt;Discover website traffic trends&lt;/b&gt; -- Is this site getting more popular, or less?
+
+&lt;b&gt;Get detailed traffic information including Reach and Rank&lt;/b&gt; -- How does this site&#39;s traffic compare to other sites on the Web?
+
+&lt;b&gt;Surf more efficiently with Related Links for each page&lt;/b&gt; -- If I like this site, are there others that I might want to visit?
+
+Plus, as you browse, you&#39;re helping make the Web a better place for everybody by contributing to the traffic information that Alexa provides.
+
+You can get more information (and more free toolbars) on our website: &lt;a href=&#34;http://outgoing.mozilla.org/v1/3ca6c120e2307fe64d2304891e2ab341eb48af2e/http%3A//alexa.com/toolbar&#34; rel=&#34;nofollow&#34;&gt;http://alexa.com/toolbar&lt;/a&gt;</description><license>
+    <name>Custom License</name>
+    <url>https://addons.mozilla.org/en-US/firefox/addon/alexa-sparky/license/1.8.0</url>
+  </license>  <icon size="64">https://addons.cdn.mozilla.net/img/uploads/addon_icons/5/5362-64.png?modified=1352765286</icon>
+  <icon size="32">https://addons.cdn.mozilla.net/img/uploads/addon_icons/5/5362-32.png?modified=1352765286</icon>
+  <compatible_applications><application>
+      <name>Firefox</name>
+      <application_id>1</application_id>
+      <min_version>3.0.9</min_version>
+      <max_version>25.*</max_version>
+      <appID>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</appID>
+    </application></compatible_applications>
+  <all_compatible_os><os>ALL</os></all_compatible_os>
+  <eula>Alexa Internet Terms of Use Agreement
+
+WEBSITE TERMS OF USE AND END USER LICENSE AGREEMENT
+FOR ALEXA BROWSER COMPANION SOFTWARE (&#34;TOOLBAR SERVICE&#34;)
+
+NOTE: ALEXA&#39;S TOOLBAR SERVICE COLLECTS AND STORES INFORMATION ABOUT THE WEB PAGES YOU VIEW. IN SOME CASES, INFORMATION COLLECTED BY THE TOOLBAR SERVICE MAY BE PERSONALLY IDENTIFIABLE, BUT PRIVACY IS IMPORTANT AT ALEXA, AND WE DO NOT ATTEMPT TO ANALYZE WEB USAGE DATA TO DETERMINE THE IDENTITY OF ANY ALEXA USER.
+
+PLEASE READ THE FOLLOWING AGREEMENT AND PRIVACY POLICY CAREFULLY BEFORE DOWNLOADING AND USING THE TOOLBAR SERVICE SOFTWARE. IF YOU DOWNLOAD AND USE THIS SOFTWARE, YOU WILL BE BOUND BY THE TERMS OF THIS AGREEMENT, INCLUDING THE PRIVACY POLICY.
+
+NOTE: ALL TERMS APPLY BOTH TO THE TOOLBAR SERVICE AS WELL AS TO THE ALEXA WEBSITE(S), WHERE APPLICABLE.
+ACCEPTANCE OF TERMS
+
+THIS AGREEMENT GOVERNS YOUR USE OF ALEXA&#39;S SOFTWARE, WEBSITE, AND INFORMATION.
+
+Alexa Internet Corp. (&#34;Alexa&#34;) offers free downloadable software (&#34;Alexa browser companion&#34; or &#34;Toolbar Service&#34;) that allows users to receive enhanced information about Web pages, websites and products while browsing the Web. Alexa&#39;s software, the information provided by Alexa through its own website and from third parties, and any other Alexa product or service is referred to collectively as the &#34;Service.&#34; Alexa is a wholly owned subsidiary of &lt;a href=&#34;http://outgoing.mozilla.org/v1/e78f88ed75df51187172c7de709431c4eb382d85/http%3A//Amazon.com&#34; rel=&#34;nofollow&#34;&gt;Amazon.com&lt;/a&gt;, Inc. (&#34;&lt;a href=&#34;http://outgoing.mozilla.org/v1/e78f88ed75df51187172c7de709431c4eb382d85/http%3A//Amazon.com&#34; rel=&#34;nofollow&#34;&gt;Amazon.com&lt;/a&gt;&#34;).
+
+Any person who wishes to use Alexa&#39;s Service must agree to the terms and conditions of this Website Terms of Use and End User License Agreement, which includes the Alexa Privacy Policy (collectively, the &#34;Agreement&#34;), as well as all other policies and guidelines incorporated by reference in this Agreement. The Agreement is a binding agreement between you and Alexa.
+
+BY DOWNLOADING OR INSTALLING, REGISTERING FOR, OR USING THE SERVICE, YOU AGREE TO BE BOUND BY ALL TERMS AND CONDITIONS OF THIS AGREEMENT AND ALL POLICIES AND GUIDELINES INCORPORATED BY REFERENCE. PLEASE READ THIS AGREEMENT CAREFULLY. IF YOU DO NOT WISH TO BE BOUND BY THIS AGREEMENT, DO NOT INDICATE YOUR ACCEPTANCE, AND DO NOT USE ALEXA&#39;S SERVICE.
+CHANGES TO THIS AGREEMENT
+
+Alexa may change any of the terms and conditions contained in this Agreement, including the Privacy Policy and other policies and guidelines governing the Service, at any time in its sole discretion. NOTICE OF MATERIAL CHANGES TO THIS AGREEMENT WILL BE POSTED ON ALEXA&#39;S WEBSITE OR ON THE SERVICE BEFORE THEY BECOME EFFECTIVE. YOU ARE RESPONSIBLE FOR REVIEWING THE NOTICE AND ANY APPLICABLE CHANGES.
+
+YOU AGREE THAT YOUR CONTINUED USE OF THE SERVICE FOLLOWING ANY CHANGES TO THIS AGREEMENT AND AFTER THE CHANGES TAKE EFFECT WILL CONSTITUTE YOUR ACCEPTANCE OF SUCH CHANGES.
+
+IF YOU DO NOT AGREE TO FUTURE CHANGES TO THIS AGREEMENT, DO NOT CONTINUE TO USE THE SERVICE AFTER THE EFFECTIVE DATE OF SUCH CHANGES AND UNINSTALL ALL ALEXA SOFTWARE.
+INFORMATION COLLECTED AND STORED BY ALEXA&#39;S SERVICE
+
+To use certain features of the Alexa Service, such as the Alexa Toolbar Service, you must install client application software. The software may cause Alexa to collect and store full Uniform Resource Locators, more commonly known as &#34;URLs,&#34; for Web pages that you view while using the Alexa Service.
+
+For more details about Alexa&#39;s data collection and data use practices, see Alexa&#39;s Privacy Policy, which is a part of this Agreement.
+
+To uninstall any Alexa Software that is on your computer, please visit the Help section of the Software, or see the Alexa Support site.
+Making Websites Invisible to Alexa
+
+Alexa believes that persons who make information available on the Web do so with the expectation that such information will be publicly and widely available and will be indexed by information location tools such as search engines. Alexa further believes that making links to publicly accessible Web pages available from our Service is legally permissible and consistent with the common, customary expectations of those who make use of the Web.
+
+If access to a particular website is restricted, we may remove the link to that site from the Service at the site operator&#39;s request. If, however, the operator of the site does not take steps to prevent it, the automatic software used to create Alexa&#39;s Service is likely to find it and index it again. Instructions for configuring a site to make it &#34;invisible&#34; to Alexa&#39;s automatic indexing software are available at Webmaster Support.
+Privacy Policy
+
+Alexa knows that you care how information about you is used and shared, and we appreciate your trust that we will do so carefully and sensibly. This Privacy Policy is a binding part of Alexa&#39;s Website Terms of Use and End User License Agreement (&#34;Agreement&#34;) and explains the type of information Alexa collects through its website and browser companion software (&#34;Toolbar Service&#34;) and what Alexa does with it. If you download and use Alexa&#39;s Toolbar Service software or use the Alexa website, you will be bound by the terms of the Agreement, including this Privacy Policy. This policy may change from time to time so you should check it frequently.
+
+Alexa is the Web Information Company. We measure Internet activity in order to understand trends, help people discover new content, and help people make better online decisions. Millions of people download Alexa toolbars to help measure the web. In return, Alexa provides toolbar users with information about Internet trends, website popularity, new and exciting topics, and related content.
+
+NOTE: ALEXA&#39;S TOOLBAR SERVICE COLLECTS AND STORES INFORMATION ABOUT THE WEB PAGES YOU VIEW. IN SOME CASES, INFORMATION COLLECTED BY THE TOOLBAR SERVICE MAY BE PERSONALLY IDENTIFIABLE, BUT PRIVACY IS IMPORTANT AT ALEXA, AND WE DO NOT ATTEMPT TO ANALYZE WEB USAGE DATA TO DETERMINE THE IDENTITY OF ANY ALEXA USER.
+What Personal Information About Users Does Alexa Gather?
+
+The information we learn from users helps us continually improve and provide information about Internet trends, website popularity, new and exciting topics, and related content. Here are the types of information we gather.
+
+    Information You Give Us: We receive and store any information you enter on our Web site or give us in any other way. [Click here] to see examples of what we collect. You can choose not to provide certain information, but then you might not be able to take advantage of many of our features. We use the information that you provide for such purposes as responding to your requests, customizing and improving our services, and communicating with you.
+
+    Automatic Information We Collect From the Toolbar Service: When you use the Toolbar Service, we collect information about the websites you visit and the advertisements that you see on those websites, the searches you perform using search engines and when you use the &#34;search&#34; function of the Toolbar Service, the ways in which you use various Toolbar Service features (including whether the Toolbar Service is still installed on your computer), and the pages you view. [Click here] to see examples of what we collect. Although this information may contain some personally identifiable information, Alexa does not use it to determine the identity of individual users or correlate it to your email address or other personally identifiable information that you give us or our affiliates, except as required by subpoenas, court orders, or other legal requirements.
+
+    Automatic Information We Collect from Our Website: We receive and store certain types of information whenever you interact with our website. For example, like many websites, we use &#34;cookies,&#34; and we obtain certain types of information when your Web browser accesses &lt;a href=&#34;http://outgoing.mozilla.org/v1/c5574da65681d0cb53a8d12a331ae2f02e68f637/http%3A//Alexa.com&#34; rel=&#34;nofollow&#34;&gt;Alexa.com&lt;/a&gt;, when you use the Toolbar Service, or when you view advertisements and other content served by or on behalf of &lt;a href=&#34;http://outgoing.mozilla.org/v1/c5574da65681d0cb53a8d12a331ae2f02e68f637/http%3A//Alexa.com&#34; rel=&#34;nofollow&#34;&gt;Alexa.com&lt;/a&gt; on other Web sites. [Click here] to see examples of the information we receive.
+
+    Information from Other Sources: We might receive information about you from other sources. [Click here] to see examples of such information.
+
+What About Cookies?
+
+    Cookies are alphanumeric identifiers that we transfer to your computer&#39;s hard drive through your Web browser, and through our Toolbar Service, to enable our systems to recognize your browser.
+
+    The Help portion of the toolbar on most browsers will tell you how to prevent your browser from accepting new cookies, how to have the browser notify you when you receive a new cookie, or how to disable cookies altogether.
+
+Does Alexa Share the Information it Receives?
+
+We share Alexa user data with our parent corporation, &lt;a href=&#34;http://outgoing.mozilla.org/v1/e78f88ed75df51187172c7de709431c4eb382d85/http%3A//Amazon.com&#34; rel=&#34;nofollow&#34;&gt;Amazon.com&lt;/a&gt;, Inc., and the subsidiaries it controls, and we may share personally identifying information with third parties only as described below.
+
+    Businesses We Do Not Control: We may offer search or other services that are powered or provided by another company. You can tell when a third party is involved in a given service offering, and, if you choose to use the service, we will share information related to your use of the service with that company. For example, if you use a third-party search engine offered through our Toolbar Service, we will transmit your search term and IP address to that company so that it can provide you with the requested search results. Likewise, if you download our Toolbar Service from a third party website, the Toolbar Service may display the third party&#39;s brand, and consequently that third party may receive information about your use of the Toolbar Service.
+
+    Third-Party Service Providers: We employ other companies and individuals to perform functions on our behalf. Examples include storing and analyzing data, providing search results and links (including paid listings and links), and providing customer service. They have access to user information needed to perform their functions, but may not use it for other purposes.
+
+    Business Transfers: As we continue to develop our business, we might sell or buy subsidiaries or business units. In such transactions, user information generally is one of the transferred business assets but remains subject to the promises made in any pre-existing Privacy Notice (unless, of course, the user consents otherwise). Also, in the event that Alexa or substantially all of its assets are acquired, user information will of course be one of the transferred assets.
+
+    Protection of Alexa and Others: We release account and other user information when we believe release is appropriate to comply with the law; enforce or apply our Terms of Use and other agreements; or protect the rights, property, or safety of Alexa, our users, or others. Obviously, however, this does not include selling, renting, sharing, or otherwise disclosing personally identifiable information from users for commercial purposes in violation of the commitments set forth in this Privacy Notice.
+
+    With Your Consent: Other than as set out above, you will receive notice when personally identifiable information about you might go to third parties, and you will have an opportunity to choose not to share the information.
+
+How Secure Is Information About Me?
+
+    Alexa uses commercially reasonable computer security safeguards to protect its databases and servers against risks of loss, unauthorized access, destruction, misuse, modification, or inadvertent or improper disclosure of data.
+
+    Alexa segregates certain personally identifiable and other information about your use of Alexa&#39;s services into separate databases, some of which can be accessed only by a limited number of employees.
+
+    If you have an Alexa account, it is important for you to protect against unauthorized access to your password and to your computer. Be sure to sign off when finished using a shared computer.
+
+What About Third-Party Advertising and Links to Other Websites?
+
+We work with third-party websites, advertisers, and Internet advertising companies working on their behalf, including Amazon (collectively, &#34;Ad Companies&#34;). These Ad Companies may send (or &#34;serve&#34;) advertisements directly to your browser, from our website, our Toolbar Service, and from other websites. They automatically receive your IP address when this happens. They may also use cookies, JavaScript, web beacons (also known as action tags or single-pixel gifs), and other technologies to measure the effectiveness of their ads and to personalize advertising content. The information practices of these Ad Companies are not covered by this Privacy Notice. Please contact them directly for more information about their privacy practices.
+Which Information Can I Access?
+
+If you create an Alexa account, we give you access to the personally identifiable information that you provide to us. [Click here] to see your account information or edit your profile.
+What Choices Do I Have?
+
+    Alexa does not require that you provide us with personally identifiable information in order to use most of Alexa&#39;s services. Therefore, you can always choose not to provide such information.
+
+    You may disable the Toolbar Service from reporting information about your web surfing activities and/or statistics about your use of the Toolbar Service by using the Options menu in the Toolbar Service.
+
+    You may disable the Toolbar Service from sending Alexa any web page, advertisement, or search term information by turning off all Web Information features listed in the Options menu in the Toolbar Service.
+
+    If you do not want to receive e-mail or other mail from us, [click here] to modify your preferences.
+
+    The Help portion of the toolbar on most browsers will tell you how to prevent your browser from accepting new cookies, how to have the browser notify you when you receive a new cookie, or how to disable cookies altogether.
+
+    The Toolbar Service enables you to update certain browser configuration settings, such as your home page or your default search provider.  If supported, you may configure these options during the installation process and in the Options menu in the Toolbar Service.
+
+Are Children Allowed to Use Alexa?
+
+Alexa does not offer products or services for use by children. If you are under 18, you may use Alexa&#39;s website or the Toolbar Service only with the involvement of a parent or guardian.
+Does Alexa Participate in the Safe Harbor Program?
+
+As a subsidiary of &lt;a href=&#34;http://outgoing.mozilla.org/v1/e78f88ed75df51187172c7de709431c4eb382d85/http%3A//Amazon.com&#34; rel=&#34;nofollow&#34;&gt;Amazon.com&lt;/a&gt;, &lt;a href=&#34;http://outgoing.mozilla.org/v1/c5574da65681d0cb53a8d12a331ae2f02e68f637/http%3A//Alexa.com&#34; rel=&#34;nofollow&#34;&gt;Alexa.com&lt;/a&gt; is a participant in the Safe Harbor program developed by the U.S. Department of Commerce and the European Union. We have certified that we adhere to the Safe Harbor Privacy Principles agreed upon by the U.S. and the E.U. For more information about the Safe Harbor and to view our certification, visit the U.S. Department of Commerce&#39;s Safe Harbor Web site. If you would like to contact us directly about the Safe Harbor program, please send an e-mail to safeharbor@amazon.com.
+Conditions of Use, Notices, and Revisions
+
+If you choose to visit Alexa or use the Toolbar Service, any dispute with Alexa over privacy is subject to this Notice and our Terms of Use, including limitations on damages, resolution of disputes, and application of the law of the state of Washington. If you have any concern about privacy at Alexa, please [contact us] with a thorough description, and we will try to resolve it. Our business changes constantly, and our Privacy Notice and the Website Terms of Use will change also. We stand behind the promises we make, however, and will never materially change our policies and practices to make them less protective of customer information collected in the past without the consent of affected customers.
+USER AND OTHER THIRD PARTY CONTENT
+
+&#34;Reviews&#34; are postings authored by you or another user of the Service through the &#34;Reviews Feature&#34; on Alexa&#39;s Services. You are responsible for anything you post in any Review. All Reviews must be accurate and truthful. You may not post in any Review material that you know or reasonably should know to be false or materially misleading, or that is libelous, defamatory, obscene, vulgar, abusive, harassing, threatening, or otherwise objectionable, or that is solely commercial in nature, or that invades a person&#39;s privacy, infringes another person&#39;s intellectual property rights, or otherwise violates any law or regulation.
+
+Alexa is not responsible for, and does not represent or endorse the accuracy or reliability of, any opinion, advice, statement, recommendation or other information included in any Review posted on the Service. Any reliance by you on any such opinion, advice, statement, recommendation or other information in a Review shall be at your sole risk.
+
+Without limiting the foregoing, Alexa retains the right but not obligation in its absolute and sole discretion to screen, edit, or delete any Review or other content displayed, uploaded to, distributed, or otherwise published through the Service and to prevent or restrict access to the Service for any reason, including to purge Reviews, or take any other action to restrict access to or availability of material.
+ANTI-SPAM POLICY AND ACCEPTABLE USE
+
+While we encourage you to refer friends, family, colleagues, and others to use the Service, you may do so only through methods that are consistent with the terms and conditions of your own Internet service provider as well as prevailing standards of acceptable Internet use and behavior. In particular, you may not use the Service, name, trademarks, or other intellectual property of Alexa in conjunction with the sending of unsolicited email, or cause to be used Alexa&#39;s equipment, network connectivity, or other resources to originate, deliver, relay, or otherwise transmit unsolicited email messages. You may not engage in any of these prohibited activities by using the service of any other provider, third-party agent, remailing service, or address forwarding service, in such a way that Alexa&#39;s network addresses or Alexa-hosted Web or email services are in any way identified as being associated with the sending of unsolicited email. Other prohibited methods of advertising or promoting your involvement with Alexa include multiple postings of messages to Usenet newsgroups, mailing lists, chat rooms (including IRC, AIM, ICQ, or other interactive chat services) or other online forums. Incidents of &#34;spamming&#34; or similar inappropriate behavior should be reported to us.
+ACCESS TO ALEXA&#39;S SERVICE
+
+To use the Service, you must provide all your own equipment to establish a connection to the Internet and provide for your own access, including paying any fees.
+OTHER WEBSITES TO WHICH ALEXA&#39;S SERVICE LINK OR REFER
+
+The Web changes constantly, and no technique can ever index all pages accessible on the Web. As a result, Alexa cannot guarantee the completeness or accuracy of the websites or URLs to which Alexa&#39;s Service link or refer.
+
+Further, the process of including websites in Alexa&#39;s Service is largely automatic. Alexa does not screen the websites included in the Service, and these other websites are maintained by persons over whom Alexa exercises no control. For these reasons, Alexa assumes no responsibility for the content of any website or URL included in the Service and is not responsible for errors or omissions or for offensive or objectionable content contained on any website or URL included in the Service.
+
+Alexa occasionally receives requests to change or remove websites listed in the Service. Alexa reserves the right to address such requests on a case-by-case basis, and our editors will review and seriously consider the new suggestions that people enter.
+ILLEGAL, UNAUTHORIZED, OR FRAUDULENT CONTENT OR ACTIVITIES
+
+The Service may be used only for lawful purposes and in a lawful manner. You agree to comply with all applicable laws and regulations.
+
+Alexa has the right, but not the obligation, to monitor any Review, activity, and content associated with the Service. Alexa may investigate any reported violation of its policies and take any action it deems appropriate, including terminating your access to the Service without notice.
+
+Alexa may report any activity it suspects violates any law or regulation to appropriate law enforcement officials, regulators, or other third parties. To cooperate with governmental requests, to protect Alexa&#39;s systems and users, to ensure the integrity and operation of Alexa&#39;s business and systems, or in response to subpoenas, court orders, or legal requirements, Alexa may access and disclose any information it considers necessary or appropriate, including user contact details, IP addressing and traffic information, posted content, and Web usage paths. By using the Service you expressly consent to the foregoing use and disclosure.
+PROPRIETARY RIGHTS
+Intellectual Property and Copyright Infringement Notice
+
+The Service is controlled and operated by Alexa Internet, Presidio of San Francisco, PO Box 29141, San Francisco, CA 94129-0141, contact information . The Service, and all materials on the Service including images, text, illustrations, logos, audio and video files (collectively &#34;intellectual property&#34;), are protected by copyrights, trademarks, servicemarks, or other proprietary rights which are either owned by Alexa, or owned by other parties who have licensed their intellectual property to Alexa. The compilation (meaning the collection, arrangement, and assembly) of all materials on the Service is the exclusive property of Alexa and protected by U.S. and foreign laws and international copyright treaties. Material from the Service and from any other Service owned, operated, controlled, or licensed by Alexa may not be copied, reproduced, republished, uploaded, posted, transmitted, or distributed in any way. Use or modification of Alexa&#39;s intellectual property in any form, including but not limited to use on any other website or networked computer environment, without express written authorization is a violation of Alexa&#39;s copyrights and other proprietary rights and is strictly prohibited.
+Notification and Procedure for Making Claims of Copyright Infringement
+
+You may notify Alexa if your work has been copied in a way that you believe constitutes copyright infringement. In compliance with Title 17, United States Code, Section 512(c)(2), Alexa has designated a Copyright Agent to receive any such notification. Alexa&#39;s Copyright Agent may be contacted at:
+
+Copyright Agent
+c/o Alexa Internet
+Presidio of San Francisco
+P.O. Box 29141
+San Francisco, CA 94129
+
+Facsimile: (415) 561-6795
+Email: copyright-agent@alexa.com
+
+If you wish to notify Alexa&#39;s Copyright Agent of a claim of copyright infringement, please provide written notice. Your notice must contain the following information:
+
+    a physical or electronic signature of the person authorized to act on behalf of the copyright owner;
+
+    identification or description of the copyrighted work you claim has been infringed;
+
+    identification or description of the work you believe is infringing on your copyrighted work and enough information to assist Alexa in locating the allegedly infringing work;
+
+    your address, telephone number, and email address;
+
+    a statement that you have a good faith belief that the use by the person you believe has infringed on your copyright is not authorized by the copyright owner, its agent, or the law;
+
+    your statement, made under penalty of perjury, that the information contained in your notification is accurate, and that you are the copyright owner or are authorized to act on the owner&#39;s behalf.
+
+Trademarks
+
+Alexa, Siblinks, &lt;a href=&#34;http://outgoing.mozilla.org/v1/e78f88ed75df51187172c7de709431c4eb382d85/http%3A//Amazon.com&#34; rel=&#34;nofollow&#34;&gt;Amazon.com&lt;/a&gt;, One-Click Shopping, the &#34;a&#34; logo, and other Alexa and &lt;a href=&#34;http://outgoing.mozilla.org/v1/e78f88ed75df51187172c7de709431c4eb382d85/http%3A//Amazon.com&#34; rel=&#34;nofollow&#34;&gt;Amazon.com&lt;/a&gt; graphics, logos, page headers, button icons, scripts, and service names are trademarks or trade dress of Alexa, &lt;a href=&#34;http://outgoing.mozilla.org/v1/e78f88ed75df51187172c7de709431c4eb382d85/http%3A//Amazon.com&#34; rel=&#34;nofollow&#34;&gt;Amazon.com&lt;/a&gt;, or their affiliates, in the United States and other countries. Neither Alexa&#39;s, &lt;a href=&#34;http://outgoing.mozilla.org/v1/e78f88ed75df51187172c7de709431c4eb382d85/http%3A//Amazon.com&#34; rel=&#34;nofollow&#34;&gt;Amazon.com&lt;/a&gt;&#39;s, nor their affiliates&#39; trademarks may be used in connection with any product or service that is not Alexa&#39;s, &lt;a href=&#34;http://outgoing.mozilla.org/v1/e78f88ed75df51187172c7de709431c4eb382d85/http%3A//Amazon.com&#34; rel=&#34;nofollow&#34;&gt;Amazon.com&lt;/a&gt;&#39;s, or their affiliates&#39;, in any manner that is likely to cause confusion among users, or in any manner that disparages or discredits Alexa, &lt;a href=&#34;http://outgoing.mozilla.org/v1/e78f88ed75df51187172c7de709431c4eb382d85/http%3A//Amazon.com&#34; rel=&#34;nofollow&#34;&gt;Amazon.com&lt;/a&gt;, or their affiliates.
+Software License
+
+The proprietary software associated with the Toolbar Service (&#34;Software&#34;), which shall be deemed to include any enhancements or modifications thereto and any related documentation, is a copyrighted work. Subject to your compliance with all of the terms and conditions of this Agreement, and in consideration of your promises reflected in this Agreement, Alexa grants to you a personal, nonexclusive, nonassignable and nontransferable license to download, install and use the Software to and on a single computer and to use the Software solely to use the Service as permitted under this Agreement. All rights not expressly granted to you by the foregoing sentence are reserved by Alexa. Without limiting the generality of the foregoing, you may not copy, modify, distribute or reverse engineer, decompile or disassemble the Software, except that you may make one copy of the Software for back-up purposes. You may not use the Software for any commercial purpose other than in connection with the Service and as permitted hereunder, and you may not transfer, sell, assign or convey it to another party without Alexa&#39;s prior written consent.
+Other Licenses
+Your Grant
+
+By entering into this Agreement, using the Service, or posting any Review, you grant Alexa and its affiliates a perpetual, nonexclusive, world-wide, royalty-free, irrevocable and fully sublicensable right and license to store, copy, modify, translate, distribute, display and otherwise use your Reviews, and any or all information contained therein, for any purpose whatsoever, including, but not limited to, in marketing or advertising materials, and to exercise all copyright and rights of publicity over the material displayed in your Reviews, in any existing or future media, now known or later developed. You also waive any &#34;moral rights&#34; or rights of attribution or integrity in such content. You are not entitled to any compensation for such use. You also grant Alexa and its affiliates and sublicensees the right to use your nickname or any identifying information that you submit with your Reviews.
+Alexa&#39;s Grant
+
+Subject to your compliance with all the terms and conditions of this Agreement, and in consideration of your promises reflected in this Agreement, Alexa grants to you a limited license to make personal use of the Service. This license expressly excludes, without limitation, any resale, modification, or commercial use of the Service or any portion thereof or any Reviews and making any derivative works based upon or distributing or copying the Service or any Reviews, except as expressly permitted hereunder. You may not frame or utilize framing techniques to enclose any trademark, logo, or other proprietary information of Alexa and its affiliates without express written consent of Alexa. You may not use any meta tags or any other &#34;hidden text&#34; utilizing the name or trademarks of Alexa and its affiliates without the express written consent of Alexa and its affiliates. Any unauthorized use terminates the permission or license granted by Alexa in this paragraph.
+INDEMNIFICATION
+
+You agree to defend, indemnify, and hold harmless Alexa and its affiliates, and each of their officers, directors, employees, agents, representatives, information providers and licensors, from any claims, costs, losses, damages, judgments and expenses, including but not limited to reasonable attorney&#39;s fees, relating to or arising out of any breach of this Agreement or any use of the Service by you, or by any other person using the Service through you or using your computer.
+DISCLAIMER OF WARRANTY
+
+YOU UNDERSTAND AND AGREE THAT THE SERVICE IS PROVIDED ON AN &#34;AS IS&#34; AND &#34;AS AVAILABLE&#34; BASIS. YOU EXPRESSLY AGREE THAT USE OF THIS SERVICE IS AT YOUR SOLE RISK.
+
+TO THE FULLEST EXTENT PERMISSIBLE UNDER THE APPLICABLE LAW, ALEXA INTERNET AND ITS AFFILIATES DISCLAIM ALL WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, WARRANTIES OF TITLE, OR IMPLIED WARRANTIES OF MERCHANTIBILITY OR FITNESS FOR A PARTICULAR PURPOSE. WITHOUT LIMITING THE FOREGOING, NEITHER ALEXA NOR ANY OF ITS AFFILIATES, NOR ANY OF THEIR OFFICERS, DIRECTORS, LICENSORS, EMPLOYEES OR REPRESENTATIVES REPRESENT OR WARRANT (i) THAT THE SERVICE, INCLUDING ITS CONTENT, WILL MEET YOUR REQUIREMENTS OR BE ACCURATE, COMPLETE, RELIABLE, OR ERROR FREE; (ii) THAT THE SERVICE WILL ALWAYS BE AVAILABLE OR WILL BE UNINTERRUPTED, ACCESSIBLE, TIMELY, OR SECURE; (iii) THAT ANY DEFECTS WILL BE CORRECTED, OR THAT THE SERVICE WILL BE FREE FROM VIRUSES, &#34;WORMS,&#34; &#34;TROJAN HORSES&#34; OR OTHER HARMFUL PROPERTIES; (iv) THE ACCURACY, RELIABILITY, TIMELINESS, OR COMPLETENESS OF ANY REVIEW, RECOMMENDATION, OR OTHER MATERIAL PUBLISHED OR ACCESSIBLE ON OR THROUGH THE SERVICE OR THE SITE; (v) THE AVAILABILITY FOR SALE, OR THE RELIABILITY OR QUALITY OF ANY PRODUCTS DISCUSSED, REVIEWED BY USERS OR REFERENCED USING THE SERVICE; (vi) ANY IMPLIED WARRANTY ARISING FROM COURSE OF DEALING OR USAGE OF TRADE; AND (vii) THAT THE SERVICE IS NONINFRINGING. ALEXA INTERNET AND ITS AFFILIATES HEREBY DISCLAIM, AND YOU HEREBY WAIVE AND RELEASE ALEXA INTERNET AND ITS AFFILIATES FROM, ANY AND ALL OBLIGATIONS, LIABILITIES, RIGHTS, CLAIMS OR REMEDIES IN TORT ARISING OUT OR IN CONNECTION WITH THIS AGREEMENT, THE SERVICE OR THE SOFTWARE, WHETHER OR NOT ARISING FROM THE NEGLIGENCE (ACTIVE, PASSIVE OR IMPUTED) OF ALEXA INTERNET OR ITS AFFILIATES.
+
+IF YOU PURCHASE A PRODUCT OR SERVICE REVIEWED BY ANOTHER USER OF THE SERVICE OR OTHERWISE AS A RESULT OF USING THE SERVICE OR ANY REVIEW, AND A DISPUTE ARISES BETWEEN YOU AND THE SELLER, YOU RELEASE ALEXA INTERNET AND ITS AFFILIATES, AND ANY OF ITS OR THEIR OFFICERS, DIRECTORS, LICENSORS, EMPLOYEES OR REPRESENTATIVES, FROM ANY CLAIMS, DEMANDS AND DAMAGES (ACTUAL AND CONSEQUENTIAL) OF EVERY KIND AND NATURE, KNOWN AND UNKNOWN, SUSPECTED AND UNSUSPECTED, DISCLOSED AND UNDISCLOSED, ARISING OUT OF OR IN ANY WAY CONNECTED WITH SUCH DISPUTES.
+
+YOU ACKNOWLEDGE AND AGREE THAT ANY SOFTWARE OR OTHER CONTENT DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SERVICE IS DONE AT YOUR OWN DISCRETION AND RISK AND THAT YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD OF SUCH SOFTWARE AND/OR CONTENT.
+
+SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU. YOU MAY ALSO HAVE OTHER LEGAL RIGHTS, WHICH VARY FROM JURISDICTION TO JURISDICTION.
+LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL ALEXA INTERNET, AMAZON.COM, OR ANY OF THEIR AFFILIATES, OR ANY OF THEIR OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, REPRESENTATIVES, INFORMATION PROVIDERS OR LICENSORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE OR OTHER DAMAGES (REGARDLESS OF THE FORM OF ACTION) ARISING OUT OF (i) USE OF THE SERVICE BY ANY PERSON, INCLUDING BUT NOT LIMITED TO, ANY DAMAGE CAUSED BY ANY RELIANCE ON, OR ANY DELAYS, INACCURACIES, ERRORS OR OMISSIONS IN, ANY INFORMATION AND CONTENT ACCESSED OVER THE SERVICE, (ii) ANY USE OR INABILITY TO USE THE SERVICE FOR WHATEVER REASON, INCLUDING BUT NOT LIMITED TO COMMUNICATIONS FAILURE OR ANY OTHER FAILURE WITH TRANSMISSION OR DELIVERY OF ANY INFORMATION ACCESSED THROUGH THE SERVICE, OR (iii) ANY GOODS OR SERVICE DISCUSSED, PURCHASED OR OBTAINED, DIRECTLY OR INDIRECTLY, THROUGH THE SERVICE, IN EACH CASE EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+SOME JURISDICTIONS DO NOT ALLOW THESE LIMITATIONS OR EXCLUSIONS SO THEY MAY NOT APPLY TO YOU.
+APPLICABLE LAW; JURISDICTION AND VENUE
+
+By visiting &lt;a href=&#34;http://outgoing.mozilla.org/v1/c5574da65681d0cb53a8d12a331ae2f02e68f637/http%3A//Alexa.com&#34; rel=&#34;nofollow&#34;&gt;Alexa.com&lt;/a&gt; or using the Toolbar Service, you agree that this Agreement shall be governed by and construed in accordance with the laws of the State of Washington, without giving effect to any principles of conflicts of laws. Any dispute relating in any way to your visit to &lt;a href=&#34;http://outgoing.mozilla.org/v1/c5574da65681d0cb53a8d12a331ae2f02e68f637/http%3A//Alexa.com&#34; rel=&#34;nofollow&#34;&gt;Alexa.com&lt;/a&gt;, the Toolbar Service, or this Agreement in which the aggregate total claim for relief sought on behalf of one or more parties exceeds $7,500 shall be adjudicated in any state or federal court in King County, Washington, and you consent to exclusive jurisdiction and venue in such courts.
+GENERAL PROVISIONS
+Entire Agreement
+
+This Agreement, which includes the Alexa Privacy Policy, constitutes the entire agreement of the parties with respect to the subject matter hereto and supersedes and cancels all prior and contemporaneous agreements, claims, representations and understandings of the parties in connection with the subject matter, hereof, oral or written.
+Severability
+
+If any provisions of this Agreement shall be deemed unlawful, void, or for any reason unenforceable, then that provision shall be deemed severable from these terms and conditions and shall not affect the validity and enforceability of any remaining provisions.
+No Waiver
+
+Alexa&#39;s failure to enforce the strict performance of any provision of this Agreement will not constitute a waiver of Alexa&#39;s right to subsequently enforce such provisions or any other provisions of this Agreement. No waiver of any provision of this Agreement shall be effective unless in writing.
+Any rights not expressly granted herein are reserved.</eula><previews><preview position="1">
+      <full type="image/png">
+        https://addons.cdn.mozilla.net/img/uploads/previews/full/15/15251.png?src=api&amp;modified=1331247702
+      </full>
+      <thumbnail type="image/png">
+        https://addons.cdn.mozilla.net/img/uploads/previews/thumbs/15/15251.png?src=api&amp;modified=1331247702
+      </thumbnail><caption>    *  Sparky is a free FireFox browser plugin that accompanies you as you surf, providing useful information about the sites you visit without interrupting your Web browsing.</caption></preview><preview position="1">
+      <full type="image/png" width="230" height="108">
+        https://addons.cdn.mozilla.net/img/uploads/previews/full/15/15252.png?src=api&amp;modified=1331247702
+      </full>
+      <thumbnail type="image/png" width="200" height="93">
+        https://addons.cdn.mozilla.net/img/uploads/previews/thumbs/15/15252.png?src=api&amp;modified=1331247702
+      </thumbnail><caption>Sparky&#39;s trendline feature allows you to track a website&#39;s popularity over time, plotting the traffic rank for the last 4 months on a handy little sparkline.</caption></preview><preview position="1">
+      <full type="image/png" width="230" height="108">
+        https://addons.cdn.mozilla.net/img/uploads/previews/full/15/15253.png?src=api&amp;modified=1331247702
+      </full>
+      <thumbnail type="image/png" width="200" height="93">
+        https://addons.cdn.mozilla.net/img/uploads/previews/thumbs/15/15253.png?src=api&amp;modified=1331247702
+      </thumbnail><caption>Sparky&#39;s reach and rank features give you a quick overview of a site&#39;s popularity. The blue bar gives you an overall indicator - is this site popular or not? The rank number tells you exactly how this site ranks in comparison to all other sites on the Web.</caption></preview><preview position="1">
+      <full type="image/png" width="230" height="154">
+        https://addons.cdn.mozilla.net/img/uploads/previews/full/15/15254.png?src=api&amp;modified=1331247702
+      </full>
+      <thumbnail type="image/png" width="200" height="133">
+        https://addons.cdn.mozilla.net/img/uploads/previews/thumbs/15/15254.png?src=api&amp;modified=1331247702
+      </thumbnail><caption>Sparky also comes with Alexa&#39;s famous patented Related Links feature built right into the browser. Now, no matter what site you are on, Sparky can help you find similar sites.</caption></preview><preview position="1">
+      <full type="image/png" width="230" height="220">
+        https://addons.cdn.mozilla.net/img/uploads/previews/full/15/15255.png?src=api&amp;modified=1331247702
+      </full>
+      <thumbnail type="image/png" width="156" height="150">
+        https://addons.cdn.mozilla.net/img/uploads/previews/thumbs/15/15255.png?src=api&amp;modified=1331247702
+      </thumbnail><caption>With a click on Sparky you have immediate access to a wealth of additional information. Do a search for the site, find sites that link to it, see who owns it, where it is located, related links and much much more.</caption></preview></previews><rating>4</rating>
+  <learnmore>https://addons.mozilla.org/en-US/firefox/addon/alexa-sparky/?src=api</learnmore><install hash="sha256:8a9c3711d6e64339ebcf06c623e089d8114449fc41bbacbc04ced5fc7f5e87a6"
+    os="ALL"
+    size="86749">https://addons.mozilla.org/firefox/downloads/file/205892/alexa_sparky-1.8.0-fx.xpi?src=api</install>
+  <developer_comments></developer_comments>
+    <reviews num="83">
+      https://addons.mozilla.org/en-US/firefox/addon/alexa-sparky/reviews/?src=api
+    </reviews>
+    <total_downloads>1780032</total_downloads>
+    <weekly_downloads>1212</weekly_downloads>
+    <daily_users>25090</daily_users>
+    <created epoch="1184783724">
+      2007-07-18T18:35:24Z
+    </created>
+    <last_updated epoch="1367369171">
+      2013-05-01T00:46:11Z
+    </last_updated>
+    <homepage>http://www.alexa.com/</homepage>
+    <support>http://www.alexa.com/help</support>
+    <featured>0</featured>
+        <performance>
+      </performance>
+    </addon>
+
+          </searchresults>

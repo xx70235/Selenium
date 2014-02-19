@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sat Nov 02 17:36:36 CST 2013
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=SBrowserSwing.jar
+manifest.mergeall=true
+manifest.mainclass=SBrowserSwing
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=

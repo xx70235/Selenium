@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=700">
+    <title>Discover Add-ons</title>
+    <link rel="stylesheet" media="all" href="https://addons.cdn.mozilla.net/media/css/zamboni/discovery-pane-min.css?build=9bf4214" />
+    <base target="_blank" href="https://addons.mozilla.org">
+      </head>
+  <body class="html-ltr firefox pane no-recs"
+        data-app="firefox"
+        data-appname="Firefox"
+        data-appid="1"
+        data-min-beta-version="3.7"
+        data-anonymous="true"
+        data-readonly="false"
+        data-media-url="https://addons.cdn.mozilla.net/media/"
+        data-show-recs="true"
+        data-version="24.0"
+data-platform="WINNT"
+data-services-url="https://services.addons.mozilla.org"
+data-recs-url="https://services.addons.mozilla.org/en-US/firefox/discovery/recs/24.0/WINNT/normal"
+data-account-url="https://services.addons.mozilla.org/en-US/firefox/discovery/pane/account"
+data-featured-url="https://services.addons.mozilla.org/en-US/firefox/discovery/pane/featured/24.0/WINNT/normal"
+data-upandcoming-url="https://services.addons.mozilla.org/en-US/firefox/discovery/pane/up-and-coming/24.0/WINNT/normal"
+>
+      <header>
+    <section id="intro">
+      <h1>
+        <img src="https://addons.cdn.mozilla.net/media/img/zamboni/discovery_pane/logo-addons.png?b=6214461-5268169d" width="87" height="82">
+        <span class="translate" data-trans="title">
+          What are Add-ons?
+        </span>
+      </h1>
+      <p>
+        <span class="translate" data-trans="intro">
+          Add-ons are applications that let you personalize Firefox with extra functionality or style. Try a time-saving sidebar, a weather notifier, or a themed look to make Firefox your own.        </span>
+        <a href="/en-US/firefox/" id="learn-more" class="button translate" data-trans="close">Learn More</a>
+      </p>
+    </section>
+    <section id="right-module"></section>
+  </header>
+
+  <section id="main">
+
+    <section id="promos" data-promo-url="https://services.addons.mozilla.org/en-US/firefox/discovery/pane/promos/24.0/WINNT">
+      <ul id="nav-features">
+        <li class="nav-prev"><a href="#" class="prev">Previous</a></li>
+        <li class="nav-next"><a href="#" class="next">Next</a></li>
+      </ul>
+      <ul class="slider"></ul>
+    </section>
+
+        <section id="featured-addons">
+      <h2 class="translate" data-trans="featured">Featured Add-ons</h2>
+      <div class="addons">
+        <ul>
+              <li class="featured-addons" data-guid="superstart@enjoyfreeware.org">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/318228/?src=discovery-featured"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/318/318228-32.png?modified=1375545715" width="32" height="32">
+                  <h3 class="htruncate">Super Start</h3>
+          <p class="desc vtruncate">Just another visual bookmarks (like speed dial or fast dial) and a simple todo-list in your homepage. Go to add-ons manager or right click for options.</p>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="{c72c0c73-4eb0-4fb3-af0f-074e97326cfd}">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/315875/?src=discovery-featured"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/315/315875-32.png?modified=1352236228" width="32" height="32">
+                  <h3 class="htruncate">eCleaner</h3>
+          <p class="desc vtruncate">Clears preferences left by extensions after uninstallation</p>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="printPages2Pdf@reinhold.ripper">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/357589/?src=discovery-featured"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/357/357589-32.png?modified=1377806402" width="32" height="32">
+                  <h3 class="htruncate">Print pages to Pdf</h3>
+          <p class="desc vtruncate">Creates one Pdf from any amount of open Browsertabs,Bookmarks/-folder, Scrapbook(Plus) pages. This document can be archived, sended by e-mail or printed out with any standard Pdf Viewer.</p>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="{8b86149f-01fb-4842-9dd8-4d7eb02fd055}">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/12/?src=discovery-featured"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/media//img/addon-icons/default-32.png" width="32" height="32">
+                  <h3 class="htruncate">All-in-One Gestures</h3>
+          <p class="desc vtruncate">This extension allows you to execute common commands using mouse gestures, rocker navigation, scroll wheel navigation and page...</p>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="gmailnoads@mywebber.com">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/7560/?src=discovery-featured"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/7/7560-32.png?modified=1349884373" width="32" height="32">
+                  <h3 class="htruncate">Webmail Ad Blocker</h3>
+          <p class="desc vtruncate">Expand your email area by blocking and removing ads on the right hand side of the screen when using Gmail, Hotmail, Outlook.com and Yahoo Mail.</p>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="{E6C1199F-E687-42da-8C24-E7770CC3AE66}">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/1237/?src=discovery-featured"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/1/1237-32.png?modified=1380285716" width="32" height="32">
+                  <h3 class="htruncate">QuickJava</h3>
+          <p class="desc vtruncate">Allows quick enable and disable of Java, Javascript, Cookies, Image Animations, Flash, Silverlight, Images, Stylesheets and Proxy from the Statusbar and/or Toolbar.</p>
+              </a>
+    </li>
+  </ul>
+
+      </div>
+    </section>
+    
+    <section id="recs">
+      <div class="header">
+        <h2>
+          Recommended for You
+          <a href="/en-US/faq#personal-recommendations">
+            What is this?</a>
+        </h2>
+      </div>
+      <div class="gallery-wrap">
+        <ul id="nav-recs">
+          <li class="nav-prev"><a href="#" class="prev">Previous</a></li>
+          <li class="nav-next"><a href="#" class="next">Next</a></li>
+        </ul>
+        <div class="gallery-addons">
+          <div class="gallery">
+            <ul class="slider addons"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section id="sub">
+    <div id="watch-video">
+      <a href="/en-US/firefox/" class="video button">Learn More About Add-ons</a>
+    </div>
+          <section class="featured featured-addons" id="up-and-coming">
+        <h2><a class="all" href="/en-US/firefox/extensions/?sort=hotness">See all</a>
+          Up & Coming</h2>
+        <ul>
+              <li class="featured-addons" data-guid="{170503FA-3349-4F17-BC86-001888A5C8E2}">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/465816/?src=discovery-upandcoming"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/465/465816-32.png?modified=1381958555" width="32" height="32">
+                  <span class="htruncate">BestVideoDownloader 2 - Youtube Downloader MP3 MP4</span>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="{b6b1a201-b252-484f-b9fe-68efbb273fbd}">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/466916/?src=discovery-upandcoming"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/466/466916-32.png?modified=1382084811" width="32" height="32">
+                  <span class="htruncate">YouTube HTML5 Player</span>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="{73007fef-a6e0-47d3-b4e7-dfc116ed6f65}">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/466899/?src=discovery-upandcoming"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/466/466899-32.png?modified=1381336944" width="32" height="32">
+                  <span class="htruncate">Google Image  Search</span>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="{bbfa755a-1046-4286-a3ee-d925d7f898b4}">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/467100/?src=discovery-upandcoming"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/467/467100-32.png?modified=1382089556" width="32" height="32">
+                  <span class="htruncate">Facebook  App Theme</span>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="jid1-OY8Xu5BsKZQa6A@jetpack">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/463802/?src=discovery-upandcoming"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/463/463802-32.png?modified=1382998826" width="32" height="32">
+                  <span class="htruncate">Official My JDownloader AddOn</span>
+              </a>
+    </li>
+  </ul>
+
+      </section>
+              <section class="featured featured-themes" id="featured-themes">
+        <h2><a class="all" href="/en-US/firefox/themes/">See all</a>
+          Featured Themes</h2>
+        <ul class="persona-list">
+  <li class="featured-themes"><div class="persona persona-large">
+  <div class="persona-inner">
+    <div class="persona-preview">
+                    <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/batik-firefox/?src=discovery-featured" target="_self"            style="background-image:url('https://addons.mozilla.org/_files/468991/preview.png?1382574036')"
+      data-browsertheme="{&#34;category&#34;:&#34;Firefox&#34;,&#34;iconURL&#34;:&#34;https://addons.mozilla.org/_files/468991/icon.png?1382574036&#34;,&#34;headerURL&#34;:&#34;https://addons.mozilla.org/_files/468991/header.png?1382574036&#34;,&#34;name&#34;:&#34;Batik Firefox&#34;,&#34;author&#34;:&#34;Mozilla Indonesia&#34;,&#34;footer&#34;:&#34;https://addons.mozilla.org/_files/468991/footer.png?1382574036&#34;,&#34;previewURL&#34;:&#34;https://addons.mozilla.org/_files/468991/preview.png?1382574036&#34;,&#34;updateURL&#34;:&#34;https://versioncheck.addons.mozilla.org/en-US/themes/update-check/468991&#34;,&#34;accentcolor&#34;:&#34;#f6f7d2&#34;,&#34;header&#34;:&#34;https://addons.mozilla.org/_files/468991/header.png?1382574036&#34;,&#34;version&#34;:&#34;1.0&#34;,&#34;footerURL&#34;:&#34;https://addons.mozilla.org/_files/468991/footer.png?1382574036&#34;,&#34;detailURL&#34;:&#34;https://addons.mozilla.org/en-US/firefox/addon/batik-firefox/&#34;,&#34;textcolor&#34;:&#34;#ffffff&#34;,&#34;id&#34;:&#34;468991&#34;,&#34;description&#34;:&#34;Desain Batiknya Firefox asli buatan seorang Mozillian dan juga perancang batik.&#34;}">
+                          <span class="addon-title"><b>Batik Firefox</b></span>
+                                  <span class="persona-install">
+            <button class="add">
+              <div>
+                <img src="https://addons.cdn.mozilla.net/media/img/impala/add-small.png?b=6214461-5268169d" alt="Add">
+                <span class="disabled-icon">+</span>
+                <span>Add</span>
+              </div>
+            </button>
+          </span>
+              </a>
+
+      
+          </div>
+  </div>
+</div></li>
+  <li class="featured-themes"><div class="persona persona-large">
+  <div class="persona-inner">
+    <div class="persona-preview">
+                    <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/tetra-fish/?src=discovery-featured" target="_self"            style="background-image:url('https://addons.mozilla.org/_files/468568/preview.png?1382343638')"
+      data-browsertheme="{&#34;category&#34;:&#34;Nature&#34;,&#34;iconURL&#34;:&#34;https://addons.mozilla.org/_files/468568/icon.png?1382343638&#34;,&#34;headerURL&#34;:&#34;https://addons.mozilla.org/_files/468568/header.png?1382343638&#34;,&#34;name&#34;:&#34;tetra fish&#34;,&#34;author&#34;:&#34;antony-2&#34;,&#34;footer&#34;:&#34;https://addons.mozilla.org/_files/468568/footer.png?1382343638&#34;,&#34;previewURL&#34;:&#34;https://addons.mozilla.org/_files/468568/preview.png?1382343638&#34;,&#34;updateURL&#34;:&#34;https://versioncheck.addons.mozilla.org/en-US/themes/update-check/468568&#34;,&#34;accentcolor&#34;:&#34;#None&#34;,&#34;header&#34;:&#34;https://addons.mozilla.org/_files/468568/header.png?1382343638&#34;,&#34;version&#34;:&#34;1.0&#34;,&#34;footerURL&#34;:&#34;https://addons.mozilla.org/_files/468568/footer.png?1382343638&#34;,&#34;detailURL&#34;:&#34;https://addons.mozilla.org/en-US/firefox/addon/tetra-fish/&#34;,&#34;textcolor&#34;:&#34;#321c4d&#34;,&#34;id&#34;:&#34;468568&#34;,&#34;description&#34;:&#34;None&#34;}">
+                          <span class="addon-title"><b>tetra fish</b></span>
+                                  <span class="persona-install">
+            <button class="add">
+              <div>
+                <img src="https://addons.cdn.mozilla.net/media/img/impala/add-small.png?b=6214461-5268169d" alt="Add">
+                <span class="disabled-icon">+</span>
+                <span>Add</span>
+              </div>
+            </button>
+          </span>
+              </a>
+
+      
+          </div>
+  </div>
+</div></li>
+  <li class="featured-themes"><div class="persona persona-large">
+  <div class="persona-inner">
+    <div class="persona-preview">
+                    <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/taiwan-happy-halloween-2013/?src=discovery-featured" target="_self"            style="background-image:url('https://addons.mozilla.org/_files/469211/preview.png?1382689237')"
+      data-browsertheme="{&#34;category&#34;:&#34;Holiday&#34;,&#34;iconURL&#34;:&#34;https://addons.mozilla.org/_files/469211/icon.png?1382689237&#34;,&#34;headerURL&#34;:&#34;https://addons.mozilla.org/_files/469211/header.png?1382689237&#34;,&#34;name&#34;:&#34;Taiwan - Happy Halloween 2013&#34;,&#34;author&#34;:&#34;Mozilla Taiwan&#34;,&#34;footer&#34;:&#34;https://addons.mozilla.org/_files/469211/footer.png?1382689237&#34;,&#34;previewURL&#34;:&#34;https://addons.mozilla.org/_files/469211/preview.png?1382689237&#34;,&#34;updateURL&#34;:&#34;https://versioncheck.addons.mozilla.org/en-US/themes/update-check/469211&#34;,&#34;accentcolor&#34;:&#34;#ed5b21&#34;,&#34;header&#34;:&#34;https://addons.mozilla.org/_files/469211/header.png?1382689237&#34;,&#34;version&#34;:&#34;1.0&#34;,&#34;footerURL&#34;:&#34;https://addons.mozilla.org/_files/469211/footer.png?1382689237&#34;,&#34;detailURL&#34;:&#34;https://addons.mozilla.org/en-US/firefox/addon/taiwan-happy-halloween-2013/&#34;,&#34;textcolor&#34;:&#34;#f5ed0c&#34;,&#34;id&#34;:&#34;469211&#34;,&#34;description&#34;:&#34;Mozilla Taiwan&#39;s Holiday Themes.&#34;}">
+                          <span class="addon-title"><b>Taiwan - Happy Halloween 2013</b></span>
+                                  <span class="persona-install">
+            <button class="add">
+              <div>
+                <img src="https://addons.cdn.mozilla.net/media/img/impala/add-small.png?b=6214461-5268169d" alt="Add">
+                <span class="disabled-icon">+</span>
+                <span>Add</span>
+              </div>
+            </button>
+          </span>
+              </a>
+
+      
+          </div>
+  </div>
+</div></li>
+  <li class="featured-themes"><div class="persona persona-large">
+  <div class="persona-inner">
+    <div class="persona-preview">
+                    <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/happy-halloween-moon/?src=discovery-featured" target="_self"            style="background-image:url('https://addons.mozilla.org/_files/467901/preview.png?1381897237')"
+      data-browsertheme="{&#34;category&#34;:&#34;Holiday&#34;,&#34;iconURL&#34;:&#34;https://addons.mozilla.org/_files/467901/icon.png?1381897237&#34;,&#34;headerURL&#34;:&#34;https://addons.mozilla.org/_files/467901/header.png?1381897237&#34;,&#34;name&#34;:&#34;Happy Halloween Moon&#34;,&#34;author&#34;:&#34;MaDonna&#34;,&#34;footer&#34;:&#34;https://addons.mozilla.org/_files/467901/footer.png?1381897237&#34;,&#34;previewURL&#34;:&#34;https://addons.mozilla.org/_files/467901/preview.png?1381897237&#34;,&#34;updateURL&#34;:&#34;https://versioncheck.addons.mozilla.org/en-US/themes/update-check/467901&#34;,&#34;accentcolor&#34;:&#34;#011f29&#34;,&#34;header&#34;:&#34;https://addons.mozilla.org/_files/467901/header.png?1381897237&#34;,&#34;version&#34;:&#34;1.0&#34;,&#34;footerURL&#34;:&#34;https://addons.mozilla.org/_files/467901/footer.png?1381897237&#34;,&#34;detailURL&#34;:&#34;https://addons.mozilla.org/en-US/firefox/addon/happy-halloween-moon/&#34;,&#34;textcolor&#34;:&#34;#ffffff&#34;,&#34;id&#34;:&#34;467901&#34;,&#34;description&#34;:&#34;Designed by MaDonna\n\nMy wallpaper to match is at: &lt;a href=\&#34;http://outgoing.mozilla.org/v1/9f3bb6db29a3d392232263189a68228267b361e2b39b786ae31d1554da64fb19/http%3A//abstract.desktopnexus.com/wallpaper/1590062/\&#34; rel=\&#34;nofollow\&#34;&gt;http://abstract.desktopnexus.com/wallpaper/1590062/&lt;/a&gt;&#34;}">
+                          <span class="addon-title"><b>Happy Halloween Moon</b></span>
+                                  <span class="persona-install">
+            <button class="add">
+              <div>
+                <img src="https://addons.cdn.mozilla.net/media/img/impala/add-small.png?b=6214461-5268169d" alt="Add">
+                <span class="disabled-icon">+</span>
+                <span>Add</span>
+              </div>
+            </button>
+          </span>
+              </a>
+
+      
+          </div>
+  </div>
+</div></li>
+  <li class="featured-themes"><div class="persona persona-large">
+  <div class="persona-inner">
+    <div class="persona-preview">
+                    <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/hurry-up-halloween/?src=discovery-featured" target="_self"            style="background-image:url('https://addons.mozilla.org/_files/468389/preview.png?1382217638')"
+      data-browsertheme="{&#34;category&#34;:&#34;Holiday&#34;,&#34;iconURL&#34;:&#34;https://addons.mozilla.org/_files/468389/icon.png?1382217638&#34;,&#34;headerURL&#34;:&#34;https://addons.mozilla.org/_files/468389/header.png?1382217638&#34;,&#34;name&#34;:&#34;Hurry Up Halloween&#34;,&#34;author&#34;:&#34;MaDonna&#34;,&#34;footer&#34;:&#34;https://addons.mozilla.org/_files/468389/footer.png?1382217638&#34;,&#34;previewURL&#34;:&#34;https://addons.mozilla.org/_files/468389/preview.png?1382217638&#34;,&#34;updateURL&#34;:&#34;https://versioncheck.addons.mozilla.org/en-US/themes/update-check/468389&#34;,&#34;accentcolor&#34;:&#34;#420028&#34;,&#34;header&#34;:&#34;https://addons.mozilla.org/_files/468389/header.png?1382217638&#34;,&#34;version&#34;:&#34;1.0&#34;,&#34;footerURL&#34;:&#34;https://addons.mozilla.org/_files/468389/footer.png?1382217638&#34;,&#34;detailURL&#34;:&#34;https://addons.mozilla.org/en-US/firefox/addon/hurry-up-halloween/&#34;,&#34;textcolor&#34;:&#34;#ffffff&#34;,&#34;id&#34;:&#34;468389&#34;,&#34;description&#34;:&#34;Designed by MaDonna\n\nMy wallpaper to match is at: &lt;a href=\&#34;http://outgoing.mozilla.org/v1/6ade60e7209f8bf03c67f355f575f8b48c8de6e8cb4bfd76266e4dba6fa7c74e/http%3A//abstract.desktopnexus.com/wallpaper/1593293/\&#34; rel=\&#34;nofollow\&#34;&gt;http://abstract.desktopnexus.com/wallpaper/1593293/&lt;/a&gt;&#34;}">
+                          <span class="addon-title"><b>Hurry Up Halloween</b></span>
+                                  <span class="persona-install">
+            <button class="add">
+              <div>
+                <img src="https://addons.cdn.mozilla.net/media/img/impala/add-small.png?b=6214461-5268169d" alt="Add">
+                <span class="disabled-icon">+</span>
+                <span>Add</span>
+              </div>
+            </button>
+          </span>
+              </a>
+
+      
+          </div>
+  </div>
+</div></li>
+</ul>
+
+      </section>
+        <section id="more-ways">
+      <h2>More ways to customize</h2>
+      <ul>
+        <li id="more-addons">
+          <a href="/en-US/firefox/extensions/">Browse all add-ons</a>
+        </li>
+        <li id="more-complete-themes">
+          <a href="/en-US/firefox/complete-themes/">See all complete themes</a>
+        </li>
+      </ul>
+    </section>
+    <section class="featured" id="promo-video-addons">
+      <h2>
+        <a id="video-close" class="all" href="#">Close Video</a>
+        <span class="translate" data-trans="addons">Add-ons</span>
+      </h2>
+      <div id="video-details">While the video plays, the add-ons being mentioned will appear here.</div>
+      <ul>
+        <li class="featured-themes"><div class="persona persona-large">
+  <div class="persona-inner">
+    <div class="persona-preview">
+                    <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/green-tile/?src=discovery-video" target="_self"            style="background-image:url('https://addons.mozilla.org/_files/349111/preview_large.jpg?1321006968')"
+      data-browsertheme="{&#34;category&#34;:&#34;None&#34;,&#34;iconURL&#34;:&#34;https://addons.mozilla.org/_files/349111/preview_small.jpg?1321006968&#34;,&#34;headerURL&#34;:&#34;https://addons.mozilla.org/_files/349111/top.png?1321006968&#34;,&#34;name&#34;:&#34;Green Tile&#34;,&#34;author&#34;:&#34;gkoberger&#34;,&#34;footer&#34;:&#34;https://addons.mozilla.org/_files/349111/bottom.png?1321006968&#34;,&#34;previewURL&#34;:&#34;https://addons.mozilla.org/_files/349111/preview.jpg?1321006968&#34;,&#34;updateURL&#34;:&#34;https://versioncheck.addons.mozilla.org/en-US/themes/update-check/349111&#34;,&#34;accentcolor&#34;:&#34;#eee0da&#34;,&#34;header&#34;:&#34;https://addons.mozilla.org/_files/349111/top.png?1321006968&#34;,&#34;version&#34;:&#34;1.0&#34;,&#34;footerURL&#34;:&#34;https://addons.mozilla.org/_files/349111/bottom.png?1321006968&#34;,&#34;detailURL&#34;:&#34;https://addons.mozilla.org/en-US/firefox/addon/green-tile/&#34;,&#34;textcolor&#34;:&#34;#404040&#34;,&#34;id&#34;:&#34;349111&#34;,&#34;description&#34;:&#34;&#34;}">
+                          <span class="addon-title"><b>Green Tile</b></span>
+                                  <span class="persona-install">
+            <button class="add">
+              <div>
+                <img src="https://addons.cdn.mozilla.net/media/img/impala/add-small.png?b=6214461-5268169d" alt="Add">
+                <span class="disabled-icon">+</span>
+                <span>Add</span>
+              </div>
+            </button>
+          </span>
+              </a>
+
+      
+          </div>
+  </div>
+</div></li>
+        <li class="featured-themes"><div class="persona persona-large">
+  <div class="persona-inner">
+    <div class="persona-preview">
+                    <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/yellow-flowery/?src=discovery-video" target="_self"            style="background-image:url('https://addons.mozilla.org/_files/349155/preview_large.jpg?1321006974')"
+      data-browsertheme="{&#34;category&#34;:&#34;None&#34;,&#34;iconURL&#34;:&#34;https://addons.mozilla.org/_files/349155/preview_small.jpg?1321006974&#34;,&#34;headerURL&#34;:&#34;https://addons.mozilla.org/_files/349155/top.png?1321006974&#34;,&#34;name&#34;:&#34;Yellow Flowery&#34;,&#34;author&#34;:&#34;gkoberger&#34;,&#34;footer&#34;:&#34;https://addons.mozilla.org/_files/349155/bottom.png?1321006974&#34;,&#34;previewURL&#34;:&#34;https://addons.mozilla.org/_files/349155/preview.jpg?1321006974&#34;,&#34;updateURL&#34;:&#34;https://versioncheck.addons.mozilla.org/en-US/themes/update-check/349155&#34;,&#34;accentcolor&#34;:&#34;#f3eabb&#34;,&#34;header&#34;:&#34;https://addons.mozilla.org/_files/349155/top.png?1321006974&#34;,&#34;version&#34;:&#34;1.0&#34;,&#34;footerURL&#34;:&#34;https://addons.mozilla.org/_files/349155/bottom.png?1321006974&#34;,&#34;detailURL&#34;:&#34;https://addons.mozilla.org/en-US/firefox/addon/yellow-flowery/&#34;,&#34;textcolor&#34;:&#34;#1c1c1c&#34;,&#34;id&#34;:&#34;349155&#34;,&#34;description&#34;:&#34;&#34;}">
+                          <span class="addon-title"><b>Yellow Flowery</b></span>
+                                  <span class="persona-install">
+            <button class="add">
+              <div>
+                <img src="https://addons.cdn.mozilla.net/media/img/impala/add-small.png?b=6214461-5268169d" alt="Add">
+                <span class="disabled-icon">+</span>
+                <span>Add</span>
+              </div>
+            </button>
+          </span>
+              </a>
+
+      
+          </div>
+  </div>
+</div></li>
+        <li class="featured-themes"><div class="persona persona-large">
+  <div class="persona-inner">
+    <div class="persona-preview">
+                    <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/under-the-sea-blue/?src=discovery-video" target="_self"            style="background-image:url('https://addons.mozilla.org/_files/349157/preview_large.jpg?1321006975')"
+      data-browsertheme="{&#34;category&#34;:&#34;Abstract&#34;,&#34;iconURL&#34;:&#34;https://addons.mozilla.org/_files/349157/preview_small.jpg?1321006975&#34;,&#34;headerURL&#34;:&#34;https://addons.mozilla.org/_files/349157/top.png?1321006975&#34;,&#34;name&#34;:&#34;Under The Sea Blue&#34;,&#34;author&#34;:&#34;gkoberger&#34;,&#34;footer&#34;:&#34;https://addons.mozilla.org/_files/349157/footer.png?1321006975&#34;,&#34;previewURL&#34;:&#34;https://addons.mozilla.org/_files/349157/preview.jpg?1321006975&#34;,&#34;updateURL&#34;:&#34;https://versioncheck.addons.mozilla.org/en-US/themes/update-check/349157&#34;,&#34;accentcolor&#34;:&#34;#5c8a81&#34;,&#34;header&#34;:&#34;https://addons.mozilla.org/_files/349157/top.png?1321006975&#34;,&#34;version&#34;:&#34;1.0&#34;,&#34;footerURL&#34;:&#34;https://addons.mozilla.org/_files/349157/footer.png?1321006975&#34;,&#34;detailURL&#34;:&#34;https://addons.mozilla.org/en-US/firefox/addon/under-the-sea-blue/&#34;,&#34;textcolor&#34;:&#34;#ffffff&#34;,&#34;id&#34;:&#34;349157&#34;,&#34;description&#34;:&#34;&#34;}">
+                          <span class="addon-title"><b>Under The Sea Blue</b></span>
+                                  <span class="persona-install">
+            <button class="add">
+              <div>
+                <img src="https://addons.cdn.mozilla.net/media/img/impala/add-small.png?b=6214461-5268169d" alt="Add">
+                <span class="disabled-icon">+</span>
+                <span>Add</span>
+              </div>
+            </button>
+          </span>
+              </a>
+
+      
+          </div>
+  </div>
+</div></li>
+        <li class="featured-addons" data-guid="amznUWL@amazon.com">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/52659/?src=discovery-video"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/52/52659-32.png?modified=1367540398" width="32" height="32">
+                  <span class="htruncate">Add to Amazon Wish List Toolbar</span>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="piclens@cooliris.com">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/5579/?src=discovery-video"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/5/5579-32.png?modified=1343338499" width="32" height="32">
+                  <span class="htruncate">Cooliris 3D Wall</span>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="ffshare@mozilla.org">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/252539/?src=discovery-video"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/252/252539-32.png?modified=1336685095" width="32" height="32">
+                  <span class="htruncate">F1 by Mozilla Labs</span>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="canitbecheaper@trafficbroker.co.uk">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/11377/?src=discovery-video"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/11/11377-32.png?modified=1374219366" width="32" height="32">
+                  <span class="htruncate">InvisibleHand</span>
+              </a>
+    </li>
+        <li class="featured-addons" data-guid="{9AA46F4F-4DC7-4c06-97AF-5035170634FE}">
+      <a href="https://services.addons.mozilla.org/en-US/firefox/discovery/addon/2257/?src=discovery-video"
+         target="_self" class="addon-title">
+        <img src="https://addons.cdn.mozilla.net/img/uploads/addon_icons/2/2257-32.png?modified=1382810266" width="32" height="32">
+                  <span class="htruncate">ImTranslator - Online Translator, Dictionary, TTS</span>
+              </a>
+    </li>
+  </ul>
+
+    </section>
+  </section>
+    <script src="https://addons.cdn.mozilla.net/en-US/firefox/jsi18n.js?b=6214461-5268169d"></script>
+      <script src="https://addons.cdn.mozilla.net/media/js/zamboni/discovery-min.js?build=6214461-5268169d"></script>
+      <script src="https://addons.cdn.mozilla.net/media/js/zamboni/discovery-video-min.js?build=6214461-5268169d" defer></script>
+    <script async defer src="https://addons.cdn.mozilla.net/en-US/firefox/addons/buttons.js?b=6214461-5268169d"></script>
+  </body>
+</html>

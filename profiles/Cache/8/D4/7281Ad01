@@ -1,0 +1,822 @@
+@CHARSET "UTF-8";
+/* 
+* This file will store css used by all projects including www
+* Please do not put project-specific style here 
+*/
+
+.app-1   { padding-right: 4%; }
+.app-2   { padding-right: 8%; }
+.app-3   { padding-right: 12%; }
+.app-4   { padding-right: 16%; }
+.app-5   { padding-right: 20%; }
+.app-6   { padding-right: 25%; }   
+.app-7   { padding-right: 29%; }   
+.app-8   { padding-right: 33%; }
+.app-9   { padding-right: 37%; }
+.app-10  { padding-right: 41%; }
+.app-11  { padding-right: 45%; }
+.app-12  { padding-right: 50%; }
+.app-13  { padding-right: 54%; }
+.app-14  { padding-right: 58%; }
+.app-15  { padding-right: 62%; }
+.app-16  { padding-right: 66%; }
+.app-17  { padding-right: 70%; }
+.app-18  { padding-right: 75%; }
+.app-19  { padding-right: 79%; }
+.app-20  { padding-right: 83%; }
+.app-21  { padding-right: 87%; }
+.app-22  { padding-right: 91%; }
+.app-23  { padding-right: 95%; }
+
+.pre-1   { padding-left: 4%; }
+.pre-2   { padding-left: 8%; }
+.pre-3   { padding-left: 12%; }  
+.pre-4   { padding-left: 16%; }   
+.pre-5   { padding-left: 20%; }  
+.pre-6   { padding-left: 25%; }  
+.pre-7   { padding-left: 29%; }  
+.pre-8   { padding-left: 33%; }  
+.pre-9   { padding-left: 37%; }  
+.pre-10  { padding-left: 41%; }  
+.pre-11  { padding-left: 45%; }  
+.pre-12  { padding-left: 50%; }  
+.pre-13  { padding-left: 54%; }  
+.pre-14  { padding-left: 58%; }  
+.pre-15  { padding-left: 62%; }  
+.pre-16  { padding-left: 66%; }  
+.pre-17  { padding-left: 70%; }  
+.pre-18  { padding-left: 75%; }  
+.pre-19  { padding-left: 79%; }  
+.pre-20  { padding-left: 83%; }  
+.pre-21  { padding-left: 87%; }  
+.pre-22  { padding-left: 91%; }  
+.pre-23  { padding-left: 95%; }  
+
+/***** FONT SPEC *****************************************************************************************/
+
+/* Color Spec */
+.color-body{
+	color: #333;
+}
+.color-premium{
+	color: #f63; /* dark orange */
+}
+.color-p1{ /* INTRO */
+	color: #b2b2b2; /* light gray */
+}
+.color-p2{ /* BASIC */
+	color: #41b0db; /* light blue */
+}
+.color-p3{ /* INSIGHT */
+	color: #2abebe; /* sort of turquoise */
+}
+.color-p4{ /* ADVANCED */
+	color: #fa7600; /* orange */
+}
+.color-p5{ /* SITE AUDIT */
+	color: #339; /* blue */
+}
+.color-gen1{
+	color: #011d5e; /* dark Alexa blue */
+}
+.color-gen2{
+	color: #c32f16; /* red */
+}
+.color-gen3{
+	color: #666; /* dark gray */
+}
+.color-gen4{
+	color: #aaa; /* light gray for pending text */
+}
+
+/* Size Spec */
+.font-body{
+	font-size: 12px;
+}
+.font-1{
+	font-size: 11px;
+}
+.font-2{
+	font-size: 14px;
+}
+.font-3{
+	font-size: 16px;
+}
+.font-4{
+	font-size: 18px;
+}
+.font-5{
+	font-size: 20px; /* to be reviewed */
+}
+.font-big1{
+	font-size: 48px; /* to be reviewed */
+}
+.font-big2{
+	font-size: 24px;
+}
+/***** PAGE LAYOUT STYLES **************************************************************************/
+.page-content{
+	/*background: #fff url(/images/layout/small-gradient.png) top center repeat-x;
+	*/
+	background-color: #fff;
+	min-height: 400px;
+	padding-top: 5px;
+}
+
+/***** CSS BUTTON STYLES ******************************************************************************/
+.btn-css{
+	padding: 5px 7px;
+	color: #fff;
+	font: normal 12px Helvetica, Arial, sans-serif;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 1px 2px #000;
+	-webkit-box-shadow: 0 1px 2px #000;
+	box-shadow: 0 1px 2px #000;
+	cursor: pointer;
+}
+span.btn-css{ /* To be review */
+	 display: inline-block;
+}
+.ie7 .btn-fix{
+	vertical-align: middle;
+}
+.ie7 .btn-css-fix{
+	vertical-align: middle;
+	padding: 3px 7px 7px;
+}
+.ie9 .btn-css{
+	border-radius: 0;
+	box-shadow: 0 2px 1px #666;
+}
+.btn-green{
+	background-color: #4e7300;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a200', endColorstr='#4e7300');
+	background-image: -moz-linear-gradient(top, #68a200, #4e7300);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#68a200), to(#4e7300));
+	background-image: -webkit-linear-gradient(top, #68a200, #4e7300);
+	background-image: linear-gradient(to bottom, #68a200, #4e7300);
+}	
+.btn-blue{
+	background-color: #009ed0;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009ed0', endColorstr='#0066a6');
+	background-image: -moz-linear-gradient(top, #009ed0, #0066a6);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#009ed0), to(#0066a6));
+	background-image: -webkit-linear-gradient(top, #009ed0, #0066a6);
+	background-image: linear-gradient(to bottom, #009ed0, #0066a6);
+}
+.btn-gray{
+	background-color: #999;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999', endColorstr='#666666');
+	background-image: -moz-linear-gradient(top, #999, #666);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#666));
+	background-image: -webkit-linear-gradient(top, #999, #666);
+	background-image: linear-gradient(to bottom, #999999, #666666);
+}
+.btn-yellow{
+	background-color: #ffe672;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe672', endColorstr='#eaad52');
+	background-image: -moz-linear-gradient(top, #ffe672, #eaad52);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffe672), to(#eaad52));
+	background-image: -webkit-linear-gradient(top, #ffe672, #eaad52);
+	background-image: linear-gradient(to bottom, #ffe672, #eaad52);
+	color: #333;
+}
+.btns{
+	margin: 0 10px;
+}
+.fake-btn{
+    cursor: default;
+}
+.btn-css a, .btn-css a:link, .btn-css a:hover, .btn-css a:visited{
+	color: #fff;
+	text-decoration: none;
+}
+.btn-link, .btn-link:link, .btn-link:hover{ /* This is used in btn-css span tag to remove underline when wrapped in a <a> tag */
+	text-decoration: none;
+	cursor: pointer;
+}
+.btn-big{   
+	font-size: 18px;
+	font-weight: normal;
+	padding: 8px 20px;
+}
+.btn-button, .ui-widget .btn-button{  /* This is used for resetting the style for the button tag */
+	background: none;
+	border: 0;
+	padding: 0;
+	border-radius: 4px;
+	-moz-box-shadow: 0 1px 2px #000;
+	box-shadow: 0 1px 2px #000;
+}
+.ff .btn-button, .ff .ui-widget .btn-button{
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.ie9 .btn-button, .ie9 .ui-widget .btn-button{
+	border-radius: 0;
+	box-shadow: 0 1px 1px #666;
+}
+.ie7 .btn-button{
+	overflow: visible;
+	padding: 0;
+	margin: 0; 
+	white-space: nowrap;
+}
+.btn-fixed-wrapper{
+	z-index: 100;
+}
+.btn-fixed{
+	position: absolute;
+}
+
+/***** INLINE ELEM STYLES *************************************************************************/
+
+.valign, .icon-valign{ /* For text or elem next to a smaller or bigger icon */
+	vertical-align: middle;
+}
+.word-wrap{ /* To break long word */
+	width: 140px;  /* default width */
+	word-wrap: break-word;
+	display: inline-block;
+}
+.ie7 .word-wrap{
+	overflow: hidden; 
+}
+.no-wrap{
+	white-space: nowrap;
+}
+.nav-prev{
+	padding-left: 15px;
+	background: transparent url(/images/nav/blue-left-arrow.png) no-repeat 0 50%;
+}
+.nav-next{
+	padding-right: 15px;
+	background: transparent url(/images/nav/blue-right-arrow.png) no-repeat 100% 50%;
+}
+.price sup{
+	vertical-align: text-top;
+	position: relative;
+}
+.hide-text{
+    position: absolute;
+    left: -9999999px; 
+}
+
+/***** ICONS STYLES *************************************************************************/
+.change-wrapper{
+	font-size: 12px;
+	color: #333;
+	padding: 0 0 0 18px;
+    margin:0 0 0 5px;
+}
+.change-down {
+    background: url(/images/arrows/down_arrow.gif) no-repeat;
+    color: #c32f16;  
+}
+.change-up {
+    background: url(/images/arrows/up_arrow.gif) no-repeat;    
+    color: #008000;   
+}
+.no-change {
+    padding: 0 0 0 15px;
+    margin:0 0 0 12px;
+}
+.tt.icon-certify, 
+.icon-certify-text{
+	vertical-align: middle;
+	display: inline-block; 
+}
+.plans .feature-icons{
+	background: transparent url(/pro/images/sprites-matrix.gif) no-repeat 0 0;
+	padding-left: 25px;
+	line-height: 20px;
+}	
+.plans .feature-icon-1{ /* Edit listing */
+	background-position: 0 2px;
+}
+.plans .feature-icon-2{ /* Enhanced Listing */
+	background-position: 0 -51px;
+}
+.plans .feature-icon-3{ /* Certified Site Metrics */
+	background-position: 0 -105px;
+}
+.plans .feature-icon-4{ /* Site Comparisons */
+	background-position: 0 -212px;
+}
+.plans .feature-icon-5{ /* SEO and Site Audits */
+	background-position: 0 -158px;
+}
+.plans .feature-icon-6{ /* Uptime Monitor */
+	background-position: 0 -265px;
+}
+
+/***** LIST & TAB STYLES **************************************************************************/
+
+.page-content .breadcrumbs{
+	margin: 0 15px 10px;
+}
+
+/***** Tabs *****/
+
+.nav-tab {
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 5px 10px 0;
+	list-style:none;
+}
+.nav-tab li {
+	float:left;
+	/*line-height: 1.3em;*/
+	margin-right: 20px;	
+	
+}
+.nav-tab li.selected{
+	-moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    background-color: #fff;    
+    -moz-box-shadow: 0 -1px 2px #999;
+	box-shadow: 0 -2px 2px #999;
+}	
+.nav-tab a, .nav-tab a:link, .nav-tab a:visited, .nav-tab a:hover{
+	display:block;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	color: #8a8c8e;
+	padding: 7px 15px;
+}
+.nav-tab .selected a, .nav-tab .selected a:link, 
+.nav-tab .selected a:visited, .nav-tab .selected a:hover{
+	color: #333;	
+}
+
+/* Support for ie legacy browsers' round corner tabs */
+/* Currently customized for tabs on siteaudit landing page */
+.ie7 .tab-corner, .ie8 .tab-corner,
+.ie7 .tab-mid, .ie8 .tab-mid{
+	float: left;
+}
+.ie7 .tab-mid, .ie8 .tab-mid{
+	padding-top: 10px;
+}
+.ie7 .tab-corner, .ie8 .tab-corner{
+	height: 33px;
+	width: 8px;
+	display: inline-block;
+}
+.ie7 .nav-tab li.selected, .ie8 .nav-tab li.selected{
+	background-color: transparent;
+}
+.ie7 .nav-tab .selected a, .ie7 .nav-tab .selected a:visited,
+.ie8 .nav-tab .selected a, .ie8 .nav-tab .selected a:visited{
+    background: transparent url(/images/layout/tab-mid.png) top right repeat-x;
+}
+.ie8 .tab-corner{
+	height: 32px;
+}
+.ie7 .selected .tab-lt, .ie8 .selected .tab-lt{
+	background: transparent url(/images/layout/tab-lt.png) 0 0 no-repeat;
+}
+.ie7 .selected .tab-rt, .ie8 .selected .tab-rt{
+	background: transparent url(/images/layout/tab-rt.png) 100% 0 no-repeat;
+}
+
+
+/***** Bullets *****/
+
+ol.bullet-green{
+	list-style: none;
+}
+ol.bullet-gray li{
+	background: transparent url('/images/icons/bullet-gray-1.png') no-repeat 0 0;
+	margin-bottom: 20px;
+	padding: 1px 0 1px 30px; /* assume 12px font size and 22px icon */
+}
+ol.bullet-gray li.no-2{
+	background: transparent url('/images/icons/bullet-gray-2.png') no-repeat 0 0;
+}
+ol.bullet-gray li.no-3{
+	background: transparent url('/images/icons/bullet-gray-3.png') no-repeat 0 0;
+}
+
+ul.bullet-disc{
+	color: #333;
+	list-style-type: disc;
+	padding-left: 1em;
+	margin-bottom: 10px;
+} 
+
+/***** FORM STYLES **************************************************************************/
+
+.form input[type="text"], .form select{
+	padding: 4px;
+	margin: 0;
+}
+.form input[type="text"],
+.form input[type="password"],
+.form textarea{
+	width: 95%;
+	color: #333;
+	font: normal normal 12px/1.5 Helvetica,Arial,sans-serif;
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+.form .row{
+	margin: 0 0 8px;
+}
+.form .pad{
+	display: inline-block;
+	padding: 0 10px 0 0;
+}
+.form input.error{
+	border: 2px solid #c32f16; 
+}
+.form label.error{
+	margin-bottom: 0;
+	line-height: 1.1em;
+}
+.form .label-top {
+	margin-bottom: 5px;
+	display: inline-block;
+	padding: 0;
+}
+.form fieldset{
+	margin: 0 0 18px;
+}
+
+/* To be reviewed */
+.form .radio input{
+    margin: 5px 5px 5px 0;
+    vertical-align: middle;
+}
+.form .radio input[type="text"]{
+	margin-left: 20px;
+}
+.form .radio label{
+    font-weight: normal;
+    margin: 5px 0;
+    vertical-align: middle;
+}
+.form .textarea{
+	resize: none;
+}
+
+/***** DIALOG STYLES **************************************************************************/
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{
+	font: 12px normal Helvetica, Arial, sans-serif;
+}
+.ui-dialog.dialog-alexa{
+	border: 5px solid #333;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding: 0;
+}
+.ui-dialog.dialog-alexa .ui-dialog-titlebar{
+	padding: 7px 15px;
+}
+.ui-dialog.dialog-alexa .ui-dialog-title{
+	margin: 0 16px 0 0;
+}
+.ui-dialog.dialog-alexa .ui-widget-header{
+	background-color: transparent;
+	color: #333;
+	font: bold 18px Helvetica,Arial,sans-serif;
+}
+.ui-dialog.dialog-alexa .ui-widget-header .ui-dialog-titlebar-close{
+	color: #fff;
+	top: 50%;
+	right: 7px;
+	padding: 0;
+	border: 0;
+	width: auto;
+}
+.ui-dialog.dialog-alexa .ui-widget-content{
+	font: 12px/1.5em Helvetical, Arial, sans-serif; 
+	padding: 0 15px 15px;
+	color: #333;
+}
+.ui-dialog.dialog-alexa .ui-icon-closethick{
+	background: url("/pro/images/icon-closebtn.jpg") no-repeat scroll 0 0 transparent;
+	width: 16px;
+}
+.ui-dialog.dialog-alexa .dialog-alert{
+	background: transparent url('/pro/images/icon-popup2.jpg') no-repeat 0 0;
+	padding-left: 40px;
+	min-height: 30px;
+}
+.ui-dialog.dialog-alexa a{
+	text-decoration: underline;
+}
+.ui-dialog.dialog-alexa a.btn-link{
+	text-decoration: none;
+}
+.ui-dialog.dialog-alexa table{
+    width: 100%;
+}
+.ui-dialog.dialog-alexa tbody{
+    background-color: #fff;
+}
+.ie7 .ui-dialog.dialog-alexa .ui-dialog-titlebar-close{
+	margin: -10px 5px;
+}
+
+
+
+/***** PANEL STYLES **************************************************************************/
+
+.panel-wrapper{
+    padding: 20px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 1px 3px #666;
+    -webkit-box-shadow: 0 1px 3px #666;
+    box-shadow: 0 1px 3px #666;
+    background-color: #fff;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f7f7f7');
+    background-image: -moz-linear-gradient(top, #fff, #f7f7f7);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f7f7f7));
+    background-image: -webkit-linear-gradient(top, #fff, #f7f7f7);
+	background-image: linear-gradient(to bottom, #ffffff, #f7f7f7);
+}
+.ie6 .panel-wrapper, .ie7 .panel-wrapper, .ie8 .panel-wrapper{
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.ie9 .panel-wrapper{
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    box-shadow: 0 2px 1px #666;
+}
+.panel-row{
+    margin-bottom: 15px;
+}
+.panel-wrapper.with-tabs{
+    padding: 0;
+}
+.panel-wrapper.no-padding{
+	padding: 0;
+}
+
+/***** PRO STYLES MOVED TO WWW ************************************************/
+
+.panel-wrapper.no-padding .panel-header{
+	border-bottom: 1px solid #DDD;
+	padding: 15px 20px 0;
+}
+.panel-wrapper.no-padding .panel-header-primary {
+	margin-bottom: 5px;
+	vertical-align: middle;
+}
+.panel-wrapper.no-padding .panel-header h2{
+	display: inline;
+	font-size: 18px;
+	padding: 0;
+}
+.panel-wrapper.no-padding p{
+	margin-bottom: 10px;
+}
+.panel-wrapper.no-padding .panel-header .last img{
+	vertical-align: middle;
+}
+.panel-wrapper.no-padding .panel-content{
+	padding: 20px;
+}
+.box-2{
+	border: 1px solid #ddd; 
+	padding: 10px; 
+	vertical-align: middle; 
+	background-color: #f7f7f7; 
+	margin-bottom: 10px;
+}
+.box-2 .header{
+	display: inline;
+	font-weight: normal;
+	font-size: 11px;
+}
+.box-2 .float-right{
+	font-size: 26px;
+}
+.float-right{
+	float: right;
+}
+
+/* NEW DIALOG STYLE */
+.ui-dialog.dialog-alexa2 .ui-dialog-content,
+.ui-dialog.dialog-alexa2 li,
+.ui-dialog.dialog-alexa2 label{
+	font: 12px normal Helvetica, Arial, sans-serif; 
+	color: #333;
+}
+.ui-dialog.dialog-alexa2,
+.ui-dialog.dialog-alexa2 fieldset{
+	padding: 0;
+}
+.ui-widget.dialog-alexa2 input.btn-css{
+	border: 0;
+	padding: 5px 7px;
+}
+.dialog-alexa2 .ui-widget-header .ui-icon,
+.dialog-alexa2 .ui-widget-content .ui-icon-closethick{
+	background: transparent url("/images/icons/close-icon.png") no-repeat 0 0;
+}
+.dialog-alexa2 .ui-widget-header{
+	color: #333;
+	font: bold 14px Helvetica,Arial,sans-serif;
+}
+.dialog-alexa2 .ui-dialog-titlebar,
+.dialog-alexa2 .ui-dialog-content{
+	padding: 10px;
+}
+.dialog-alexa2 .ui-dialog-content{
+	padding-top: 0;
+}
+.dialog-alexa2 .ui-dialog-titlebar-close{
+	top: 21px;
+	right: 6px;
+}
+.dialog-alexa2 .ui-dialog-form-action{
+	padding: 10px;
+}
+.ui-dialog.dialog-alexa2 .css-select li{
+	line-height: 18px;
+	margin-bottom: 0;
+}
+.ui-dialog.dialog-waiting .ui-widget-header{
+	font: bold 14px Helvetica, Arial, sans-serif; 
+	color: #333;
+}
+
+/***** TO BE ADDED TO SCSS MODULES ********************************************/
+
+.data-table{
+	width: 100%;
+	margin: 0 0 10px;
+}
+.data-table th, .data-table td{
+	font-size: 12px;
+}
+.data-table th{
+	border-bottom: 2px solid #676767;
+	padding: 0 3px 8px;
+}
+.data-table td{
+	padding: 5px 3px;
+	border-bottom: 1px solid #bdbdbd;
+	vertical-align: middle;
+}
+.data-table th.last, .data-table td.last{
+	padding-right: 0;
+}
+.data-table a{
+	text-decoration: underline;
+}	
+.data-table .url{
+	display: inline-block;
+	width: 140px;
+	word-wrap: break-word;
+}
+.data-url a,
+.data-url span{
+    word-wrap: break-word;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* FOR SORTABLE TABLE CELLS */
+table.tablesorter thead tr .header a{
+	background: url(/images/buttons/btn-sort-bg.gif) no-repeat 100% 50%;
+	cursor: pointer;
+	padding-right: 10px;
+}
+table.tablesorter thead tr .headerSortUp a{
+	background: url(/images/buttons/btn-sort-asc.gif) no-repeat 100% 50%;
+}
+table.tablesorter thead tr .headerSortDown a{
+	background: url(/images/buttons/btn-sort-desc.gif) no-repeat 100% 50%;
+}
+
+/* FOR DISPLAYING TABLE LAYOUT WITHOUT USING TABLE */
+.table{
+	display: table;
+}
+.table-row{
+	display: table-row;
+}
+.table-cell{
+	display: table-cell;
+}
+
+/* PANEL ADDITION */
+.panel-wrapper.no-padding .panel-content.bdr-btm{
+	border-bottom: 1px solid #ddd;
+}
+.panel-wrapper.no-padding .sub-panel-desc{
+	margin-bottom: 20px;
+}
+
+
+.form label.error{
+	color: #c32f16;
+	background: rgba(0, 0, 0, 0) url(/images/icons/icon-error.png) no-repeat 0 0;
+	padding: 0 0 2px 16px;
+}
+
+
+/* CSS SELECT DROPDOWN */
+div.css-select-wrapper{
+	display: inline-block; 
+	vertical-align: middle;
+	margin: 0 0 0 10px; 
+	text-align: left;
+}
+.ie7 div.css-select-wrapper{
+	display: inline;
+}
+.css-select{
+	text-align: left; /* may not needed */
+	font-size: 12px;
+	font-weight: normal;
+}
+.css-select .select-part{
+	display: inline-block;
+	float: left;
+	height: 28px;
+	line-height: 28px;
+}
+.css-select .select-icon{
+	position: relative;
+	margin-right: 5px;
+	top: -2px;
+}
+.css-select .select-list{
+	display: none;
+	position: relative;
+	z-index: 4;
+}
+.css-select .select-list.active{
+	display: block;
+}
+.css-select ul{
+	position: absolute;
+	margin: 0;
+	background-color: #f3f3f3;
+	border: 1px solid #ddd;
+	border-width: 0 1px;
+}
+.ie7 .css-select ul{
+	border-top: 1px solid #ddd;
+	top: -1px;
+}
+.css-select .selected-text{
+	display: block;
+}
+.css-select .select-label{
+	margin-right: 10px;
+}
+#date-select.css-select .selected-text{
+	background: transparent url(/pro/images/icon-date.gif) no-repeat 0 7px;
+	padding-left: 17px;
+}
+.css-select .select-action{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ebebeb');
+	background-image: -moz-linear-gradient(top, #ffffff, #ebebeb);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#ebebeb));
+	background-image: -webkit-linear-gradient(top, #ffffff, #ebebeb);
+	background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+	cursor: pointer;
+	display: inline-block;
+	border: 1px solid #ddd;
+}
+.css-select .select-selected{
+	border-right: 0;
+	padding-left: 10px;
+}
+.css-select .select-selected:hover,
+.css-select .select-selected.hover{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#e7e7e7');
+	background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f7f7f7), to(#e7e7e7));
+	background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7);
+	background-image: linear-gradient(to bottom, #f7f7f7, #e7e7e7);
+}
+.css-select .select-btn{
+	display: inline-block;
+	padding: 0 10px;
+}
+.css-select li{
+	padding: 5px 0 5px 10px;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+.css-select li.selected,
+.css-select li:hover{
+	color: #fff;
+	background-color: #0199d5;
+}
+#date-select .preset-end{
+	border-bottom-color: #676767;
+}
+	

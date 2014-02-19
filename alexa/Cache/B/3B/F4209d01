@@ -1,0 +1,652 @@
+if (typeof ALEXA  == "undefined") { var ALEXA = {}; }
+
+;
+(function($){
+	ALEXA = {
+			init: function(){				
+				this.axDialog.closeOnClickOverlay();
+			},
+			// This is for My Sites sub menu. A sub menu shows when "My Sites" link is hovered. 
+			initTabsDropDown: function(){
+				$(".has-dropdown").hover(function(){
+					$(this).addClass('dd-active');
+					$(".drop-down-wrapper").show();
+				}, function(){
+					$(this).removeClass('dd-active');
+					$(".drop-down-wrapper").hide();
+				});
+			},
+			/* For SA redesign hover menu */
+			showMenuByData: function(customOpts){
+				var newOpts, $elem, data, $hovered, menuId,
+					options = {
+						delay: 0,
+						autoClose: true,
+						menuId: "",  // expect to receive a class to find the menu id so we can update the specific menu
+						trigger: "",
+						target: "",
+						dataTrigger: "",
+						dataTarget: "", 
+						close: null  // a function to execute when the menu is closed
+					};
+				
+				var	showMenu = function(){	
+					if($hovered.hasClass("active")){						
+						$("#"+menuId).find(newOpts.target).hide().filter(function(){								
+							return data === $(this).data(newOpts.dataTarget);
+						}).show();
+					}
+				};
+				
+				newOpts = customOpts ? $.extend(true, {}, options, customOpts) : options;
+				$elem = $(newOpts.target);
+				
+				$(newOpts.trigger).hover(function(){					
+					// The "active" class is added as a flag to the hovered item so the menu 
+					// can be immediately closed when the item is not hovered by checking if the flag is present.
+					$(this).addClass("active");
+					$hovered = $(this);
+					
+					data = $(this).data(newOpts.dataTrigger);
+					
+					// Rememeber which menu we are hovering
+					if(newOpts.menuId){
+						menuId = $(this).parents(newOpts.menuId).attr("id");
+					}	
+					// We'll delay the menu to show up if delay > 0
+					if(newOpts.delay > 0){						
+						window.setTimeout(showMenu, newOpts.delay);
+					}else{
+						showMenu();
+					}
+						
+				}, function(){
+					$(this).removeClass("active");
+					if(newOpts.autoClose){
+						$(newOpts.target).hide();
+					}
+					if( (newOpts.close !== null) && (typeof newOpts.close === 'function') ){
+						newOpts.close();
+					}
+				});
+				
+			}, // End showMenuByData
+			navigate: {
+				scrollY: function(value, easing, trigger, triggerWrapper){
+					if(triggerWrapper){
+						$(triggerWrapper).delegate(trigger, "click", function(){
+							$("html, body").stop().animate({scrollTop: value}, easing);
+							return false;
+						});
+					}else{
+						$(trigger).click(function(){
+							$("html, body").stop().animate({scrollTop: value}, easing);
+							return false;
+						});
+					}
+				}, 
+				scrollingPos: function(elem, style){
+					$(window).scroll(function(){
+                		$(elem).css(style);
+                	});
+				}
+			}, // End navigate
+			axDialog: {
+				dfOptions: {
+					modal: true,
+					autoOpen: false,
+					resizable: false,
+					draggable: false  // cause js error in jQuery UI 1.8.5
+				},
+				dfOptions185: {
+					modal: true,
+					autoOpen: false,
+					resizable: false
+				},
+				fixCloseBtn: function(btnText){
+					var $closeLink = $(".ui-dialog-titlebar-close");
+					if(!$closeLink.parents(".ui-dialog").hasClass("dialog-alexa")){
+						$closeLink.html("").html(btnText+"<span class='ui-icon ui-icon-closethick'></span>");
+					}
+				},
+				addBtnClass: function(btnText, btnClass){  // A separate function to apply custom class to all dialog buttons for easy styling
+					var $btns;
+					
+					if (btnText && btnClass){
+						btnText = $.trim(btnText);
+						$('.ui-dialog-buttonpane').find('button:contains('+btnText+')').addClass(btnClass);
+					}
+					
+				}, // End addBtnClass
+				// Automatically close the dialog when click outside of the dialog
+				closeOnClickOverlay: function(){
+					// All dialog should be able to close on click except the processing dialog					
+					$("body").delegate(".ui-widget-overlay", "click", function(){
+						var okToClose = !($("#waiting-dialog").dialog("isOpen") === true);	
+						if(okToClose){
+							$(".ui-dialog-content").dialog("close");
+						}
+					});
+				},
+				waiting: {
+					opts: {
+						resizable: false,
+					    modal: true,
+					    width: 200,
+					    autoOpen: false,
+					    dialogClass: 'dialog-waiting',
+					    title: "Processing..."
+					},
+					open: function(customOpts){
+						var self = this, 
+							newOpts;
+                        $("#survey-wrapper").hide();
+						newOpts = customOpts ? $.extend(true, {}, self.opts, customOpts) : self.opts;
+						$('#waiting-dialog').dialog(newOpts).dialog("open");
+					},
+					close: function(){
+						var self = this;
+						$('#waiting-dialog').dialog("close");
+                        $("#survey-wrapper").show();
+					}
+				}, // End waiting dialog
+				error: {
+					opts: {
+						resizable: false,
+					    modal: true,
+						width: 400,
+					    dialogClass: 'dialog-alexa2 dialog-error'
+					},
+					open: function(customOpts){
+						var self = this, 
+							message, newOpts;
+						newOpts = customOpts ? $.extend(true, {}, self.opts, customOpts) : self.opts;
+						message = customOpts.alexaDataError ? customOpts.alexaDataError : false;
+						if(message){
+							$('#dialog-error').html(message);
+						}
+						$('#dialog-error').dialog(newOpts).dialog("open");
+					}
+				}, // End error dialog
+				custom: {
+					closeBtn: function($dialog){
+						$dialog.parents(".ui-dialog").find(".dialog-custom-close-btn")
+							.unbind("click").click(function(){
+								$dialog.dialog("close");
+								return false;
+                    	});
+					}
+				}
+			}, // End axDialog
+			form: {
+				// mimic native placeholder feature for browsers don't support it
+				placeholder: function(elemClass){  
+					elemClass = elemClass ? elemClass : "";
+					if ( !('placeholder' in document.createElement('input')) ){	
+						
+						var displayText, assignedText; // assignedText is the pre-populated input text
+						
+						$('[placeholder]').each(function(){
+							assignedText = $.trim($(this).val());
+							// If there is a pre-populated input text, keep it in the input field
+							displayText =  assignedText ? assignedText : $(this).attr('placeholder');
+							$(this).val(displayText);
+						});
+						
+						$('[placeholder]').focus(function() {
+							var input = $(this);
+							
+							input.addClass(elemClass);
+							if ($.trim(input.val()) === input.attr('placeholder')) {
+								input.val('');
+							}
+						}).blur(function() {
+							var input = $(this), 
+								v = $.trim(input.val());
+							if (v === '' || v === input.attr('placeholder')) {
+								input.removeClass(elemClass);
+								input.val(input.attr('placeholder'));
+							}
+						}).blur();
+						
+						$('[placeholder]').parents('form').submit(function() {
+							$(this).find('[placeholder]').each(function() {
+								var input = $(this);
+								if (input.val() == input.attr('placeholder')) {
+									input.val('');
+								}
+							});
+						});									
+					}else{
+						if(elemClass){  
+							$('[placeholder]').focus(function() {								
+								$(this).addClass(elemClass);
+							}).blur(function() {
+								var input = $(this), 
+									v = $.trim(input.val());
+								if (v === '' || v === input.attr('placeholder')) {
+									input.removeClass(elemClass);
+								}
+							}).blur();	
+						}					
+					}
+				}, // End placeholder
+				maxlength: function(){
+					
+					if ( !('maxlength' in document.createElement('textarea')) ){
+						var ie7 = $("body").hasClass("ie7"),
+							filter = ie7 ? "textarea" : "textarea[maxlength]";
+						
+						$("body").find(filter).each(function(){
+							var input, chars, remain, allow;
+							
+							allow = ie7 && $(this).data("maxlength") ? 
+									$(this).data("maxlength") : $(this).attr("maxlength");
+							
+							if(allow >= 0){
+								$(this).keypress(function(e){
+									if (e.which !== 0 && e.charCode !== 0){
+										input = $(this).val();
+										chars = input.length;
+										remain = parseInt(allow - chars);
+										if(remain <=0){
+											$(this).val(input.substring(0, chars-1));
+										}
+									}
+								});
+							}
+							
+						});
+					}
+				}, // End maxlength
+				trimSpaces: function(form){
+					if($(form).length){
+						// Trim all leading and trailing white spaces in text input
+						$(form).find("input:text").blur(function(){
+							var value = $.trim($(this).val());
+							$(this).val(value);
+						});
+					}
+				}, // End trimSpaces
+				stripTags: function(string){
+					if(typeof string === "string"){
+						return string.replace(/(<([^>]+)>)/ig,"");
+					}else{
+						return null;
+					}
+				},
+				// Show the delete button when input field has content
+				// Delete input content when the delete button is clicked
+				clearInput: function(obj){
+					
+					if(obj){
+						
+						obj.wrapper = obj.wrapper || "body";
+						
+						$(obj.wrapper).delegate(obj.trigger, "focusout", function(){
+							var $clearBtn = $(this).siblings(".js-delete-input");
+
+				        	if($.trim($(this).val())){
+				        		$clearBtn.addClass("active");
+				        	}else{
+				        		$clearBtn.removeClass("active");
+				        	}
+				        	
+				        })
+				        
+				        $(obj.wrapper).delegate(".js-delete-input", "click", function(){
+				        	$(this).prev(obj.trigger).val("");
+				        	$(this).removeClass("active");
+						});
+					}
+					
+				}, // End clearInput
+				// CSS select dropdown script
+				select: {
+            		init: function(obj){
+            			var wrapper, $dropdown,
+                			self = this;
+                		
+                		if(!obj.id){
+                			return;
+                		}
+                		wrapper = obj.wrapper || "body";
+                		
+                		// Initialize the areas that show the drop down when clicked
+                		$(wrapper).delegate(obj.id+" .js-select-action", "click", function(e){
+                			$dropdown = $(this).parents(".css-select").find(".select-list");
+                			if($dropdown.hasClass("active")){
+                				self.reset(obj);
+                            }else{
+                            	self.open($(this), $dropdown);
+                            }
+                			if(obj.triggerCallback && typeof(obj.triggerCallback) === "function"){
+                				obj.triggerCallback.apply(this);
+                			}
+                			e.stopPropagation();
+                		});
+                		
+            			if(obj.onSelect && typeof(obj.onSelect) === "function"){
+            				obj.onSelect();
+            			}else{
+            				this.onSelect(obj);
+            			}
+                		
+            			if(obj.close && typeof(obj.close) === "function"){
+            				obj.close();
+            			}else{
+            				this.close(obj);
+            			}
+            			
+            		},
+            		// Reset CSS select dropdown to original style when close
+            		reset: function(obj){
+            			$(obj.id).find(".select-list").removeClass("active")
+    						.end().find(".select-selected").removeClass("hover");
+            		},
+            		open: function($this, $dropdown){
+            			var selectedText;
+            			
+            			// Always highlight the selected option in the dropdown 
+                    	// before the dropdown is open 
+                    	if(!$dropdown.find("li.selected").length){
+                    		selectedText = $.trim($this.parents(".css-select")
+                    				.find(".selected-text").text());
+                    		
+                    		$dropdown.find("li").each(function(){
+                        		if($.trim($(this).text()) === selectedText){
+                        			$(this).addClass("selected");
+                        		}
+                        	});
+                    	}
+                    	// "hover" class is added purely to enforce hover style 
+                        $dropdown.addClass("active").parents(".css-select")
+                        	.find(".select-selected").addClass("hover");
+            		},
+            		close: function(obj){
+            			var self = this;
+                		$('html').click(function() {
+                			self.reset(obj);
+                	    });
+            		},
+            		onSelect: function(obj){
+            			var self = this;
+                		
+                		$("body").delegate(obj.id+" .active li", "click", function(e){
+                			// "disabled" class applies to select item separator and shouldn't do anything
+                			if(!$(this).hasClass("disabled")){  
+                				var $parent = $(this).parents(".select-list"),
+                					displayName = $(this).text();
+
+                				$.trim(displayName);
+                				// Update the selected option text at the top 
+                				$parent.siblings(".select-selected").find(".selected-text").text(displayName); 
+                				
+                				$(this).addClass("selected").siblings().removeClass("selected");
+                				self.reset(obj);
+                        	    if (obj.callback && typeof(obj.callback) === "function"){
+                        	    	obj.callback.apply(this);
+                        	    }
+                			}
+                			e.stopPropagation();
+                		});
+            		}
+            	} // End form.select
+			}, // End form
+			image: {
+				cache: [],
+				preload: function(){
+					var i=0, argsLength = arguments.length;
+					for (;i < argsLength; i++){
+						var cacheImage = document.createElement('img');
+						cacheImage.src = arguments[i];
+						ALEXA.image.cache.push(cacheImage);
+					}
+				}
+			}, // End image
+			note: {
+				init: function(){
+					this.close();
+				},
+				// closeNote is a function to close message note when the icon "X" is clicked.
+				close: function(){
+					var self = this;
+					
+					$("#content-inner").delegate(".note-action-close", "click", function(){
+						var noteId;
+						
+						if($(this).parents(".note-row").length){
+							$(this).parents(".note-row").remove();
+						}else{
+							$(this).parents(".note-bg-wrapper").remove();
+						}
+						
+						// Send ajax to the server to mark this note has been dismissed
+						noteId = $(this).parents(".note-wrapper").attr("id");
+						
+						$.ajax({
+						    url: "/noteboard/dismiss",
+						    type: 'POST',
+						    data: {id: noteId},
+						    dataType: 'json',
+						    success: function(data){
+						    	if(data.success){ // successfully dimiss a note, reduce the count
+						    		self.updateCount(-1);  
+						    	}else{ // failure to dismiss a note, pending for spec 
+						    		
+						    	}
+						    }
+						});
+					});
+				}, // End note.close
+				// updateCount: update the total note count when a user dismiss a note or recover a note
+				updateCount: function(change){
+					var $count = $(".msg-count"),
+						updateTotal = ($count.text() * 1) + change;
+					
+					if(updateTotal > 0){
+						$count.text(updateTotal);
+					}else{
+						$count.remove();
+					}
+					
+				} // End note.updateCount
+			}, // End note
+			tab: {
+				init: function(obj){
+					var which, $tab, $content,
+						trigger = obj.trigger, // link that trigger the tab action
+						twrapper = obj.twrapper ? obj.twrapper : "body", // the parent element for the trigger
+						wrapper = obj.wrapper ? obj.wrapper : "body", // the parent div of the tabs and content
+						selector = obj.selector ? obj.selector : "#"; // the selector prefix, should be either an id (#) or a class (.)
+				
+					$(twrapper).delegate(trigger, "click", function(){
+						
+						which = $(this).data(obj.data); // content to show, should be the same id or class as "data-nav" in the tab markup
+						$tab = $(this).parents(wrapper).find(obj.targetTab.elem); // gather relevent tabs
+						$content = $(this).parents(wrapper).find(obj.targetContent.elem); // gather relevent contents
+						
+						$tab.removeClass(obj.targetTab.css);
+						$tab.filter(function(){
+							return $(this).data(obj.data) === which;
+						}).addClass(obj.targetTab.css);			
+						$content.removeClass(obj.targetContent.css);
+						
+						$(selector + which).addClass(obj.targetContent.css);
+						
+						if(obj.callback && (typeof obj.callback === "function")){
+							obj.callback.apply(this);
+                		}
+						return false;
+						
+					});
+				}
+			}, // End tab
+			list: {
+				toggleVisibleByIndex: function(param){
+                	$("body").delegate(param.trigger, "click", function(){
+                        var text, triggerCss,
+                            target = $(this).data("toggle") ? $(this).data("toggle"): $(this).attr("data-toggle");
+                        
+                        $(target).find(param.item).eq(param.number).nextAll().toggleClass(param.elemClass);
+                        text = $.trim($(this).text()) === param.text.df ? param.text.al : param.text.df;
+                        $(this).text(text);
+                        
+                        if(param.triggerClass && param.triggerClass.df && param.triggerClass.al){
+                            if($(this).hasClass(param.triggerClass.df)){
+                            	$(this).removeClass(param.triggerClass.df).addClass(param.triggerClass.al);
+                            }else{
+                            	$(this).removeClass(param.triggerClass.al).addClass(param.triggerClass.df);
+                            }
+                        }
+                    
+                        return false;
+                    });
+                }
+			} // End list
+	}; // End ALEXA object
+	
+	
+	ALEXA.validation = {
+		// Default options for validation errors
+		dfOpts: {
+            errorPlacement: function(error, elem){
+            	var id = $(elem).attr("id"),
+                	$parent = $(elem).parents(".err-" + id);
+            	
+                // Credit card error placement handling
+                if($(elem).hasClass("ccDate")){
+                	$("#err-ccDate").html(error);
+                }else{
+                	error.insertBefore($parent);
+                }
+                
+            },
+            highlight: function(element, errorClass, validClass) {
+            	var errorPadding = $("<div class='label-error-padding'>&nbsp;</div>");
+            	
+            	$(element).addClass(errorClass).removeClass(validClass);
+                
+                // Special highlight handling for credit card
+                if($(element).hasClass("ccDate")){
+                    $(".ccDate").addClass(errorClass).removeClass(validClass);
+                    $("#err-ccDate").show();
+                }
+            }, 
+            unhighlight: function(element, errorClass, validClass) {
+            	$(element).removeClass(errorClass).addClass(validClass);
+                
+                // Special handling for credit card
+                if($(element).hasClass("ccDate")){
+                    $(".ccDate").removeClass(errorClass).addClass(validClass);
+                    $("#err-ccDate").hide();
+                }
+            }
+        },
+        // Add custom methods to the validator plugin
+        addMethods: function(){                        
+            // Add a method to the validator plugin not to throw errors when urls don't have "http" or "https"
+            $.validator.addMethod("urlOptHTTP", function(value, element) {
+                var trimmed = $.trim(value);
+                return this.optional(element) || /^((https?|ftp):\/\/)?(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|_|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(trimmed);
+                }, "Please enter a valid url."
+            );
+            
+            // Add a custom rule to check url to make sure it is within the same domain name of the site user entered
+            $.validator.addMethod("matchDomain", function(value, element, param) {
+                var regexStr = "^((https?|ftp):\/\/)?.*\.?" + $(param).text();
+                return this.optional(element) || value.search(new RegExp(regexStr, "i")) !== -1 ? true : false;
+                }, "The link must be to a page on the same domain."
+            );    
+            
+            // Add a custom rule to check credit card expiration date. The month should be equal or greater than today's month
+            $.validator.addMethod("ccMonth", function(value, element) {
+                var tdMonth, tdYear, exMonth, exYear, result, compareMths,
+                    today = new Date();    
+                
+                tdMonth = today.getMonth() + 1;
+                tdYear = today.getFullYear();
+                exMonth = value * 1;
+                exYear = $(".ccYear").val() * 1;
+                
+                compareMths = (tdMonth > exMonth) ? false : true; 
+                result = (tdYear > exYear) ? false : (tdYear == exYear) ? compareMths : true;
+                return this.optional(element) || result;
+                }, "The expiration date is invalid."
+            );
+            
+            // Add a custom rule to check credit card expiration date. This is for the credit card year field
+            $.validator.addMethod("ccYear", function(value, element) {                    
+                var tdMonth, tdYear, exMonth, exYear, result, compareMths,
+                today = new Date();
+                
+                tdMonth = today.getMonth() + 1;
+                tdYear = today.getFullYear();
+                exMonth = $(".ccMonth").val();
+                exYear = value;
+                
+                compareMths = (tdMonth > exMonth) ? false : true; 
+                result = (tdYear > exYear) ? false : (tdYear == exYear) ? compareMths : true;                            
+                return this.optional(element) || result;
+                }, "The expiration date is invalid."
+            );
+            
+            // Add a custom rule to remove space, dash(-) and period(.) characters before validation
+            $.validator.addMethod("cleanNum", function(value, element) {                    
+                var cleaned = value.replace(/(\s|-|\.)+/g, "");
+                return this.optional(element) || /^\d+$/.test(cleaned);
+                }, "Please enter only digits."
+            );
+            
+            // Add a custom rule to remove space, dash(-) and period(.) characters before validation
+            $.validator.addMethod("letters", function(value, element) {                    
+                var trimmed = $.trim(value);
+                return this.optional(element) || /^[a-z]+$/i.test(trimmed);
+                }, "Please enter only letters."
+            );
+            
+        }	
+	};
+	
+	ALEXA.comparison = {
+			defaultName: "My Competitors",
+			save: function($form, callback){
+				
+		    	$.ajax({
+		            url: "/pro/comparison/edit",
+		            type: 'POST',
+		            cache: false,
+		            dataType: 'json',
+		            data: $form.serialize(),
+		            success: function(data) {
+		            	
+		                if(data.success) {
+		                	if(callback.success && Object.prototype.toString.call(callback.success) === "[object Function]"){
+		                		callback.success(data);
+		                	}
+		                } else {
+		                	ALEXA.axDialog.waiting.close();  
+		                	if(callback.error && Object.prototype.toString.call(callback.error) === "[object Function]"){
+		                		callback.error(data);
+		                	}
+		                }
+		            },
+		            error: function(data, status, e) {
+		                ALEXA.axDialog.waiting.close();
+		            }
+		        });
+			}
+	};
+	
+	ALEXA.init();
+	
+	if($.validator !== undefined){
+		// Add a method to the validator plugin not to throw errors when urls don't have "http" or "https"
+		$.validator.addMethod("urlOptHTTP", function(value, element) {
+            var trimmed = $.trim(value);
+            return this.optional(element) || /^((https?|ftp):\/\/)?(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|_|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(trimmed);
+            }, "Please enter a valid url."
+        );
+	}
+	
+})(jQuery);

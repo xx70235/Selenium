@@ -1,0 +1,20 @@
+190.202.131.82	3128	VE	Venezuela	anonymous	no	yes	8 seconds ago
+186.95.148.125	8080	VE	Venezuela	anonymous	no	no	8 seconds ago
+5.254.101.112	7808	RO	Romania	elite proxy	no	yes	18 seconds ago
+188.34.251.218	8080	IR	Iran, Islamic Republic of	anonymous	no	yes	18 seconds ago
+64.33.171.6	8080	US	United States	anonymous	no	no	18 seconds ago
+50.31.113.250	7808	US	United States	elite proxy	no	yes	18 seconds ago
+198.24.181.73	7808	US	United States	elite proxy	no	yes	18 seconds ago
+198.27.97.214	7808	US	United States	elite proxy	no	yes	18 seconds ago
+192.227.139.227	7808	--	Unknown	elite proxy	no	yes	18 seconds ago
+198.143.1.163	7808	US	United States	elite proxy	no	yes	18 seconds ago
+216.189.101.117	7808	US	United States	elite proxy	no	yes	18 seconds ago
+119.30.39.1	3128	BD	Bangladesh	anonymous	no	yes	18 seconds ago
+192.227.157.173	8089	CA	Canada	elite proxy	no	yes	18 seconds ago
+173.208.252.196	8089	US	United States	elite proxy	no	yes	18 seconds ago
+50.2.64.206	7808	US	United States	elite proxy	no	yes	18 seconds ago
+186.91.255.8	8080	VE	Venezuela	anonymous	no	yes	18 seconds ago
+186.90.184.147	8080	VE	Venezuela	anonymous	no	yes	18 seconds ago
+72.29.101.11	7808	US	United States	elite proxy	no	yes	18 seconds ago
+69.197.132.80	3128	US	United States	elite proxy	no	yes	18 seconds ago
+190.203.236.123	8080	VE	Venezuela	anonymous	no	yes	18 seconds ago

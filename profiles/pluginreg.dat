@@ -1,0 +1,312 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version|0.16|$
+Arch|x86-msvc|$
+
+[PLUGINS]
+npGoogleUpdate3.dll|$
+C:\Users\Station\AppData\Local\Google\Update\1.3.21.165\npGoogleUpdate3.dll|$
+1.3.21.165|$
+1380768497447|0|0|$
+Google Update|$
+Google Update|$
+2
+0|application/x-vnd.google.update3webcontrol.3|||$
+1|application/x-vnd.google.oneclickctrl.9|||$
+npalidcp.dll|$
+C:\Windows\system32\aliedit\3.6.0.0\npalidcp.dll|$
+1.0.0.1|$
+1377508838000|0|0|$
+npalidcp|$
+Alipay webmod control|$
+1
+0|application/alidcp|npalidcp| |$
+npAliSecCtrl.dll|$
+C:\Windows\system32\aliedit\3.6.0.0\npAliSecCtrl.dll|$
+1.0.18.0|$
+1377508836000|0|0|$
+Alipay Security Control|$
+Alipay Security Control 3|$
+1
+0|application/x-alisecctrl-plugin|npAliSecCtrl.dll|*|$
+npactivex.dll|$
+C:\Program Files (x86)\Common Files\Tencent\Npchrome\npactivex.dll|$
+1.94.5.1|$
+1377243470512|0|0|$
+QQ2013 Chrome Plugin for CPHelper|$
+QQ2013|$
+1
+0|application/qscall-plugin|DLL|dll|$
+npQQPhotoDrawEx.dll|$
+C:\Program Files (x86)\Tencent\Qzone\Ver_247.312\npQQPhotoDrawEx.dll|$
+2.47.312.813|$
+1376385610000|0|0|$
+npQQPhotoDrawEx Module|$
+npQQPhotoDrawEx|$
+1
+0|application/tencent-qqphotodrawex2-plugin||rts|$
+npSSOAxCtrlForPTLogin.dll|$
+C:\Program Files (x86)\Common Files\Tencent\TXSSO\1.2.2.23\Bin\npSSOAxCtrlForPTLogin.dll|$
+1.0.1.12|$
+1376303284000|0|0|$
+QQ QuickLogin Helper|$
+Tencent SSO Platform|$
+1
+0|application/nptxsso|TXSSO||$
+npQzoneMusic.dll|$
+C:\Program Files (x86)\Tencent\QQMusic\QzoneMusic\npQzoneMusic.dll|$
+9.22.3136.723|$
+1374558128000|0|0|$
+QQMusic|$
+QQMusic|$
+1
+0|application/tecent-qzonemusic-plugin|This plug-in is transfers of QzoneMusic when opening Qzone in a web page with Firefox.|rts|$
+npGoogleUpdate3.dll|$
+C:\Program Files (x86)\Google\Update\1.3.21.153\npGoogleUpdate3.dll|$
+1.3.21.153|$
+1374043493928|0|0|$
+Google Update|$
+Google Update|$
+2
+0|application/x-vnd.google.update3webcontrol.3|||$
+1|application/x-vnd.google.oneclickctrl.9|||$
+npgeplugin.dll|$
+C:\Program Files (x86)\Google\Google Earth\plugin\npgeplugin.dll|$
+7.1.1.1888|$
+1373625288524|0|0|$
+GEPlugin|$
+Google Earth Plugin|$
+1
+0|application/geplugin|GEPlugin||$
+NPSWF32_11_7_700_224.dll|$
+C:\Windows\SysWOW64\Macromed\Flash\NPSWF32_11_7_700_224.dll|$
+11.7.700.224|$
+1371033971890|0|0|$
+Shockwave Flash 11.7 r700|$
+Shockwave Flash|$
+2
+0|application/x-shockwave-flash|Adobe Flash movie|swf|$
+1|application/futuresplash|FutureSplash movie|spl|$
+npYunWebDetect.dll|$
+C:\Users\Station\AppData\Roaming\baidu\BaiduYunGuanjia\npYunWebDetect.dll|$
+2.1.0.7|$
+1369194772000|0|0|$
+YunWebDetect|$
+BaiduYunGuanjia Application|$
+1
+0|application/bd-npYunWebDetect-plugin|||$
+npctrl.dll|$
+c:\Program Files (x86)\Microsoft Silverlight\5.1.20513.0\npctrl.dll|$
+5.1.20513.0|$
+1368429276000|0|0|$
+5.1.20513.0|$
+Silverlight Plug-In|$
+2
+0|application/x-silverlight|npctrl|scr|$
+1|application/x-silverlight-2|||$
+npQQMailWebKit.dll|$
+C:\Program Files (x86)\QQMailPlugin\npQQMailWebKit.dll|$
+1.0.0.22|$
+1366877940000|0|0|$
+QQMail plugin for WebKit #1.0.0.22|$
+QQMail Plugin|$
+2
+0|application/x-tencent-qmail-webkit|QQMailPlugin for webkit||$
+1|application/x-tencent-qmail|QQMailPlugin for webkit||$
+npaliedit.dll|$
+C:\Windows\system32\aliedit\3.6.0.0\npaliedit.dll|$
+1.3.0.2|$
+1366167492000|0|0|$
+npaliedit|$
+Alipay security control|$
+1
+0|application/aliedit|npaliedit| |$
+nptxftnWebKit.dll|$
+C:\Program Files (x86)\QQMailPlugin\nptxftnWebKit.dll|$
+1.0.0.4|$
+1365408134000|0|0|$
+Tencent FTN plug-in|$
+Tencent FTN plug-in|$
+1
+0|application/txftn-webkit|nptxftn||$
+npitunes.dll|$
+C:\Program Files (x86)\iTunes\Mozilla Plugins\npitunes.dll|$
+1.0.1.1|$
+1365363094000|0|0|$
+iTunes Detector Plug-in|$
+iTunes Application Detector|$
+1
+0|application/itunes-plugin|This plug-in detects the presence of iTunes when opening iTunes Store URLs in a web page with Firefox.||$
+npiTools.dll|$
+C:\Users\Station\Documents\iTools\Plugin\npiTools.dll|$
+1.0.0.1|$
+1360131536441|0|0|$
+npiTools|$
+npiTools 动态链接库|$
+1
+0|application/npiTools-plugin|||$
+npjp2.dll|$
+C:\Program Files (x86)\Java\jre7\bin\plugin2\npjp2.dll|$
+10.11.2.21|$
+1359514877219|0|0|$
+Next Generation Java Plug-in 10.11.2 for Mozilla browsers|$
+Java(TM) Platform SE 7 U11|$
+38
+0|application/x-java-applet|Java Applet||$
+1|application/x-java-bean|JavaBeans||$
+2|application/x-java-vm|||$
+3|application/x-java-applet;version=1.1.1|||$
+4|application/x-java-bean;version=1.1.1|||$
+5|application/x-java-applet;version=1.1|||$
+6|application/x-java-bean;version=1.1|||$
+7|application/x-java-applet;version=1.2|||$
+8|application/x-java-bean;version=1.2|||$
+9|application/x-java-applet;version=1.1.3|||$
+10|application/x-java-bean;version=1.1.3|||$
+11|application/x-java-applet;version=1.1.2|||$
+12|application/x-java-bean;version=1.1.2|||$
+13|application/x-java-applet;version=1.3|||$
+14|application/x-java-bean;version=1.3|||$
+15|application/x-java-applet;version=1.2.2|||$
+16|application/x-java-bean;version=1.2.2|||$
+17|application/x-java-applet;version=1.2.1|||$
+18|application/x-java-bean;version=1.2.1|||$
+19|application/x-java-applet;version=1.3.1|||$
+20|application/x-java-bean;version=1.3.1|||$
+21|application/x-java-applet;version=1.4|||$
+22|application/x-java-bean;version=1.4|||$
+23|application/x-java-applet;version=1.4.1|||$
+24|application/x-java-bean;version=1.4.1|||$
+25|application/x-java-applet;version=1.4.2|||$
+26|application/x-java-bean;version=1.4.2|||$
+27|application/x-java-applet;version=1.5|||$
+28|application/x-java-bean;version=1.5|||$
+29|application/x-java-applet;version=1.6|||$
+30|application/x-java-bean;version=1.6|||$
+31|application/x-java-applet;version=1.7|||$
+32|application/x-java-bean;version=1.7|||$
+33|application/x-java-applet;jpi-version=1.7.0_11|||$
+34|application/x-java-bean;jpi-version=1.7.0_11|||$
+35|application/x-java-vm-npruntime|||$
+36|application/x-java-applet;deploy=10.11.2|||$
+37|application/x-java-applet;javafx=2.2.4|||$
+npDeployJava1.dll|$
+C:\Windows\SysWOW64\npDeployJava1.dll|$
+10.11.2.21|$
+1359514874992|0|0|$
+NPRuntime Script Plug-in Library for Java(TM) Deploy|$
+Java Deployment Toolkit 7.0.110.21|$
+1
+0|application/java-deployment-toolkit|||$
+npDeployJava1.dll|$
+C:\Windows\system32\npDeployJava1.dll|$
+10.11.2.21|$
+1359514874992|0|0|$
+NPRuntime Script Plug-in Library for Java(TM) Deploy|$
+Java Deployment Toolkit 7.0.110.21|$
+1
+0|application/java-deployment-toolkit|||$
+npalicdo.dll|$
+C:\Users\Station\AppData\Roaming\alipay\cf\npalicdo.dll|$
+1.0.0.4|$
+1356171255307|0|0|$
+npalicdo|$
+npalicdo plugin|$
+1
+0|application/npalicdo|npalicdo|dll|$
+npcajax.dll|$
+C:\Program Files (x86)\Common Files\TTKN\Bin\npcajax.dll|$
+1.0.0.1|$
+1349927988000|0|0|$
+npcajax|$
+CNKI CAJAX Plugin|$
+1
+0|application/CNKI-cajax-plugin|npcajax|rts|$
+NPSPWRAP.DLL|$
+C:\PROGRA~2\MICROS~3\Office15\NPSPWRAP.DLL|$
+15.0.4420.1017|$
+1349095092000|0|0|$
+The plugin allows you to have a better experience with Microsoft SharePoint|$
+Microsoft Office 2013|$
+2
+0|application/x-sharepoint|SharePoint Plug-in for Firefox||$
+1|application/x-sharepoint-uc|||$
+NPCMBEdit.dll|$
+C:\Windows\SysWOW64\NPCMBEdit.dll|$
+1.0.0.2|$
+1340763624000|0|0|$
+China Merchants Bank Edit|$
+CMBEdit Plugin|$
+1
+0|application/x-cmbedit|cmbedit||$
+NPCMBEdit.dll|$
+C:\Windows\system32\NPCMBEdit.dll|$
+1.0.0.2|$
+1340763624000|0|0|$
+China Merchants Bank Edit|$
+CMBEdit Plugin|$
+1
+0|application/x-cmbedit|cmbedit||$
+NPComBrg701.dll|$
+C:\Windows\system32\itruscert\NPComBrg701.dll|$
+1.0.2011.701|$
+1311580150000|0|0|$
+iTrusPTA&XEnroll hwPTA,IEnroll,UKeyInstalls for FireFox,version=1.0.0.2|$
+iTrusChina iTrusPTA,XEnroll,iEnroll,hwPTA,UKeyInstalls Firefox Plugin|$
+6
+0|application/PTA.iTrusPTA.Version.1|PTA|*|$
+1|application/CEnroll.CEnroll.Version.1|CEnroll||$
+2|application/Itrusenroll.CertEnroll.Version.1|IEnroll||$
+3|application/HwPTA.iTrusHwPTA|hwPTA||$
+4|application/HwWDkey.installWDkey|hwWDkey||$
+5|application/HwEpass2001.InstallEpass2001|HwEpass2001||$
+NPWLPG.dll|$
+C:\Program Files (x86)\Windows Live\Photo Gallery\NPWLPG.dll|$
+15.4.3508.1109|$
+1289327266000|0|0|$
+NPWLPG|$
+Windows Live Photo Gallery|$
+2
+0|application/x-wlpg3-detect|Windows Live Photo Gallery|wlpg|$
+1|application/x-wlpg-detect|Windows Live Photo Gallery|wlpg|$
+NPSPWRAP.DLL|$
+C:\PROGRA~2\MICROS~3\Office14\NPSPWRAP.DLL|$
+14.0.4761.1000|$
+1269433358000|0|0|$
+The plug-in allows you to open and edit files using Microsoft Office applications|$
+Microsoft Office 2010|$
+1
+0|application/x-sharepoint|SharePoint Plug-in for Firefox||$
+NPAUTHZ.DLL|$
+C:\PROGRA~2\MICROS~3\Office14\NPAUTHZ.DLL|$
+14.0.4730.1010|$
+1263044538000|0|0|$
+Office Authorization plug-in for NPAPI browsers|$
+Microsoft Office 2010|$
+1
+0|application/x-msoffice14|14.0.4730.1010|*|$
+nppdf32.dll|$
+C:\Program Files (x86)\Adobe\Reader 9.0\Reader\browser\nppdf32.dll|$
+9.1.0.163|$
+1235711622000|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+
+[INVALID]
+c:\Program Files (x86)\Microsoft Silverlight\5.1.20513.0\npctrlui.dll|$
+1368429276000|$
+C:\Windows\SysWOW64\npmproxy.dll|$
+1247534171654|$
+C:\Windows\system32\npmproxy.dll|$
+1247534171654|$
+C:\Windows\system32\aliedit\3.6.0.0\npAliSecCtrl64.dll|$
+1377508838000|$
