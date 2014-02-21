@@ -3,12 +3,16 @@ package action;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
+import main.SBrowserSwing;
 import models.CardModel;
 
 import org.junit.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
+import org.openqa.selenium.browserlaunchers.locators.SingleBrowserLocator;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -32,15 +36,14 @@ public class FirstPageWP {
   {
       this.driver = driver;
       this.cardModel = model;
-      baseUrl = "http://www.selectyourgoods.com";
+//      baseUrl = "http://www.selectyourgoods.com";
   }
   
 
   @Test
   public void emuAction() throws Exception {
       
-    //TODO:少了从主页到达定制页的步骤
-    driver.get(baseUrl + "/id168.php");
+    driver.get(SBrowserSwing.baseUrl + SBrowserSwing.targetUrl);
 //    driver.findElement(
 //            By.xpath("//a[contains(@href, 'https://signup.wpengine.com/?plan_id=personal&coupon=')]")).click();
 //    WebDriverWait wait = new WebDriverWait(driver, 30);

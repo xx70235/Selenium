@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html [
+  <!ENTITY % htmlDTD PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+  %htmlDTD;
+  <!ENTITY % globalDTD SYSTEM "chrome://global/locale/global.dtd">
+  %globalDTD;
+  <!ENTITY % ntabDTD SYSTEM "chrome://ntab/locale/ntab.dtd">
+  %ntabDTD;
+]>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <title>&ntab.title;</title>
+  <link type="text/css" rel="stylesheet" href="chrome://ntab/skin/ntab.css" />
+  <script type="application/javascript;version=1.8" src="chrome://ntab/content/ntab/track.js"></script>
+  <script type="application/javascript;version=1.8" src="chrome://ntab/content/ntab/locale.js"></script>
+  <script type="application/javascript;version=1.8" src="chrome://ntab/content/ntab/ntab.js"></script>
+  <body>
+    <!--<menu type="context" id="thumb-menu">
+      <menuitem label="&ntab.context.edit;" onclick="Grid.editGridItem()"></menuitem>
+      <menuitem label="&ntab.context.refresh;" onclick="Grid.refreshGridItem()"></menuitem>
+      <menuitem label="&ntab.context.refreshall;" onclick="Grid.refreshAll()"></menuitem>
+      <menuitem label="&ntab.context.export;" onclick="DataBackup.exportToFile()"></menuitem>
+      <menuitem label="&ntab.context.import;" onclick="DataBackup.importFromFile()"></menuitem>
+    </menu>-->
+    <a id="setdefault" hidden="true">&ntab.label.setdefault;</a>
+    <a id="promo" hidden="true" href="http://s.click.taobao.com/t?e=m%3D2%26s%3DuUiV40C9ezQcQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMXXNLRnyVBJORitN3%2FurF3xoVxuUFnM6iJG6UkagZE085UoOeRlV%2BcFK%2Bs4V8nQaFs%2FkAwgPKQnTSXsCR0ntb%2B3gaNEn4fWyEhGCHDcaCNXUV7nk5G9SG%2FnRpnmZl0TvuVrtAtsVcgFtomfkDJRs%2BhU%3D">淘宝双12</a>
+    <nav id="navpane">
+      <a data-pane="nav" title="&ntab.tooltip.switchtonav;">Nav</a>
+      <a data-pane="quickdial" title="&ntab.tooltip.switchtoquickdial;">Dial</a>
+      <a data-pane="search" title="&ntab.tooltip.switchtosearch;">Search</a>
+      <a data-pane="blank" title="&ntab.tooltip.switchtoblank;">Blank</a>
+    </nav>
+    <footer>
+      <a href="" title="&ntab.firefoxchina;">
+        <img src="chrome://ntab/skin/Logo.png" alt="Firefox" />
+      </a>
+      <div id="toggle">
+        Toggle
+      </div>
+      <ul id="launcher">
+        <li data-menu="related-tabs">
+          &ntab.launcher.relatedtabs;
+          <div id="related-tabs">
+            <dl class="frequent"></dl>
+            <label><input type="checkbox"></input>&ntab.launcher.relatedtabs.all;</label>
+            <input type="button" value="&ntab.launcher.relatedtabs.open;"></input>
+          </div>
+        </li>
+        <li data-menu="tools">
+          &ntab.launcher.tools;
+          <ul id="tools">
+            <!-- same id as used in BrowserOnClick.onAboutHome -->
+            <li id="downloads">&ntab.launcher.tools.downloads;</li>
+            <li id="bookmarks">&ntab.launcher.tools.bookmarks;</li>
+            <li id="history">&ntab.launcher.tools.history;</li>
+            <li id="addons">&ntab.launcher.tools.add-ons;</li>
+            <li id="sync">&ntab.launcher.tools.sync;</li>
+            <li id="settings">&ntab.launcher.tools.settings;</li>
+          </ul>
+        </li>
+        <li data-menu="page-settings">
+          &ntab.launcher.pagesettings;
+          <form id="page-settings">
+            <fieldset>
+              <legend>&ntab.launcher.pagesettings.background;</legend>
+              <div id="bgcolor-radio">
+                <label><input type="radio" name="bgcolor" value="white"></input>White</label>
+                <label><input type="radio" name="bgcolor" value="#fff8ed"></input>Orange</label>
+                <label><input type="radio" name="bgcolor" value="#fdfece"></input>Yellow</label>
+                <label><input type="radio" name="bgcolor" value="#edfffb"></input>Green</label>
+                <label><input type="radio" name="bgcolor" value="#edf7ff"></input>Blue</label>
+                <label><input type="radio" name="bgcolor" value="#f4edff"></input>Purple</label>
+                <label><input id="shownoise" data-pref="moa.ntab.backgroundnoise" type="checkbox"></input>&ntab.launcher.pagesettings.background.noise;</label>
+              </div>
+              <div>
+                <input type="file" id="bgimage" name="bgimage"></input>
+                <input id="bgreset" type="button" value="&ntab.launcher.pagesettings.background.reset;"></input>
+              </div>
+              <div id="bgimagestyle-radio" hidden="true">
+                <label><input type="radio" name="bgimage-style" value="fill"></input>&ntab.launcher.pagesettings.background.style.fill;</label>
+                <label><input type="radio" name="bgimage-style" value="fit"></input>&ntab.launcher.pagesettings.background.style.fit;</label>
+                <label><input type="radio" name="bgimage-style" value="stretch"></input>&ntab.launcher.pagesettings.background.style.stretch;</label>
+                <label><input type="radio" name="bgimage-style" value="tile"></input>&ntab.launcher.pagesettings.background.style.tile;</label>
+                <label><input type="radio" name="bgimage-style" value="center"></input>&ntab.launcher.pagesettings.background.style.center;</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>&ntab.launcher.pagesettings.quickdial;</legend>
+              <div>
+                <label for="col_num">&ntab.launcher.pagesettings.quickdial.col;</label>
+                <select id="col_num">
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4" selected="selected">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+                <label for="row_num">&ntab.launcher.pagesettings.quickdial.row;</label>
+                <select id="row_num">
+                  <option value="1">1</option>
+                  <option value="2" selected="selected">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>&ntab.launcher.pagesettings.misc;</legend>
+              <div>
+                <label><input id="openinnewtab" data-pref="moa.ntab.openLinkInNewTab" type="checkbox"></input>&ntab.launcher.pagesettings.misc.openinnewtab;</label>
+                <label><input id="hidesearch" data-pref="moa.ntab.dial.hideSearch" type="checkbox"></input>&ntab.launcher.pagesettings.misc.hidesearch;</label>
+              </div>
+              <div>
+                <input id="resetpref" type="button" value="&ntab.launcher.pagesettings.misc.restore;"></input>
+                <input id="feedback" type="button" value="&ntab.launcher.pagesettings.misc.feedback;"></input>
+              </div>
+            </fieldset>
+          </form>
+        </li>
+      </ul>
+      <ul id="quick_dial_tabs">
+        <a data-tab="grid">&ntab.quickdial.grid;</a>
+        <a data-tab="site">&ntab.quickdial.site;</a>
+      </ul>
+    </footer>
+    <section id="nav">
+      <iframe src=""></iframe>
+    </section>
+    <section id="quickdial">
+      <iframe src=""></iframe>
+      <div id="prevtab">
+        <div class="top-flex"></div>
+        <div class="arrow"></div>
+      </div>
+      <div id="quick_dial_tabpanels">
+        <div id="grid">
+          <div class="top-flex"></div>
+          <ul>
+            <li data-direction="-1">Up</li>
+            <li data-direction="1">Down</li>
+          </ul>
+        </div>
+        <div id="site">
+          <div class="top-flex"></div>
+          <iframe src=""></iframe>
+          <iframe src=""></iframe>
+        </div>
+      </div>
+      <div id="nexttab">
+        <div class="top-flex"></div>
+        <div class="arrow"></div>
+      </div>
+    </section>
+    <section id="search">
+      <iframe src=""></iframe>
+    </section>
+    <section id="blank">
+    </section>
+    <div id="overlay">
+      <div>
+        <form id="dial_editor">
+          <input name="title" placeholder="&ntab.editor.title;"></input>
+          <input name="url" placeholder="&ntab.editor.url;"></input>
+          <input type="submit" value="&ntab.editor.add;"></input>
+        </form>
+        <ul id="editor_tabs" class="editor_promoted">
+          <li data-tab="editor_related">&ntab.editor.related;</li>
+          <li data-tab="editor_bookmark">&ntab.editor.bookmark;</li>
+          <li data-tab="editor_promoted">&ntab.editor.promoted;</li>
+        </ul>
+        <div id="editor_tabpanels">
+          <div id="editor_related">
+            <figure>
+              <figcaption>&ntab.editor.frequent;</figcaption>
+              <ul id="editor_frequent"></ul>
+            </figure>
+            <figure>
+              <figcaption>&ntab.editor.session;</figcaption>
+              <ul id="editor_session"></ul>
+            </figure>
+          </div>
+          <ul id="editor_bookmark"></ul>
+          <iframe id="editor_promoted"></iframe>
+        </div>
+        <div id="prompt-close"></div>
+      </div>
+    </div>
+  </body>
+</html>
