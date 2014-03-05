@@ -1,14 +1,14 @@
 #Fat Jar Configuration File
-#Sat Nov 02 17:36:36 CST 2013
+#Sun Feb 23 22:18:02 CST 2014
 onejar.license.required=true
 manifest.classpath=
 manifest.removesigners=true
 onejar.checkbox=false
-jarname=SBrowserSwing.jar
+jarname=SBrowserSwingV1.2.jar
 manifest.mergeall=true
-manifest.mainclass=SBrowserSwing
+manifest.mainclass=main.SBrowserSwing
 manifest.file=<createnew>
 jarname.isextern=false
 onejar.expand=
-excludes=
+excludes=<jar|AlexaHacker.jar>;<jar|Ipaofu_poster.jar>;<jar|SBrowser.jar>;<jar|SBrowserSwing.jar>
 includes=

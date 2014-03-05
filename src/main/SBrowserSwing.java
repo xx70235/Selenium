@@ -93,10 +93,10 @@ public class SBrowserSwing
         // 打开浏览器
         // if(driver==null)
         driver = new FirefoxDriver(profile);
-        driver = new FirefoxDriver();
+//        driver = new FirefoxDriver();
         
 //         设置baseurl
-        baseUrl = "http://www.selectyourgoods.com/";
+//        baseUrl = "http://www.selectyourgoods.com/";
         // 设置等待时间（忘了具体是干啥的了，好像用处不大）
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
