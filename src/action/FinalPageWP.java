@@ -49,8 +49,8 @@ public class FinalPageWP {
     driver.findElement(By.id("billing_info_address1")).sendKeys(cardModel.getAddr());
     driver.findElement(By.id("billing_info_city")).clear();
     driver.findElement(By.id("billing_info_city")).sendKeys(cardModel.getCity());
-    driver.findElement(By.id("billing_info_state")).clear();
-    driver.findElement(By.id("billing_info_state")).sendKeys(cardModel.getState());
+//    driver.findElement(By.id("billing_info_state")).clear();
+//    driver.findElement(By.id("billing_info_state")).sendKeys(cardModel.getState());
     driver.findElement(By.id("billing_info_zip")).clear();
     driver.findElement(By.id("billing_info_zip")).sendKeys(cardModel.getZipcode());
 //    new Select(driver.findElement(By.id("billing_info_country"))).selectByVisibleText("United States");
