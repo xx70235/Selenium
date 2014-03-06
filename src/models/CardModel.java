@@ -278,7 +278,7 @@ public class CardModel
     public String toString()
     {
        
-        String  cardinfo = "ÕË»§ÐÕÃû£º"+this.getAccName()+"\r\n"
+        String  cardinfo = "Username:"+this.getAccName()+"\r\n"
                 +"First Name: "+this.getFname()+"\r\n"
                 +"Last Name: "+this.getLname()+"\r\n"
                 +"Email: "+this.getEmail()+"\r\n"
@@ -302,10 +302,10 @@ public class CardModel
     
     private void generatePassword(int pwd_len)
     {
-      //35ÊÇÒòÎªÊý×éÊÇ´Ó0¿ªÊ¼µÄ£¬26¸ö×ÖÄ¸+10¸öÊý×Ö
+      //35ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½0ï¿½ï¿½Ê¼ï¿½Ä£ï¿½26ï¿½ï¿½ï¿½ï¿½Ä¸+10ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         int  maxNum = 36;
-        int i;  //Éú³ÉµÄËæ»úÊý
-        int count = 0; //Éú³ÉµÄÃÜÂëµÄ³¤¶È
+        int i;  //ï¿½ï¿½Éµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        int count = 0; //ï¿½ï¿½Éµï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½
         char[] str = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
           'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
           'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
@@ -313,9 +313,9 @@ public class CardModel
         StringBuffer pwd = new StringBuffer("");
         Random r = new Random();
         while(count < pwd_len){
-         //Éú³ÉËæ»úÊý£¬È¡¾ø¶ÔÖµ£¬·ÀÖ¹Éú³É¸ºÊý£¬
+         //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½É¸ï¿½ï¿½ï¿½
          
-         i = Math.abs(r.nextInt(maxNum));  //Éú³ÉµÄÊý×î´óÎª36-1
+         i = Math.abs(r.nextInt(maxNum));  //ï¿½ï¿½Éµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª36-1
          
          if (i >= 0 && i < str.length) {
           pwd.append(str[i]);
@@ -327,7 +327,7 @@ public class CardModel
     }
  
     public String getRandomNumber(int digCount,Random r) {  
-        //·ÀÖ¹³öÏÖdigCount == 0µÄÇé¿ö
+        //ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½digCount == 0ï¿½ï¿½ï¿½ï¿½ï¿½
         digCount++;
         StringBuilder sb = new StringBuilder(digCount);  
         for(int i=0; i < digCount; i++)  

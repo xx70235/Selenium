@@ -1,10 +1,10 @@
 #Fat Jar Configuration File
-#Sun Feb 23 22:18:02 CST 2014
+#Thu Mar 06 01:23:54 CST 2014
 onejar.license.required=true
 manifest.classpath=
 manifest.removesigners=true
 onejar.checkbox=false
-jarname=SBrowserSwingV1.2.jar
+jarname=SBrowserSwingV1.4.jar
 manifest.mergeall=true
 manifest.mainclass=main.SBrowserSwing
 manifest.file=<createnew>

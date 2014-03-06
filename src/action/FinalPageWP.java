@@ -53,7 +53,7 @@ public class FinalPageWP {
     driver.findElement(By.id("billing_info_state")).sendKeys(cardModel.getState());
     driver.findElement(By.id("billing_info_zip")).clear();
     driver.findElement(By.id("billing_info_zip")).sendKeys(cardModel.getZipcode());
-    new Select(driver.findElement(By.id("billing_info_country"))).selectByVisibleText("United States");
+//    new Select(driver.findElement(By.id("billing_info_country"))).selectByVisibleText("United States");
 //    driver.findElement(By.id("pay-creditcard")).click();
   }
 
